@@ -1,0 +1,46 @@
+{
+  "devices" : [
+    {
+      "default_input" : true,
+      "default_output" : false,
+      "id" : 93,
+      "name" : "CRUSHER PLYR 720 XBOX",
+      "nominal_rate" : 16000,
+      "running_somewhere" : 0
+    },
+    {
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 87,
+      "name" : "CRUSHER PLYR 720 XBOX",
+      "nominal_rate" : 44100,
+      "running_somewhere" : 0
+    },
+    {
+      "default_input" : false,
+      "default_output" : true,
+      "id" : 98,
+      "name" : "External Headphones",
+      "nominal_rate" : 96000,
+      "running_somewhere" : 0
+    },
+    {
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 82,
+      "name" : "MacBook Pro Microphone",
+      "nominal_rate" : 96000,
+      "running_somewhere" : 0
+    },
+    {
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 75,
+      "name" : "MacBook Pro Speakers",
+      "nominal_rate" : 44100,
+      "running_somewhere" : 0
+    }
+  ],
+  "scope" : "Read-only CoreAudio properties. No playback or capture.",
+  "time" : 1794439972.0046639
+}

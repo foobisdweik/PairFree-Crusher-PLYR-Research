@@ -1,0 +1,159 @@
+{
+  "name" : "BLE-CRUSHER PLYR 720",
+  "scope" : "Service discovery and selected standard reads only. No vendor commands or setting changes.",
+  "services" : [
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : true,
+          "properties" : 18,
+          "read" : true,
+          "uuid" : "2A19",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "180F"
+    },
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 12,
+          "read" : false,
+          "uuid" : "43484152-2DAB-3241-6972-6F6861424C45",
+          "write" : true,
+          "write_without_response" : true
+        },
+        {
+          "indicate" : false,
+          "notify" : true,
+          "properties" : 16,
+          "read" : false,
+          "uuid" : "43484152-2DAB-3141-6972-6F6861424C45",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "5052494D-2DAB-0341-6972-6F6861424C45"
+    },
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A23",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A24",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A25",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A26",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A27",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A28",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A29",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A2A",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A50",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "180A"
+    }
+  ],
+  "standard_values" : [
+    {
+      "error" : "none",
+      "hex" : "00",
+      "text" : "\u0000",
+      "uuid" : "2A19"
+    },
+    {
+      "error" : "none",
+      "hex" : "53365058572d54393634",
+      "text" : "S6PXW-T964",
+      "uuid" : "2A24"
+    },
+    {
+      "error" : "none",
+      "hex" : "76312e302e302e3335",
+      "text" : "v1.0.0.35",
+      "uuid" : "2A26"
+    },
+    {
+      "error" : "none",
+      "hex" : "53365058572d54393634",
+      "text" : "S6PXW-T964",
+      "uuid" : "2A27"
+    }
+  ],
+  "status" : "standard reads completed"
+}

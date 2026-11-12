@@ -1,0 +1,302 @@
+{
+  "scope": {
+    "binary": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+    "sha256": "d9ce96ce502e280d5f08ba961233bd262d48ec2e572dd5c4dd4aab0b9222d1d2",
+    "static_native_analysis_only": true,
+    "no_hardware_access_by_this_agent": true
+  },
+  "commands": [
+    {
+      "name": "RELAY_RACE",
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 825,
+      "line_end": 842,
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0D01"
+          },
+          {
+            "name": "relay_id",
+            "type": "uint16"
+          },
+          {
+            "name": "race_cmd_payload",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5D"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0D01"
+          },
+          {
+            "name": "relay_id",
+            "type": "uint16"
+          },
+          {
+            "name": "race_response",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QUERY_RELAY_ID",
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 843,
+      "line_end": 857,
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0D00"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0D00"
+          },
+          {
+            "name": "type_list",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NOTIFY_QUERY_RELAY_ID",
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 2415,
+      "line_end": 2425,
+      "formats": {
+        "RequestFormat": [],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5D"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0D00"
+          },
+          {
+            "name": "type_list",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "framing": {
+    "query_request_hex": "05 5A 02 00 00 0D",
+    "relay_request_fields": [
+      "packet_type:u8=0x05",
+      "race_type:u8=0x5A",
+      "packet_len:u16le=4+len(nested_RACE)",
+      "race_id:u16le=0x0D01",
+      "relay_id:u16le",
+      "nested_RACE:bytes"
+    ],
+    "relay_notification_fields": [
+      "packet_type:u8=0x05",
+      "race_type:u8=0x5D",
+      "packet_len:u16le",
+      "race_id:u16le=0x0D01",
+      "relay_id:u16le",
+      "nested_RACE_response:bytes"
+    ],
+    "nesting": "The relay payload contains the complete inner RACE frame, including its 0x05 prefix.",
+    "example_read_only_build_version": "05 5A 0A 00 01 0D 00 02 05 5A 02 00 08 1E"
+  },
+  "native_evidence": [
+    {
+      "function": "0xB6088",
+      "symbol": "AirohaSdkMgr.getRelayID() implementation",
+      "fact": "A model-dependent branch returns immediate 0x0200 at 0xB611C. Other models return the stored AbstractModel._relayID.",
+      "addresses": [
+        "0xB60FC",
+        "0xB611C",
+        "0xB614C",
+        "0xB6158"
+      ],
+      "limit": "The selected model-mask bits were not mapped to public model names."
+    },
+    {
+      "function": "0xD1A28",
+      "fact": "When role is 1, the SDK requires a nonzero stored relay ID. It creates a relay command, sets raceCmdPayload from the inner command bytes, and serializes the uint16 relayID.",
+      "addresses": [
+        "0xD1A68",
+        "0xD1A84",
+        "0xD1A8C",
+        "0xD1B1C",
+        "0xD1B98",
+        "0xD1BD4"
+      ],
+      "limit": "This is a generic family builder. Runtime selection for the PLYR was not traced by this agent."
+    },
+    {
+      "function": "0x16CA54",
+      "fact": "A generic response handler finds typeList, rejects odd lengths, scans pairs, and selects a pair whose first byte is 0x05. It converts that pair to uint16 and stores _relayID.",
+      "addresses": [
+        "0x16D1A4",
+        "0x16D43C",
+        "0x16D650",
+        "0x16D780",
+        "0x16D790",
+        "0x16D7C8",
+        "0x16D804"
+      ]
+    },
+    {
+      "function": "0x362D8",
+      "fact": "Another generic handler follows the same even-length, pair-stride, first-byte-0x05 selection rule.",
+      "addresses": [
+        "0x366F0",
+        "0x36C50",
+        "0x36FF4",
+        "0x3711C",
+        "0x3712C",
+        "0x37170",
+        "0x3719C"
+      ]
+    },
+    {
+      "function": "0x17FED4",
+      "debug_name": "preparePacketData(relayId:)",
+      "fact": "This routine is another useful entry for following how the SDK prepares routed packets.",
+      "addresses": [
+        "0x17FF80",
+        "0x1801DC"
+      ],
+      "limit": "Its full data model was not recovered."
+    }
+  ],
+  "parent_reported_live_verification": {
+    "provenance": "The parent agent performed and reported these live tests. This agent did not repeat them.",
+    "query_relay_id": {
+      "request": "05 5A 02 00 00 0D",
+      "response": "05 5B 04 00 00 0D 00 02",
+      "type_list_hex": "00 02",
+      "interpretation_limit": "Generic first-byte-0x05 handlers would not select this entry. The public API has a model-dependent 0x0200 override."
+    },
+    "relayed_build_version": {
+      "request": "05 5A 0A 00 01 0D 00 02 05 5A 02 00 08 1E",
+      "outer_ack": "05 5B 03 00 01 0D 00",
+      "notification_prefix": "05 5D 7B 00 01 0D 00 02 05 5B 73 00 08 1E 00",
+      "inner_ascii_reported": "ab158x_evb SDK5.2.0.AB158x",
+      "result": "Relay ID 0x0200 reaches the AB158x processor."
+    },
+    "direct_build_version": {
+      "inner_ascii_reported": "ab156x_evb SDK5.2.0.AB156x",
+      "result": "The direct BLE endpoint reports the AB156x processor."
+    }
+  },
+  "findings": [
+    {
+      "claim": "Relay ID 0x0200 is now verified by a live build-version response from the AB158x processor. This is stronger than interpreting type_list bytes alone.",
+      "status": "parent-reported live-confirmed"
+    },
+    {
+      "claim": "The direct BLE endpoint and relay 0x0200 expose different processor families. Queries for master-only state must address the master endpoint.",
+      "status": "parent-reported live-confirmed endpoint distinction; master role mapping uses project firmware evidence"
+    },
+    {
+      "claim": "The generic SDK typeList parser and the public API model override are separate paths. The observed 00 02 entry must not be described as matching the generic first-byte-0x05 rule.",
+      "status": "artifact-confirmed distinction"
+    },
+    {
+      "claim": "The outer 0x0D01 acknowledgement and later 0x5D relay notification are distinct. The notification carries the inner response.",
+      "status": "artifact schema plus parent-reported live-confirmed"
+    }
+  ],
+  "limitations": [
+    "This agent did not validate master RAM addresses or aux mode semantics.",
+    "Relay routing alone does not establish a repair for aux audio.",
+    "Only the relayed read-only build-version request is documented as live-confirmed in this batch.",
+    "The full native DualChipGetDeviceInfoFlow was not recovered.",
+    "No keys, firmware writes, settings writes, app execution, or live commands were performed by this agent."
+  ]
+}

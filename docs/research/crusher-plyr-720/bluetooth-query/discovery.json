@@ -1,0 +1,140 @@
+{
+  "devices" : [
+    {
+      "name" : "BLE-CRUSHER PLYR 720",
+      "source" : "connected BLE retrieval"
+    },
+    {
+      "advertised_services" : [
+        "5052494D-2DAB-0341-6972-6F6861424C45"
+      ],
+      "name" : "BLE-CRUSHER PLYR 720",
+      "rssi" : -37,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -53,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -53,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : 127,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -61,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -61,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "5052494D-2DAB-0341-6972-6F6861424C45"
+      ],
+      "name" : "BLE-CRUSHER PLYR 720",
+      "rssi" : -39,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "5052494D-2DAB-0341-6972-6F6861424C45"
+      ],
+      "name" : "BLE-CRUSHER PLYR 720",
+      "rssi" : -40,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -61,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -59,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "5052494D-2DAB-0341-6972-6F6861424C45"
+      ],
+      "name" : "BLE-CRUSHER PLYR 720",
+      "rssi" : -38,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -59,
+      "source" : "BLE advertisement"
+    },
+    {
+      "advertised_services" : [
+        "180F",
+        "180A",
+        "FEED",
+        "FDB3"
+      ],
+      "name" : "Crusher Evo",
+      "rssi" : -59,
+      "source" : "BLE advertisement"
+    }
+  ],
+  "scope" : "Discovery only. No connection, characteristic read, or control write.",
+  "status" : "scan completed"
+}

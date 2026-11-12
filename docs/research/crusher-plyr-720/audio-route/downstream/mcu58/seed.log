@@ -1,0 +1,57 @@
+openjdk version "25.0.5.0.3" 2026-10-24
+OpenJDK Runtime Environment Homebrew (build 25.0.5.0.3)
+OpenJDK 64-Bit Server VM Homebrew (build 25.0.5.0.3, mixed mode)
+INFO  Using log config file: jar:file:/Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /Users/iphoobis/Library/Application Support/ghidra/ghidra_12.1.4_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /Users/iphoobis/Library/Application Support/ghidra/ghidra_12.1.4_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (477 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (DefaultSSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (DefaultTrustManagerFactory)  
+INFO  Headless startup complete (1331 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 59 extension points (20 false positives) (ClassSearcher)  
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by org.apache.felix.framework.util.SecureAction (file:/Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/Base/lib/org.apache.felix.framework-7.0.5.jar)
+WARNING: Please consider reporting this to the maintainers of class org.apache.felix.framework.util.SecureAction
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+INFO  HEADLESS Script Paths:
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /Users/iphoobis/Applications/ghidra_12.1.4_PUBLIC/Ghidra/Features/PDB/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/mcu58/ghidra/MCU58 (HeadlessAnalyzer)  
+INFO  Opening project: /Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/mcu58/ghidra/MCU58 (HeadlessProject)  
+INFO  REPORT: Processing project file: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  
+INFO  Packed database cache: /Users/iphoobis/Library/Caches/ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib (ApplyDataArchiveAnalyzer)  
+INFO  REPORT: Analysis succeeded for file: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: Seed8051.java  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/scripts/Seed8051.java (HeadlessAnalyzer)  
+INFO  REPORT: Execute script: ExportAll.java '/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/mcu58/mcu58-all.c'  (HeadlessAnalyzer)  
+INFO  SCRIPT: /Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/downstream/scripts/ExportAll.java (HeadlessAnalyzer)  
+INFO  ANALYZING changes made by post scripts: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for processed file: /mcu58-flash-087ec000.bin (HeadlessAnalyzer)  

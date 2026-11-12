@@ -1,0 +1,447 @@
+{
+  "scope": "Static .35 SG200X Master and Slave dispatch evidence. No hardware. No shared Ghidra mutations.",
+  "images": [
+    {
+      "role": "Master",
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin",
+      "bytes": 3280896,
+      "sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+      "pointer_delta": "0x806b000",
+      "AT_pointer_matches": 315,
+      "strings": [
+        {
+          "offset": "0x86de8",
+          "address": "0x80f1de8",
+          "text": "../../../../../middleware/airoha/dspfw/port/chip/ab158x/src/dsp_scenario.c",
+          "references": []
+        },
+        {
+          "offset": "0x878ce",
+          "address": "0x80f28ce",
+          "text": "../../../../../middleware/airoha/dspfw/port/chip/ab158x/src/dsp_upper_layer/dsp_stream_task.c",
+          "references": []
+        },
+        {
+          "offset": "0x118745",
+          "address": "0x8183745",
+          "text": "../../../../../../..//middleware/airoha/dspfw/anc_protected/port/chip/ab158x/src/anc_control.c:694 0",
+          "references": []
+        },
+        {
+          "offset": "0x28a350",
+          "address": "0x82f5350",
+          "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB158x",
+          "references": [
+            "0x81d345c",
+            "0x81f501c",
+            "0x824deec",
+            "0x82582a4"
+          ]
+        },
+        {
+          "offset": "0x28eacc",
+          "address": "0x82f9acc",
+          "text": "RACE_COSYS",
+          "references": [
+            "0x81ed80c"
+          ]
+        },
+        {
+          "offset": "0x28eb99",
+          "address": "0x82f9b99",
+          "text": "IF_RELAY",
+          "references": [
+            "0x82efc5c"
+          ]
+        },
+        {
+          "offset": "0x28f0ed",
+          "address": "0x82fa0ed",
+          "text": "race_cosys_timer",
+          "references": [
+            "0x81f9d5c"
+          ]
+        },
+        {
+          "offset": "0x29ec36",
+          "address": "0x8309c36",
+          "text": "race_app_cosys",
+          "references": [
+            "0x8317684"
+          ]
+        },
+        {
+          "offset": "0x2a6598",
+          "address": "0x8311598",
+          "text": "[pikachu_lib_vern][Build/ab158x/ULL_G2_AWS_LEAUDIO_EMP]2024/07/31 12:21:09",
+          "references": [
+            "0x82d1578"
+          ]
+        },
+        {
+          "offset": "0x2b397c",
+          "address": "0x831e97c",
+          "text": "ab158x_evb",
+          "references": []
+        },
+        {
+          "offset": "0x2b3987",
+          "address": "0x831e987",
+          "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB158x",
+          "references": []
+        }
+      ],
+      "range_table": [
+        {
+          "file_offset": "0x284d88",
+          "address": "0x82efd88",
+          "start": "0x2c10",
+          "end": "0x2ccf",
+          "handler_pointer": "0x823f3e5",
+          "handler_address": "0x823f3e4",
+          "bytes": "102ccf2ce5f32308"
+        },
+        {
+          "file_offset": "0x28ebf0",
+          "address": "0x82f9bf0",
+          "start": "0x900",
+          "end": "0x9ff",
+          "handler_pointer": "0x81f4edd",
+          "handler_address": "0x81f4edc",
+          "bytes": "0009ff09dd4e1f08"
+        },
+        {
+          "file_offset": "0x28ec48",
+          "address": "0x82f9c48",
+          "start": "0xd00",
+          "end": "0xd01",
+          "handler_pointer": "0x81f9a41",
+          "handler_address": "0x81f9a40",
+          "bytes": "000d010d419a1f08"
+        },
+        {
+          "file_offset": "0x28ec60",
+          "address": "0x82f9c60",
+          "start": "0x1100",
+          "end": "0x1101",
+          "handler_pointer": "0x81f77e9",
+          "handler_address": "0x81f77e8",
+          "bytes": "00110111e9771f08"
+        },
+        {
+          "file_offset": "0x28ec68",
+          "address": "0x82f9c68",
+          "start": "0x110f",
+          "end": "0x110f",
+          "handler_pointer": "0x81f9c05",
+          "handler_address": "0x81f9c04",
+          "bytes": "0f110f11059c1f08"
+        },
+        {
+          "file_offset": "0x28ec70",
+          "address": "0x82f9c70",
+          "start": "0x1110",
+          "end": "0x111f",
+          "handler_pointer": "0x81f78ad",
+          "handler_address": "0x81f78ac",
+          "bytes": "10111f11ad781f08"
+        }
+      ]
+    },
+    {
+      "role": "Slave",
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Slave_Headset_DFU_v1.0.0.35.decoded.bin",
+      "bytes": 2289664,
+      "sha256": "275a8380461aea6616192be3d1118b7df17217c596f256aadfb49a9fe21f0af3",
+      "pointer_delta": "0x8015000",
+      "AT_pointer_matches": 284,
+      "strings": [
+        {
+          "offset": "0x98cb6",
+          "address": "0x80adcb6",
+          "text": "../../../../../middleware/airoha/dspfw/port/chip/ab156x/src/dsp_upper_layer/dsp_stream_task.c",
+          "references": []
+        },
+        {
+          "offset": "0x1d75f4",
+          "address": "0x81ec5f4",
+          "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB156x",
+          "references": [
+            "0x80e0d60",
+            "0x80f3670",
+            "0x814d780",
+            "0x81577f8"
+          ]
+        },
+        {
+          "offset": "0x1daf74",
+          "address": "0x81eff74",
+          "text": "RACE_COSYS",
+          "references": [
+            "0x80ecbc0"
+          ]
+        },
+        {
+          "offset": "0x1dafff",
+          "address": "0x81effff",
+          "text": "IF_RELAY",
+          "references": [
+            "0x81e8308"
+          ]
+        },
+        {
+          "offset": "0x1db55d",
+          "address": "0x81f055d",
+          "text": "race_cosys_timer",
+          "references": [
+            "0x80f826c"
+          ]
+        },
+        {
+          "offset": "0x1e560e",
+          "address": "0x81fa60e",
+          "text": "race_app_cosys",
+          "references": [
+            "0x820671c"
+          ]
+        },
+        {
+          "offset": "0x1ecb27",
+          "address": "0x8201b27",
+          "text": "[pikachu_lib_vern][Build/ab156x/LEAUDIO_EMP]2024/07/31 12:06:41",
+          "references": [
+            "0x81c9764"
+          ]
+        },
+        {
+          "offset": "0x1f4b6f",
+          "address": "0x8209b6f",
+          "text": "ab156x_evb",
+          "references": []
+        },
+        {
+          "offset": "0x1f4b7a",
+          "address": "0x8209b7a",
+          "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB156x",
+          "references": []
+        }
+      ],
+      "range_table": [
+        {
+          "file_offset": "0x1d346c",
+          "address": "0x81e846c",
+          "start": "0x2c10",
+          "end": "0x2ccf",
+          "handler_pointer": "0x8143eed",
+          "handler_address": "0x8143eec",
+          "bytes": "102ccf2ced3e1408"
+        },
+        {
+          "file_offset": "0x1db058",
+          "address": "0x81f0058",
+          "start": "0x900",
+          "end": "0x9ff",
+          "handler_pointer": "0x80f353d",
+          "handler_address": "0x80f353c",
+          "bytes": "0009ff093d350f08"
+        },
+        {
+          "file_offset": "0x1db0b0",
+          "address": "0x81f00b0",
+          "start": "0xd00",
+          "end": "0xd01",
+          "handler_pointer": "0x80f7f51",
+          "handler_address": "0x80f7f50",
+          "bytes": "000d010d517f0f08"
+        },
+        {
+          "file_offset": "0x1db0c8",
+          "address": "0x81f00c8",
+          "start": "0x1100",
+          "end": "0x1101",
+          "handler_pointer": "0x80f5e89",
+          "handler_address": "0x80f5e88",
+          "bytes": "00110111895e0f08"
+        },
+        {
+          "file_offset": "0x1db0d0",
+          "address": "0x81f00d0",
+          "start": "0x110f",
+          "end": "0x110f",
+          "handler_pointer": "0x80f8115",
+          "handler_address": "0x80f8114",
+          "bytes": "0f110f1115810f08"
+        },
+        {
+          "file_offset": "0x1db0d8",
+          "address": "0x81f00d8",
+          "start": "0x1110",
+          "end": "0x111f",
+          "handler_pointer": "0x80f5f45",
+          "handler_address": "0x80f5f44",
+          "bytes": "10111f11455f0f08"
+        }
+      ]
+    }
+  ],
+  "relay_candidates": [
+    {
+      "role": "Master",
+      "opcode_start": "0xd00",
+      "opcode_end": "0xd01",
+      "handler": "0x81f9a40",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    },
+    {
+      "role": "Master",
+      "opcode_start": "0x1100",
+      "opcode_end": "0x1101",
+      "handler": "0x81f77e8",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    },
+    {
+      "role": "Master",
+      "opcode_start": "0x110f",
+      "opcode_end": "0x110f",
+      "handler": "0x81f9c04",
+      "priority": "highest",
+      "reason": "The110f handler is near the race_cosys_timer literal. This is a candidate co-system command, not yet a verified relay payload."
+    },
+    {
+      "role": "Master",
+      "opcode_start": "0x1110",
+      "opcode_end": "0x111f",
+      "handler": "0x81f78ac",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    },
+    {
+      "role": "Slave",
+      "opcode_start": "0xd00",
+      "opcode_end": "0xd01",
+      "handler": "0x80f7f50",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    },
+    {
+      "role": "Slave",
+      "opcode_start": "0x1100",
+      "opcode_end": "0x1101",
+      "handler": "0x80f5e88",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    },
+    {
+      "role": "Slave",
+      "opcode_start": "0x110f",
+      "opcode_end": "0x110f",
+      "handler": "0x80f8114",
+      "priority": "highest",
+      "reason": "The110f handler is near the race_cosys_timer literal. This is a candidate co-system command, not yet a verified relay payload."
+    },
+    {
+      "role": "Slave",
+      "opcode_start": "0x1110",
+      "opcode_end": "0x111f",
+      "handler": "0x80f5f44",
+      "priority": "secondary",
+      "reason": "Related opcode ranges warrant targeted decompilation."
+    }
+  ],
+  "unknowns": [
+    "A live family label is strong evidence about the answering firmware family. It does not establish an exact physical chip ID.",
+    "Reading an absolute address through one chip cannot establish the value of a variable mapped in another chip.",
+    "No cross-chip query payload is verified yet. Do not send guessed relay requests.",
+    "IF_RELAY and race_cosys_timer are labels. They do not by themselves establish a wire opcode."
+  ],
+  "live_context_from_parent": {
+    "firmware": ".35",
+    "GET_BUILD_VERSION": "The BLE response identifies ab156x_evb and SDK5.2.0.AB156x.",
+    "READ_ADDRESS": "Address04247684 returnedfdb20dab through BLE. This does not establish Master state.",
+    "status": "Parent-reported live context, not hardware access by this batch."
+  },
+  "decompilation_evidence": {
+    "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/slave-relay.c",
+    "sha256": "b83bbab068aeb36253994a7d40fe0075a9a9a2fe8e5b7b6f94f10337d5ac4ee7",
+    "qualification": "Candidate .35 address mapping. Helper semantics remain unresolved."
+  },
+  "refined_candidates": [
+    {
+      "opcode": "0x0d00",
+      "handler": "0x080f7f50",
+      "candidate_response_payload": "00 02",
+      "evidence_lines": [
+        14,
+        24
+      ],
+      "status": "decompilation-supported",
+      "limit": "This reports a capability or version-like value. The meaning of02 remains unresolved."
+    },
+    {
+      "opcode": "0x0d01",
+      "handler": "0x080f7f50",
+      "nested_handler": "0x080f7cfc",
+      "candidate_response_payload": "One byte. It stores the helper result XOR1.",
+      "nested_packet_offset": 8,
+      "nested_length": "RACE wire length field minus4",
+      "evidence_lines": [
+        25,
+        32
+      ],
+      "status": "decompilation-supported",
+      "limit": "This is the strongest generic forwarding candidate. The transport, destination bytes and helper behavior must be resolved before use."
+    },
+    {
+      "opcode": "0x110f",
+      "handler": "0x080f8114",
+      "layout": [
+        {
+          "frame_offset": 6,
+          "field": "Boolean supplied as callback argument0"
+        },
+        {
+          "frame_offset": 7,
+          "field": "Callback-array index"
+        },
+        {
+          "frame_offset": 8,
+          "field": "Callback payload"
+        }
+      ],
+      "callback_array": "0x14229738",
+      "array_pointer_literal_addresses": [
+        "0x080f802c",
+        "0x080f81a4"
+      ],
+      "evidence_lines": [
+        50,
+        70
+      ],
+      "status": "decompilation-supported",
+      "limit": "This invokes a registered callback. It is not established as a host query or generic RACE-to-Master wrapper."
+    },
+    {
+      "opcodes": [
+        "0x1100",
+        "0x1101",
+        "0x1111",
+        "0x1112",
+        "0x1113"
+      ],
+      "status": "decompilation-supported control/write paths",
+      "limit": "These commands must not be treated as read-only relay discovery."
+    }
+  ],
+  "next_decompile_targets": [
+    {
+      "address": "0x080f7cfc",
+      "reason": "Helper receives nested bytes from0D01. It may reveal a route to the Master RACE parser."
+    },
+    {
+      "address_range": "0x080f7fd8..0x080f8030",
+      "reason": "Contains the second literal reference to callback array0x14229738. Likely registration or lookup logic."
+    }
+  ]
+}

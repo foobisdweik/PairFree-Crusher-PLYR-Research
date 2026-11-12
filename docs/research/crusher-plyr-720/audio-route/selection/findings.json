@@ -1,0 +1,251 @@
+{
+  "firmware": {
+    "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin",
+    "sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+    "version": "v1.0.0.35",
+    "image": "SG200X Master",
+    "candidate_mapping": "runtime address = decoded file offset + 0x0806B000"
+  },
+  "scope": {
+    "hardware_commands_sent": 0,
+    "device_mutations": 0,
+    "ghidra_project": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/audio-route/selection/ghidra/Selection-35.gpr",
+    "project_is_separate_from_root": true
+  },
+  "findings": [
+    {
+      "id": "sel-01",
+      "claim": "LINE_IN_VOL at0x08241570 parses up/down/level as selectors0/1/2, followed by two decimal arguments. It queues a three-byte payload through event0x27. It does not directly write a gain RAM field.",
+      "status": "static-confirmed",
+      "evidence": [
+        "functions.c:21-64",
+        "literals0x08241690,0x0824169C,0x082416A0"
+      ]
+    },
+    {
+      "id": "sel-02",
+      "claim": "AT parser0x08237FE0 maps line_in,in/out to event0x26 and usb_in,in/out to event0x28, with value1/0. These are manual controls, not a proven source-priority rule.",
+      "status": "static-confirmed",
+      "evidence": [
+        "sources.c:157-199",
+        "literal0x0823866C points to line_in",
+        "literal0x08238678 points to usb_in"
+      ]
+    },
+    {
+      "id": "sel-03",
+      "claim": "AT+USBAUDIO handler0x08246928 maps ON/OFF to0x0824690C, which queues event0x63. OUT_CTRL,ON/OFF uses0x08245C28 and eventgroup3/action0x20/subevent2.",
+      "status": "static-confirmed",
+      "evidence": [
+        "sources.c:385-446",
+        "source-helpers.c:3-24"
+      ]
+    },
+    {
+      "id": "sel-04",
+      "claim": "USB event consumer0x08245FFC initializes three common route records. It uses source IDs2,3,4 and keeps their handles at0x042479A8,0x042479AC,0x042479B0.",
+      "status": "static-confirmed",
+      "evidence": [
+        "usb-events.c:143-198",
+        "usb-helpers.c:3-62"
+      ]
+    },
+    {
+      "id": "sel-05",
+      "claim": "USB eventgroup0x20 changes one of three active-stream bytes. If the application USB flag is set, it queues start or stop for that stream. Event0x63 changes that flag and applies start or stop to each active stream.",
+      "status": "static-confirmed",
+      "evidence": [
+        "usb-events.c:270-304",
+        "usb-events.c:406-455"
+      ]
+    },
+    {
+      "id": "sel-06",
+      "claim": "The common registration routine accepts IDs0..5 and stores0x44-byte records at0x042479B8. Five direct registration calls initialize IDs0..4. No direct registration for ID5 was found in the scanned MCU range.",
+      "status": "static-confirmed calls; absence limited to direct BL scan",
+      "evidence": [
+        "route-api.c:100-124",
+        "registration_calls"
+      ]
+    },
+    {
+      "id": "sel-07",
+      "claim": "The USB records share the common manager with the two aux records. Their stream activity and flags therefore matter independently of jack detection.",
+      "status": "static-confirmed manager relationship",
+      "evidence": [
+        "usb-events.c:162-190",
+        "../aux-events/event-consumer.c:65-90",
+        "route-api.c:100-124"
+      ]
+    },
+    {
+      "id": "sel-08",
+      "claim": "The source-mode callback starts at0x082452CC, before a PUSH instruction. Starting at0x082452CE loses the preceding comparison and creates false incoming-condition flags.",
+      "status": "verified entry correction",
+      "evidence": [
+        "route-api.c:3-98"
+      ],
+      "rejected_artifact": "The first function in usb-events.c is a rejected mid-function export. Do not use it. The second function starts correctly at0x08245FFC."
+    }
+  ],
+  "ram_fields": [
+    {
+      "name": "usb_active",
+      "literal_address": "0x8246368",
+      "ram_address": "0x42479a4",
+      "bytes": 3,
+      "meaning": "One activity byte for each USB stream index0..2.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_handle_0",
+      "literal_address": "0x824632c",
+      "ram_address": "0x42479a8",
+      "bytes": 4,
+      "meaning": "Pointer to common route record2.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_handle_1",
+      "literal_address": "0x8246330",
+      "ram_address": "0x42479ac",
+      "bytes": 4,
+      "meaning": "Pointer to common route record3.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_handle_2",
+      "literal_address": "0x8246340",
+      "ram_address": "0x42479b0",
+      "bytes": 4,
+      "meaning": "Pointer to common route record4.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_application_enable",
+      "literal_address": "0x824636c",
+      "ram_address": "0x420f478",
+      "bytes": 1,
+      "meaning": "Event0x63 updates this flag. Stream callbacks start or stop records only while this flag is set.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_attached_state",
+      "literal_address": "0x8246374",
+      "ram_address": "0x42479a2",
+      "bytes": 1,
+      "meaning": "Function08245D84 stores attachment-like callback state and conditionally queues0x28.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_additional_gate",
+      "literal_address": "0x82468dc",
+      "ram_address": "0x42479b7",
+      "bytes": 1,
+      "meaning": "Value zero participates in the explicit output-control start condition. Exact external meaning is unknown.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_cached_volume_a",
+      "literal_address": "0x8246704",
+      "ram_address": "0x42479b5",
+      "bytes": 1,
+      "meaning": "Cached value from the USB volume event.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_cached_volume_b",
+      "literal_address": "0x8246708",
+      "ram_address": "0x42479b4",
+      "bytes": 1,
+      "meaning": "Second cached value from the USB volume event.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_format_values",
+      "literal_address": "0x82468e8",
+      "ram_address": "0x420f46c",
+      "bytes": 12,
+      "meaning": "Three per-stream values changed by eventgroup0x24/subevent5. Exact unit is unknown.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_format_byte_a",
+      "literal_address": "0x82468c0",
+      "ram_address": "0x420f468",
+      "bytes": 3,
+      "meaning": "Three per-stream bytes changed by eventgroup0x24/subevent0x0B. Exact format meaning is unknown.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    },
+    {
+      "name": "usb_format_byte_b",
+      "literal_address": "0x82468c8",
+      "ram_address": "0x420f464",
+      "bytes": 3,
+      "meaning": "Three per-stream bytes changed by eventgroup0x24/subevent0x0C. Exact format meaning is unknown.",
+      "status": "static-confirmed access; this agent did not read live RAM"
+    }
+  ],
+  "registration_calls": [
+    {
+      "address": "0x8245774",
+      "source_id": 0,
+      "owner": "aux initialization"
+    },
+    {
+      "address": "0x8245792",
+      "source_id": 1,
+      "owner": "aux initialization"
+    },
+    {
+      "address": "0x8246086",
+      "source_id": 2,
+      "owner": "USB initialization"
+    },
+    {
+      "address": "0x824609a",
+      "source_id": 3,
+      "owner": "USB initialization"
+    },
+    {
+      "address": "0x82460c2",
+      "source_id": 4,
+      "owner": "USB initialization"
+    }
+  ],
+  "topology": {
+    "aux": "Two records0/1. Lifecycle analysis is in the aux-events batch.",
+    "headset_usb_c": "Three records2/3/4. Mapping to game/chat/microphone names remains unverified.",
+    "bluetooth": "The direct BLE endpoint is the AB156x chip. This batch did not establish how its audio reaches the Master manager.",
+    "dongle_2_4ghz": "No confirmed binding between dongle audio and a common route record was recovered.",
+    "source_5": "Unassigned. The manager permits it, but no direct registration appeared.",
+    "priority_order": "Unresolved. Concurrent records and callbacks do not prove a fixed four-source priority order."
+  },
+  "limits": [
+    "No live RAM field was read by this agent.",
+    "No hardware state was changed.",
+    "No source-priority order was established for AUX, USB-C, dongle, and Bluetooth.",
+    "The USB additional gate must not be called a mute flag without further evidence.",
+    "Cached volume values do not prove that a backend accepted gain or that audio reaches the drivers.",
+    "Manager exports overlap work the root later reported. Root manager analysis is authoritative for live interpretation.",
+    "The decoded image includes several processor regions. The selected MCU mapping is not a complete map of the package."
+  ],
+  "artifacts": [
+    "functions.c",
+    "sources.c",
+    "source-helpers.c",
+    "usb-events.c",
+    "usb-helpers.c",
+    "route-api.c",
+    "manager.c",
+    "strings.json",
+    "scripts/ExportSelection.java",
+    "usb-consumer.c"
+  ],
+  "verified_usb_extract": {
+    "path": "usb-consumer.c",
+    "source": "usb-events.c",
+    "source_prefix_lines": 95,
+    "extract_prefix_lines": 2
+  }
+}

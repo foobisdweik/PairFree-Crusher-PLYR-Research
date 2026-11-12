@@ -1,0 +1,10 @@
+{
+  "request_count": 32,
+  "notification_counts": {
+    "055c0300033101": 1,
+    "055b0300802c03": 32
+  },
+  "duration_seconds": 94.15648913383484,
+  "user_report": "Aux was unplugged for approximately five seconds and reconnected while Bluetooth remained connected.",
+  "timing_limit": "The physical cable transitions were not independently timestamped. Do not infer exact before/after timing from this report."
+}

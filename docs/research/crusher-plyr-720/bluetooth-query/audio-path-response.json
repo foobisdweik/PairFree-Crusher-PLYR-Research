@@ -1,0 +1,27 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794423704.3115082
+    },
+    {
+      "hex" : "055a040001090a00",
+      "kind" : "request",
+      "time" : 1794423704.9828591
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794423704.9833999
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423705.059936
+    }
+  ],
+  "query" : "GET_MMI_ENUM module 0x000A",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

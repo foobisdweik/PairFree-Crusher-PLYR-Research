@@ -1,0 +1,475 @@
+{
+  "scope": {
+    "repository": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon",
+    "commit": "8b0fc1f1e771760ff74bed1cb4091dd9ee41ad4b",
+    "inventory_files": 25,
+    "inventory_bytes": 200539,
+    "batches": [
+      [
+        "docs/PROTOCOL.md",
+        "bridge/hidbridge.py",
+        "dll/hidbridge_dll.c",
+        "tools/hidprobe.py",
+        "tools/hidlog.c"
+      ],
+      [
+        "scripts/patch_asar.py",
+        "README.md",
+        "CONTRIBUTING.md",
+        "udev/99-skullcandy.rules",
+        "dll/hid.def"
+      ]
+    ],
+    "binary": {
+      "path": "dll/hid_bridge.dll",
+      "type": "PE32+ x86-64 DLL",
+      "sha256": "4f00c670cb388ba939e9c312417b2bc8b7dc83e7c372339d17508711fc96c277"
+    }
+  },
+  "files_reviewed": [
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/CONTRIBUTING.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/udev/99-skullcandy.rules",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hid.def"
+  ],
+  "findings": [
+    {
+      "id": "usb-01",
+      "topic": "coverage",
+      "claim": "The repository documents SLYR Pro on Linux with Skull-HQ 3.2.0 and Wine 11.x. It does not establish Crusher PLYR720 support.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 13,
+          "line_end": 15
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 215,
+          "line_end": 219
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified"
+    },
+    {
+      "id": "usb-02",
+      "topic": "device",
+      "claim": "The documented SLYR Pro has VID 0x34F0, PID 0x2220, and an AB1565 chip response. Interface MI_05 exposes vendor collection col02 with usage page 0xFF13 and usage 0x01.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 10,
+          "line_end": 22
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified"
+    },
+    {
+      "id": "usb-03",
+      "topic": "transport",
+      "claim": "The documentation reports real replies through Linux HIDIOCGFEATURE. It reports empty interrupt reads and empty Wine GetInputReport replies. These are historical SLYR Pro observations, not new physical tests.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 26,
+          "line_end": 45
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified"
+    },
+    {
+      "id": "usb-04",
+      "topic": "frame",
+      "claim": "The documented request uses report 0x06 with 62 bytes including zero padding. The documented FEATURE response uses report 0x07 with 63 bytes. Only a prefix of each packet is printed.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 61
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified"
+    },
+    {
+      "id": "usb-05",
+      "topic": "frame",
+      "claim": "The document infers an outer little-endian length at offsets 1-2, channel 0x05 at offset 3, request/reply types 0x5A/0x5B at offset 4, another length at offsets 5-6, and command ID at offsets 7-8. It labels this interpretation as based on one sample.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 63,
+          "line_end": 81
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified"
+    },
+    {
+      "id": "usb-06",
+      "topic": "local bridge",
+      "claim": "The bridge uses TCP at 127.0.0.1:38099. Requests have [op:u8][rid:u8][len:u16le]. Only WRITE and SETFEATURE carry len payload bytes. Responses have [status:u8][len:u16le][data]. This is a local software protocol, not a headset protocol.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-07",
+      "topic": "local bridge",
+      "claim": "The helper selects the first sorted hidraw node matching VID 0x34F0 and the optional product filter. It does not select a usage page, interface, or original Windows handle. Multiple attached Skullcandy devices may therefore route to the wrong node.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 28,
+          "line_end": 33
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 47,
+          "line_end": 61
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-08",
+      "topic": "local bridge",
+      "claim": "The DLL forwards GetInputReport and GetFeature to bridge GETFEATURE. It forwards SetOutputReport to WRITE and SetFeature to SETFEATURE for any handle with VID 0x34F0. Other devices use hidwine.dll.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 32,
+          "line_end": 41
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 134,
+          "line_end": 175
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-09",
+      "topic": "retry",
+      "claim": "The DLL allows at most two attempts per operation. It resets the socket after send or receive failure. It has no explicit socket deadline. An empty GETFEATURE reply ends the attempt loop.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 44,
+          "line_end": 70
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 73,
+          "line_end": 124
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-10",
+      "topic": "retry",
+      "claim": "The helper reopens a missing device on demand and reopens after a write error. Feature-read errors return empty bytes without reopening. All device operations share one lock.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 63,
+          "line_end": 117
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-11",
+      "topic": "framing risks",
+      "claim": "The helper treats any positive write count as success, even if fewer bytes were written than requested. The DLL truncates an oversized response length without draining the remainder. The latter could desynchronize the TCP stream if the helper ever sends an oversized response.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 83,
+          "line_end": 89
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 142,
+          "line_end": 147
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 99,
+          "line_end": 106
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-12",
+      "topic": "detection patch",
+      "claim": "The patch reads the first 18 bytes of Linux USB descriptor files when node-hid has no Skullcandy device. It returns vendorId and productId from offsets 8 and 10. It does not create real command replies or a usable HID path.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 31,
+          "line_end": 56
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 59,
+          "line_end": 79
+        }
+      ],
+      "model_scope": "Skull-HQ host software only"
+    },
+    {
+      "id": "usb-13",
+      "topic": "forced responses",
+      "claim": "The reviewed bridge code does not synthesize device state, firmware versions, THX state, or successful HID data. It transports bytes and converts transport results to booleans. The detection patch supplies descriptor-derived enumeration records.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 127,
+          "line_end": 175
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 31,
+          "line_end": 56
+        }
+      ],
+      "model_scope": "Bridge software only"
+    },
+    {
+      "id": "usb-14",
+      "topic": "capture tooling",
+      "claim": "hidprobe writes the supplied bytes without padding, waits 30 ms, fetches a 63-byte feature report by default, then waits up to 0.5 seconds for interrupt input. It uses the first matching device.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+          "line_start": 64,
+          "line_end": 73
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+          "line_start": 92,
+          "line_end": 120
+        }
+      ],
+      "model_scope": "Probe software only"
+    },
+    {
+      "id": "usb-15",
+      "topic": "capture limits",
+      "claim": "hidlog logs at most 48 bytes of each report. The logger passes calls to Wine rather than the native bridge. Consequently, its replies may contain the same Wine failures that the bridge addresses.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+          "line_start": 44,
+          "line_end": 49
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+          "line_start": 58,
+          "line_end": 80
+        }
+      ],
+      "model_scope": "Logger software only"
+    },
+    {
+      "id": "usb-16",
+      "topic": "access rules",
+      "claim": "The checked-in Linux access rules match only PID 0x2220. They do not grant matching permissions for Crusher PID 0x5220 or dongle PID 0x5320.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/udev/99-skullcandy.rules",
+          "line_start": 1,
+          "line_end": 7
+        }
+      ],
+      "model_scope": "SLYR Pro defaults"
+    },
+    {
+      "id": "usb-17",
+      "topic": "firmware relevance",
+      "claim": "The repository contains one built x64 HID bridge DLL. It contains no firmware image, decryption implementation, firmware key, firmware updater, or Bluetooth controller project among its 25 non-Git files. The only decoded device command is the SLYR Pro device-info example.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 81
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 151,
+          "line_end": 165
+        }
+      ],
+      "model_scope": "Repository inventory"
+    },
+    {
+      "id": "usb-18",
+      "topic": "length ambiguity",
+      "claim": "The response prefix has outer length 0x003B and inner length 0x000D. If the outer length counts bytes after offset 2, it describes 62 total bytes, but the prose reports a 63-byte FEATURE transfer. The inner length ends at offset 19 if it counts bytes after offset 6. That matches the 20-byte printed prefix, but the remaining transfer bytes are not shown. Padding, transfer size, and meaningful frame size must remain separate.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 49,
+          "line_end": 78
+        }
+      ],
+      "model_scope": "SLYR Pro single documented exchange"
+    }
+  ],
+  "commands": [
+    {
+      "name": "get device info (document label)",
+      "transport": "USB HID output -> FEATURE reply",
+      "opcode": "0x0A0C",
+      "request": "06 0a 00 05 5a 06 00 0c 0a 02 10 e8 03; documentation says zero-pad to 62 bytes",
+      "response": "07 3b 00 05 5b 0d 00 0c 0a 00 02 10 06 00 41 42 31 35 36 35 ...; documentation says 63 bytes",
+      "model_scope": "SLYR Pro 34F0:2220 only; applicability to Crusher PLYR720 is unverified",
+      "status": "source-confirmed capture excerpt; frame interpretation inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 81
+        }
+      ]
+    },
+    {
+      "name": "bridge WRITE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 1,
+      "request": "header plus full output report",
+      "response": "status; zero length",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ]
+    },
+    {
+      "name": "bridge GETFEATURE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 2,
+      "request": "header only; rid and requested length",
+      "response": "status; returned report length and bytes",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ]
+    },
+    {
+      "name": "bridge SETFEATURE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 3,
+      "request": "header plus full feature report",
+      "response": "status; zero length",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ]
+    },
+    {
+      "name": "bridge READ",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 4,
+      "request": "header only; requested length",
+      "response": "status; interrupt bytes if available",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "No Crusher PLYR720-specific USB report capture or validated report descriptor exists here.",
+    "The AB1565 identification applies to SLYR Pro, not to Crusher PLYR720.",
+    "The native helper uses Linux-only hidraw and ioctl. It is not a macOS bridge implementation.",
+    "No raw capture validates the documented packet excerpt independently.",
+    "No firmware update sequence, encrypted container, checksum scheme, signing scheme, boot ROM, debug interface, memory map, or cryptographic key is present.",
+    "No command in this repository proves THX processing on the headset.",
+    "The command ID 0x0A0C and parameters 02 10 e8 03 need confirmation on Crusher PLYR720.",
+    "The documented channel and length interpretations need more than one sample.",
+    "Existing logger truncation prevents complete replay of reports longer than 48 bytes.",
+    "No new physical tests were performed. No VM or headset was accessed.",
+    "The reply outer-length interpretation and 63-byte transfer size differ by one byte. The document lacks the full report needed to resolve this."
+  ]
+}

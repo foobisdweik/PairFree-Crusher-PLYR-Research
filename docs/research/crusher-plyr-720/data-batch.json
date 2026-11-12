@@ -1,0 +1,201 @@
+{
+  "scope": {
+    "repository": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research",
+    "included": [
+      "data tree inventory and keyword search",
+      "tools tree inventory and keyword search",
+      "docs/RESEARCH.md",
+      "docs/UPSTREAM.md"
+    ],
+    "excluded": [
+      "docs/skullcandy assigned to another batch",
+      "AirohaPeq.kt assigned to another batch",
+      "external Windows artifacts",
+      "network downloads",
+      "VM and hardware"
+    ],
+    "inventory": {
+      "data_files": 88,
+      "data_bytes": 3124413,
+      "tools_files": 241,
+      "tools_bytes": 499412,
+      "data_skullcandy_exists": false,
+      "skullcandy_crusher_plyr_content_matches_in_data_tools": 0,
+      "firmware_capture_project_candidates": 0
+    },
+    "inventory_method": "Walked the repository except .git, node_modules, .venv and __pycache__. Searched text content in data and tools. Candidate extensions were .bin, .fw, .hex, .dfu, .gpr, .zip, .apk, .so, .elf, .pcap, .pcapng, .btsnoop and .cap."
+  },
+  "files_reviewed": [
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md"
+  ],
+  "findings": [
+    {
+      "id": "data-001",
+      "topic": "artifact_provenance",
+      "claim": "The research identifies app.skullcandy 5.0.6. Its reference bundle SHA-256 is 255153c95a3a12131af83350dc962a22b20eb49b6e73ce4a92800e82af254e9a. This identifies the original bundle, not an extracted base APK.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 23,
+          "line_end": 33
+        }
+      ],
+      "model_scope": "Skullcandy app inventory. This does not establish Crusher PLYR 720 support."
+    },
+    {
+      "id": "data-002",
+      "topic": "artifact_provenance",
+      "claim": "The earlier research inventoried four Skullcandy APK files and 26 native .so entries. Its supplied native split is arm64-v8a. These counts do not prove that all native functions were decoded.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 37,
+          "line_end": 50
+        }
+      ],
+      "model_scope": "Skullcandy app 5.0.6"
+    },
+    {
+      "id": "data-003",
+      "topic": "missing_artifacts",
+      "claim": "The document places raw artifacts and disassembly at E:\\Builds\\research\\vendor-audit-2026-11-06. It places earlier decompilations at E:\\Builds\\research\\decompiled. It says none was copied into this repository. Those external locations were not inspected during this batch.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 52,
+          "line_end": 57
+        }
+      ],
+      "model_scope": "Skullcandy app research"
+    },
+    {
+      "id": "data-004",
+      "topic": "firmware_availability",
+      "claim": "The recorded research fetched no firmware and executed no Bluetooth commands. Therefore its findings are static app evidence, rather than a recording of this headset.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 96,
+          "line_end": 105
+        }
+      ],
+      "model_scope": "All five vendors in the research pass, including Skullcandy"
+    },
+    {
+      "id": "data-005",
+      "topic": "crypto_scope",
+      "claim": "The documented successful bundled-file decryption concerns HeyMelody. It does not establish a Skullcandy firmware decryption method or key.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 68,
+          "line_end": 74
+        }
+      ],
+      "model_scope": "HeyMelody only. Excluded from Skullcandy decryption evidence."
+    },
+    {
+      "id": "data-006",
+      "topic": "native_analysis_lead",
+      "claim": "The prior analysis inspected Skullcandy native exports and JNI entry points for EQ. The document directs addresses and hashes to vendor notes. That does not establish access to controller firmware.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 71,
+          "line_end": 72
+        }
+      ],
+      "model_scope": "Skullcandy mobile app"
+    },
+    {
+      "id": "data-007",
+      "topic": "analytical_packet_provenance",
+      "claim": "The Bragi device.dev_info example has header CRC 2D and FCS 5480. The values were recalculated analytically. They were not captured from a headset.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 96,
+          "line_end": 100
+        }
+      ],
+      "model_scope": "Bragi protocol example. Crusher PLYR 720 applicability is unknown."
+    },
+    {
+      "id": "data-008",
+      "topic": "reference_implementation_limit",
+      "claim": "The Earshot revision a581f96efb5a91b0622a5be9600a02a72b4e1649 implements Crusher 1080 ANC. Its implementation is explicitly untested on hardware. It is not proof of Crusher PLYR 720 behavior.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 73,
+          "line_end": 77
+        }
+      ],
+      "model_scope": "Crusher 1080 ANC reference only"
+    },
+    {
+      "id": "data-009",
+      "topic": "rpc_status",
+      "claim": "The recorded Skullcandy SDK parser requires STATUS body byte zero to exist and equal zero for success. An absent body follows the error path. Earshot accepts an absent or empty body, so its behavior differs. Hardware confirmation remains pending.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 79,
+          "line_end": 81
+        }
+      ],
+      "model_scope": "Skullcandy 5.0.6 Bragi SDK. Crusher PLYR 720 applicability is unknown."
+    },
+    {
+      "id": "data-010",
+      "topic": "model_scope",
+      "claim": "The research lists 56 Skullcandy catalog records. Seven records are speakers, and some records contain metadata only. Per-model Dart routes remain partly undecoded. Therefore the catalog count does not measure confirmed protocol support.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 8,
+          "line_end": 19
+        }
+      ],
+      "model_scope": "Skullcandy catalog union"
+    }
+  ],
+  "commands": [
+    {
+      "name": "BOS-RPC STATUS success parsing",
+      "transport": "Bragi BOS-RPC. Exact physical transport is outside this batch.",
+      "opcode": null,
+      "request": null,
+      "response": "Require at least one body byte. The first body byte must be 00 for success.",
+      "model_scope": "Skullcandy 5.0.6 Bragi SDK. Crusher PLYR 720 is unverified.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 79,
+          "line_end": 81
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "There is no data/skullcandy directory in the supplied PairFree checkout.",
+    "No files in the data or tools trees mention Skullcandy, Crusher or PLYR.",
+    "No firmware binary, APK, native .so, Ghidra project or packet capture exists under the candidate extensions in the inventoried repository.",
+    "The scoped evidence does not identify a PLYR 720 firmware container, processor, load address, encryption mode, signature scheme or decryption key.",
+    "The external Windows artifact paths are references, not files available in these two supplied directories.",
+    "No actual hardware behavior was confirmed in this batch.",
+    "Commands from other Airoha products must remain separate until the PLYR transport and command behavior are matched."
+  ]
+}

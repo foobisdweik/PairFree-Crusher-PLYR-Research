@@ -1,0 +1,33 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794438770.2985249
+    },
+    {
+      "hex" : "055a08008016000084762404",
+      "kind" : "request",
+      "time" : 1794438771.0144892
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794438771.015012
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794438771.0469511
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0d00801600000084762404fdb20dab",
+      "kind" : "notification",
+      "time" : 1794438771.0510931
+    }
+  ],
+  "query" : "READ_ADDRESS four bytes at 0x04247684",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

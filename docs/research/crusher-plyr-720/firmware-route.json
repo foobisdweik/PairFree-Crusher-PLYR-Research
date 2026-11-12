@@ -1,0 +1,400 @@
+{
+  "scope": {
+    "firmware_root": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware",
+    "native_binary": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+    "native_binary_sha256": "d9ce96ce502e280d5f08ba961233bd262d48ec2e572dd5c4dd4aab0b9222d1d2",
+    "no_app_or_firmware_execution": true,
+    "no_live_device_access": true,
+    "decoded_bytes_kept_in_memory_only": true
+  },
+  "files": [
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/SG200X_Master_Headset_DFU_v1.0.0.34.bin",
+      "bytes": 2115951,
+      "sha256": "506760afdda43a975e55860ac0e6b36582bd00157facfbaca9b6e913d93c1131",
+      "whole_file_entropy_bits_per_byte": 7.999385866712128,
+      "prefix_digest_hex": "b69a16628a1db9fe339eb0d521a0d7c9f1a26c15de1d875fedb0b73f2f7980ef",
+      "prefix_matches_sha256_of_file_from_0x100": true,
+      "offset_0x20_through_0xff_all_ff": true,
+      "tlvs_assuming_u16le_type_u16le_length": [
+        {
+          "offset": "0x100",
+          "type": "0x11",
+          "length": 10,
+          "value_hex": "0101001000006f392000"
+        },
+        {
+          "offset": "0x10e",
+          "type": "0x13",
+          "length": 28,
+          "value_hex": "5347323030585f76312e302e302e333400ffffffffffffffffffffff",
+          "ascii": "SG200X_v1.0.0.34"
+        },
+        {
+          "offset": "0x12e",
+          "type": "0x12",
+          "length": 52,
+          "value_hex": "040000000010000000a013000050010000b0130000301a0000501a0000e02d000020040000104500000032000020000000c07e00"
+        },
+        {
+          "offset": "0x166",
+          "type": "0x14",
+          "length": 132,
+          "value_hex": "040000002f70da10082d9745b872d70ddc1c14cfce9589079daf343d132aa696bbbdf9c86a84a493fa584f5b07f0616de133875e9f904322e274d72d9f4f32fae77f2aa711d33a92fee65013ab1c1eecd595c1735a755b6ed2ab0609ccbb8c0edb09e71369ba8d69f9df0e745eadb76f290a388ed1596f76983a6a599d2ddc3fe4d3cbd3"
+        },
+        {
+          "offset": "0x1ee",
+          "type": "0x20",
+          "length": 23,
+          "value_hex": "4142313538355f4455414c5f434849505f4d4153544552",
+          "ascii": "AB1585_DUAL_CHIP_MASTER"
+        },
+        {
+          "offset": "0x209",
+          "type": "0x21",
+          "length": 18,
+          "value_hex": "686561647365745f7265665f64657369676e",
+          "ascii": "headset_ref_design"
+        },
+        {
+          "offset": "0x21f",
+          "type": "0xf0",
+          "length": 1,
+          "value_hex": "01"
+        }
+      ],
+      "header_tlv_stop": "0x224",
+      "body_offset": "0x1000",
+      "body_first_32_hex": "5d00400000001032000000000000030036c123ed077d559c0a2130521de7014a",
+      "lzma_alone_test": {
+        "success": true,
+        "eof": true,
+        "compressed_bytes_consumed": 2111855,
+        "unused_bytes": 0,
+        "decompressed_bytes": 3280896,
+        "sha256": "202b0da5549f850ce539166c0f5bd4bc4c6a0435970ba66df2a16821c8416879",
+        "first32_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d413",
+        "expected_size_from_lzma_header_u64le": 3280896,
+        "decoded_bytes_written": false
+      }
+    },
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/SG200X_Slave_Headset_DFU_v1.0.0.34.bin",
+      "bytes": 1402192,
+      "sha256": "4bbdfedd5ac7dd468301eed457013e8e0459ac798ebbcef101e66d90df29dc7d",
+      "whole_file_entropy_bits_per_byte": 7.998687461350983,
+      "prefix_digest_hex": "ff88728785daac2ab097dac48fa4c639e00fc21273fb9f0d4fb9d29e779a37f7",
+      "prefix_matches_sha256_of_file_from_0x100": true,
+      "offset_0x20_through_0xff_all_ff": true,
+      "tlvs_assuming_u16le_type_u16le_length": [
+        {
+          "offset": "0x100",
+          "type": "0x11",
+          "length": 10,
+          "value_hex": "01010010000050551500"
+        },
+        {
+          "offset": "0x10e",
+          "type": "0x13",
+          "length": 28,
+          "value_hex": "5347323030585f76312e302e302e333400ffffffffffffffffffffff",
+          "ascii": "SG200X_v1.0.0.34"
+        },
+        {
+          "offset": "0x12e",
+          "type": "0x12",
+          "length": 52,
+          "value_hex": "040000000010000000e00a000030010000f00a0000b0160000300c0000a02100004001000070230000e022000020000000a02500"
+        },
+        {
+          "offset": "0x166",
+          "type": "0x14",
+          "length": 132,
+          "value_hex": "0400000039e7716fe901f4efa1c152f2a9f65fd7836e013d4fc1d5aa786339dc9da91d9a1d1a7afda2e59979a2751f965309d505de6739ca69ce4c18a494ce665bfce61c4ea900647240ddee434e248b8045c658aece7fdc1a6bb2409167cb63fece3fcc529781644ed1966f66203e43c291f709d5295bc8edd63271e1d67c992c32625b"
+        },
+        {
+          "offset": "0x1ee",
+          "type": "0x20",
+          "length": 16,
+          "value_hex": "4142313536355f6475616c5f63686970",
+          "ascii": "AB1565_dual_chip"
+        },
+        {
+          "offset": "0x202",
+          "type": "0x21",
+          "length": 18,
+          "value_hex": "686561647365745f7265665f64657369676e",
+          "ascii": "headset_ref_design"
+        },
+        {
+          "offset": "0x218",
+          "type": "0xf0",
+          "length": 1,
+          "value_hex": "01"
+        }
+      ],
+      "header_tlv_stop": "0x21d",
+      "body_offset": "0x1000",
+      "body_first_32_hex": "5d0040000000f022000000000000030036c123ed077d559c0a2130521de7014a",
+      "lzma_alone_test": {
+        "success": true,
+        "eof": true,
+        "compressed_bytes_consumed": 1398096,
+        "unused_bytes": 0,
+        "decompressed_bytes": 2289664,
+        "sha256": "fc0d5b3d56853fde48c807f20b09498cf20e6481d4cec5088245ab9f4e0e431d",
+        "first32_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d413",
+        "expected_size_from_lzma_header_u64le": 2289664,
+        "decoded_bytes_written": false
+      }
+    },
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/SG200_Master_Headset_DFU_v1.0.0.34.bin",
+      "bytes": 2090905,
+      "sha256": "3832be4db64c12be526124667f5c6caf7629869cd154540f15a52bbf62e8ea97",
+      "whole_file_entropy_bits_per_byte": 7.999384528610179,
+      "prefix_digest_hex": "1ecbf8b04a0060e48e447aaa4e3d94fe809ff84b48f7e7906eb8b76a933125f1",
+      "prefix_matches_sha256_of_file_from_0x100": true,
+      "offset_0x20_through_0xff_all_ff": true,
+      "tlvs_assuming_u16le_type_u16le_length": [
+        {
+          "offset": "0x100",
+          "type": "0x11",
+          "length": 10,
+          "value_hex": "01010010000099d71f00"
+        },
+        {
+          "offset": "0x10e",
+          "type": "0x13",
+          "length": 28,
+          "value_hex": "53473230305f76312e302e302e333400ffffffffffffffffffffffff",
+          "ascii": "SG200_v1.0.0.34"
+        },
+        {
+          "offset": "0x12e",
+          "type": "0x12",
+          "length": 52,
+          "value_hex": "040000000010000000a013000050010000b013000090190000501a0000402d000020040000104500006031000020000000c07e00"
+        },
+        {
+          "offset": "0x166",
+          "type": "0x14",
+          "length": 132,
+          "value_hex": "04000000304e19b539217b00c117f19a60f0d82479790e0c201ba33e38eb9230cf5f2961bf1a11369cbbeb341c53c62cc7157668c0951f71a50eed671328546aef9a506111d33a92fee65013ab1c1eecd595c1735a755b6ed2ab0609ccbb8c0edb09e71369ba8d69f9df0e745eadb76f290a388ed1596f76983a6a599d2ddc3fe4d3cbd3"
+        },
+        {
+          "offset": "0x1ee",
+          "type": "0x20",
+          "length": 23,
+          "value_hex": "4142313538355f4455414c5f434849505f4d4153544552",
+          "ascii": "AB1585_DUAL_CHIP_MASTER"
+        },
+        {
+          "offset": "0x209",
+          "type": "0x21",
+          "length": 18,
+          "value_hex": "686561647365745f7265665f64657369676e",
+          "ascii": "headset_ref_design"
+        },
+        {
+          "offset": "0x21f",
+          "type": "0xf0",
+          "length": 1,
+          "value_hex": "01"
+        }
+      ],
+      "header_tlv_stop": "0x224",
+      "body_offset": "0x1000",
+      "body_first_32_hex": "5d00400000007031000000000000030036c123ed077d559c0a2130521de7014a",
+      "lzma_alone_test": {
+        "success": true,
+        "eof": true,
+        "compressed_bytes_consumed": 2086809,
+        "unused_bytes": 0,
+        "decompressed_bytes": 3239936,
+        "sha256": "56fa375e61462055faa04b55e3e3cd1c79ce0b3c5fa175ed66b4ecc1c95c618d",
+        "first32_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d413",
+        "expected_size_from_lzma_header_u64le": 3239936,
+        "decoded_bytes_written": false
+      }
+    },
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/SG200_Slave_Headset_DFU_v1.0.0.34.bin",
+      "bytes": 1402256,
+      "sha256": "e74467f241aac76f5cfed319750763cf871736d632172fc3fbaef50f3bf70309",
+      "whole_file_entropy_bits_per_byte": 7.998728146334903,
+      "prefix_digest_hex": "9deb83d52a0a8239bc390bd6c8ee5b968df7f15adf4e27cff9c8f236ca649664",
+      "prefix_matches_sha256_of_file_from_0x100": true,
+      "offset_0x20_through_0xff_all_ff": true,
+      "tlvs_assuming_u16le_type_u16le_length": [
+        {
+          "offset": "0x100",
+          "type": "0x11",
+          "length": 10,
+          "value_hex": "01010010000090551500"
+        },
+        {
+          "offset": "0x10e",
+          "type": "0x13",
+          "length": 28,
+          "value_hex": "53473230305f76312e302e302e333400ffffffffffffffffffffffff",
+          "ascii": "SG200_v1.0.0.34"
+        },
+        {
+          "offset": "0x12e",
+          "type": "0x12",
+          "length": 52,
+          "value_hex": "040000000010000000e00a000030010000f00a0000b0160000300c0000a02100004001000070230000e022000020000000a02500"
+        },
+        {
+          "offset": "0x166",
+          "type": "0x14",
+          "length": 132,
+          "value_hex": "040000005131039c3438c9aa9e0c25af025c354a7d0d1ef347de2346f8dd5a77b7917c74b41613f92779628e3932338d9171887c2d14abe42c4a59f49d3a31f77c76ec864ea900647240ddee434e248b8045c658aece7fdc1a6bb2409167cb63fece3fcc529781644ed1966f66203e43c291f709d5295bc8edd63271e1d67c992c32625b"
+        },
+        {
+          "offset": "0x1ee",
+          "type": "0x20",
+          "length": 16,
+          "value_hex": "4142313536355f6475616c5f63686970",
+          "ascii": "AB1565_dual_chip"
+        },
+        {
+          "offset": "0x202",
+          "type": "0x21",
+          "length": 18,
+          "value_hex": "686561647365745f7265665f64657369676e",
+          "ascii": "headset_ref_design"
+        },
+        {
+          "offset": "0x218",
+          "type": "0xf0",
+          "length": 1,
+          "value_hex": "01"
+        }
+      ],
+      "header_tlv_stop": "0x21d",
+      "body_offset": "0x1000",
+      "body_first_32_hex": "5d0040000000f022000000000000030036c123ed077d559c0a2130521de7014a",
+      "lzma_alone_test": {
+        "success": true,
+        "eof": true,
+        "compressed_bytes_consumed": 1398160,
+        "unused_bytes": 0,
+        "decompressed_bytes": 2289664,
+        "sha256": "bd8aef0e204737f05445dd851beeb3585c790b2270bb2512cc713be42fec6273",
+        "first32_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d413",
+        "expected_size_from_lzma_header_u64le": 2289664,
+        "decoded_bytes_written": false
+      }
+    }
+  ],
+  "decompile_targets": [
+    {
+      "address": "0x17DE0",
+      "name": "-[AirohaUnifyLibrary.AB155x.FotaControl validateOTABinWithSettings:]",
+      "reason": "This is the SDK validation entry for AB155x. Follow its callees to locate file parsing."
+    },
+    {
+      "address": "0x28B058",
+      "name": "-[AirohaUnifyLibrary.AB1562.FotaControl validateOTABinWithSettings:]",
+      "reason": "This is the SDK validation entry for AB1562. Compare chip-specific routing."
+    },
+    {
+      "address": "0x4A6990",
+      "name": "-[AirohaUnifyLibrary.AB1585.FotaControl validateOTABinWithSettings:]",
+      "reason": "This entry is most directly relevant to the AB1585 master label in these firmware headers."
+    },
+    {
+      "address": "0x6109E4",
+      "name": "-[AirohaUnifyLibrary.AB1568.FotaControl validateOTABinWithSettings:]",
+      "reason": "This is another chip-family validation entry. It may share the file parser."
+    },
+    {
+      "address": "0x476780",
+      "name": "-[AirohaUnifyLibrary.AB1585.AirohaFOTAManager startSingleFotaWithFile_path:settings:]",
+      "reason": "This entry accepts a firmware path for the chip family named in the master images. Follow file reads and transfer data."
+    }
+  ],
+  "native_string_evidence": [
+    {
+      "file_offset": "0x704913",
+      "string": "FotaParseError"
+    },
+    {
+      "file_offset": "0x704922",
+      "string": "FotaHeaderInfo"
+    },
+    {
+      "file_offset": "0x7607A0",
+      "string": "Fota bin file < 4k, not a valid file",
+      "code_xref": "0xF5830",
+      "function_bounds": [
+        "0xF5830",
+        "0xF585C"
+      ],
+      "meaning": "This short routine constructs the diagnostic. It is not established as the parser."
+    },
+    {
+      "file_offset": "0x760870",
+      "string": "unrecognized header type ",
+      "code_xref": "0xF5978",
+      "function_bounds": [
+        "0xF593C",
+        "0xF5A18"
+      ],
+      "meaning": "This short routine constructs the diagnostic. It is not established as the parser."
+    }
+  ],
+  "findings": [
+    {
+      "claim": "All four files have a validated SHA256 prefix. Bytes 0x00 through 0x1F equal SHA256(file[0x100:]). Bytes 0x20 through 0xFF are all 0xFF.",
+      "status": "confirmed by direct byte tests"
+    },
+    {
+      "claim": "All four files contain a header region that parses consistently as uint16 little-endian types and lengths. The region names the model, version, chip role, and headset_ref_design.",
+      "status": "confirmed byte structure; field semantics partially inferred"
+    },
+    {
+      "claim": "The master headers contain AB1585_DUAL_CHIP_MASTER. The slave headers contain AB1565_dual_chip. These labels identify the image targets. They do not prove the connected physical device uses these exact chips.",
+      "status": "confirmed file metadata; hardware mapping unverified"
+    },
+    {
+      "claim": "Each body beginning at offset 0x1000 is a complete LZMA-Alone stream. Python decompression reaches EOF and consumes the entire body for all four files.",
+      "status": "confirmed by offline decompression"
+    },
+    {
+      "claim": "These bodies require decompression before further firmware analysis. Encryption is not required to decode this outer body layer. This does not rule out encrypted subregions inside the decoded firmware.",
+      "status": "confirmed outer compression; inner content unverified"
+    },
+    {
+      "claim": "The whole-file entropy is approximately 7.999 bits per byte. Successful decompression explains why entropy alone could not establish encryption.",
+      "status": "confirmed measurement and decompression"
+    },
+    {
+      "claim": "The native SDK exposes FOTA validation functions and header-error strings. This identifies useful entrypoints, but does not establish which parser the Flutter app selects.",
+      "status": "confirmed symbols; selection unknown"
+    },
+    {
+      "claim": "The native SDK symbols containing encrypted concern GroupChat and PBP data. No exact firmware decryption route was established. Flutter was outside this native-only batch.",
+      "status": "limited static result"
+    }
+  ],
+  "limitations": [
+    "No native function was decompiled in this batch.",
+    "No shared REA target was accessed.",
+    "No keys or credentials were extracted.",
+    "No firmware or app code was executed. Python only parsed and decompressed file bytes.",
+    "Decoded firmware architecture, memory map, partitions, and executable instructions remain unverified.",
+    "A successful outer decompression does not prove every decoded region is plaintext code.",
+    "The image version is 1.0.0.34. The active headset version may differ."
+  ],
+  "reproduction": {
+    "prefix_hash": "hashlib.sha256(data[0x100:]).digest() == data[:32]",
+    "header": "struct.unpack_from(\"<HH\", data, offset); advance by 4 + length from 0x100",
+    "body_decode": "lzma.LZMADecompressor(format=lzma.FORMAT_ALONE).decompress(data[0x1000:], max_length=16777216)",
+    "validation": "Check eof, unused_data, decompressed length, and SHA256 for each file.",
+    "native_symbols": "nm -n <binary> | <xcrun swift-demangle> --compact",
+    "diagnostic_xrefs": "ARM64 ADRP + ADD scanning and bounded llvm-objdump windows; function boundaries from LC_FUNCTION_STARTS"
+  }
+}

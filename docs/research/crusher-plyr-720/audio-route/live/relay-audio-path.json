@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794439807.7386642
+    },
+    {
+      "hex" : "055a0c00010d0002055a040001090a00",
+      "kind" : "request",
+      "time" : 1794439808.508703
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794439808.5089312
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794439808.54195
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794439808.5441451
+    },
+    {
+      "error" : "none",
+      "hex" : "055d0e00010d0002055b060001090a000001",
+      "kind" : "notification",
+      "time" : 1794439808.7178888
+    }
+  ],
+  "query" : "RELAY_RACE 0x0200 GET_MMI_ENUM module 0x000A",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

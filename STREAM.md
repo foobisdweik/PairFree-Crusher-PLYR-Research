@@ -1,0 +1,85 @@
+# STREAM — live insights (PLYR 720 aux route)
+
+Master `v1.0.0.35`. Runtime = file offset + `0x0806B000`. "Live" = RAM read over BLE relay `0x1680`.
+
+## 2026-11-11
+
+- Live, during silent YouTube playback (aux + BT connected): `0x04247685`=1, `0x04247686`=1 (jack detected).
+- Live: `0x0420F43C..3F` = `05 01 1E 01`. Requested path `F43D`=1, level `F43E`=30, gate `F43F`=1.
+- Live: route records 0 (`line_in`) and 1 (`line_out`) both state `+0x24`=4. Transmitters (table `0x0423F72C`, 0x54/entry) idx 3 and 4 both state 3.
+- Static: record state values — 1 opened (`0x08246E98`), 3 starting (`0x0824706C`), 4 set after start-complete event, 5 stopping (`0x08247104`), 0 released (`0x0824714E`). Transmitter state 3 is required for stop and gain apply, so 3 = running.
+- Static: `0x08246D4C` applies gain. Record `+0x13` nonzero forces both gains to 0 (mute). Otherwise gains = `+0x10`,`+0x11`; `+0x12` passed too. Sent via `0x0822824C` → `0x0821FCC4` only if transmitter state is 3.
+- Live: both records `+0x10..+0x13` = `1E 1E 64 00` → gain 30/30, `+0x12`=100, mute byte 0. MCU-side route is not muted.
+- Static: line_in init sets gains from `0x0821E5D4()` = byte `0x0423F34B` (max level, inferred). Level step clamps to that max.
+- Conclusion: the MCU control plane reports the aux route started, running, unmuted. Silence is past MCU route state (DSP, ADC/AFE, external analog path).
+- Static: `0x082455A4(1)` (aux start) also calls `0x0824D6D8(2)`: sets vote byte `0x0420F4D8[2]`=1. Votes `0x0420F4D8[0..3]`; arbiter `0x0824D664` picks the lowest set index.
+- Static: arbiter result: lowest set index 2, or no vote set → `0x0824D428(2,1)` sets mask bit 2. Lowest set index 0, 1, or 3 → `0x0824D428(2,0)` clears bit 2. Index 0 and 1 outrank index 2.
+- Static: `0x0824D428` keeps a u16 mask at `0x0420F4C4` and sends 4 bytes `02 01 <mask hi> <mask lo>` through `0x081F8C14` (bus transfer, handle `0x0420F4C8`, 100 timeout). Failure posts module 1 event `0xAC`. Destination chip unknown.
+- Static: `0x08239754` clears mask bits 1 and 0 and sets bit 2. `0x0824C114` (command group 2, sub 0) writes bit 2 = (arg == 0).
+- Live (BLE read, same session state): votes `0x0420F4D8` = `00 00 01 01` → index 2 (aux) and 3 set; 0 and 1 clear. Aux wins the arbiter.
+- Live: mask `0x0420F4C4` u16 = `0x0007` (bits 0, 1, 2 set).
+- Live: max level byte `0x0423F34B` = 30. Current level 30 = max.
+- Static: mask device is I2C-style: descriptor `0x0420F4C8` (+5 mode, +6 bus port, +7 address); bus driver `0x081ACB44` accepts ports 0..3.
+- Live: descriptor `0x0420F4C8..D7` = sem `0x04223CD0`, `+4..7` = `00 04 00 58` → port 0, address `0x58`; rx `0x04252910`, tx `0x04252900`.
+- Static: device `0x58` protocol — `02 01 hi lo` set mask (`0x0824D428`, `0x0824D3CC`); `02 02` read → reply `02 02 hi lo` (`0x0824D31C`); 6-byte version read (`0x0824D4FC`, bad reply posts module 1 event `0xBC`). Packet MCU-like, not a register codec.
+- Live: second device descriptor `0x0420F4B4` = sem `0x04223DE8`, `00 04 00 11` → port 0, address `0x11`.
+- Static: device `0x11` is register-mapped. Init `0x0824D02A`: reg `0x45`=0, wait 40, 175 (reg,val) pairs, reg `0x45`=`0x80`, wait, 17 pairs. Config NVKEY `0xF5FD` (20 bytes). `0x0824D278` writes reg `0x27` = `0x20`/`0x30`. Codec/DSP-like (inferred).
+- Static: firmware has factory command `AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN` / `_CLOSE` (string `0x082F71D8`). Handler not yet traced.
+- The arbiter mask bit 2 is set both when aux wins and when no vote is set. So `0x0007` alone does not prove aux-specific switching.
+- Static: chip `0x11` = Crusher sensory-bass driver. Evidence: timer name `CRUSHER_VOL` (`0x082FF426`) on its 0..100 ramped level; app names `RaceCommandCrusherEqVolumeSet/Get`, `AT.CRUSHER=level,`; firmware log `allow_bt_crusher:%d` (`0x080F21D4`).
+- Static: `0x11` reg `0x45` = run control. `0x0824CFE0(0)` writes `0x80` (run), `(1)` writes `0` (standby). Boot `0x0824CEE0`: init tables, then standby, then reg `0x27` from NVKEY `0xF673`.
+- Static: `0x11` reg `0x2C` = Crusher gain. `0x0824D106(level)`: level < 5 → `0x80`; else gain table `0x04247C3C[(level-4)/5]` (20 bytes, NVKEY `0xF5FD`, default `0d 0d 0e 0e 0f 0f 11 11 12 12 13 13 14 14 15 15 16 16 17 17` at `0x082FF432`).
+- Static: level ramp — target `0x0420F4B1`, current `0x0420F4B0`; steps of 20 per `CRUSHER_VOL` tick when the gap > 49. Reg `0x27` = `0x20` (mode 0) or `0x30` (mode 1), cache `0x04247C50`.
+- Static: RACE `0x2CD0..0x2CD9` handler `0x0824C864` controls this chip (`2CD1` get level, `2CD3`/`2CD6` write 105-byte EQ presets `0x21..0x24` to NVKEY, `2CD5` select preset, `2CD7` set reg `0x27` mode, `2CD8`/`2CD9` getters).
+- Live: Crusher current/target `0x0420F4B0` = `41 41` → level 65 → reg `0x2C` = `0x14`. Gate `0x0420F4A0` = 1. Mode cache `0x04247C50` = 1 (reg `0x27` = `0x30`). Preset `0x04247C36` = 0. Gain table = defaults. On-flag `0x04247C14` = 1 (inferred: chip in run state).
+- Aux events do not call any `0x11` function. Chip `0x11` drives the bass transducers, not the main speakers (inferred from naming). Its cached state does not explain aux silence.
+- Live: macOS "External Headphones" output volume was 11% before the test; set to 50% (not muted).
+- Live: with the physical Crusher dial at max, `0x0420F4B0` = `64 64` → level 100 → reg `0x2C` = `0x17` (table max). Dial input reaches firmware state.
+- Test signal played over aux: 20 s of 60 Hz pulses (0.5 s on/off), then 10 s of 440 Hz (`afplay`, 48 kHz WAV, exit 0). Result (user): no pulses felt, no tone heard.
+- Caveat: firmware log `allow_bt_crusher:%d` suggests Crusher may be gated per source. A Bluetooth control run of the same file is needed before "no pulses over aux" can locate the fault.
+- Bluetooth control run: default output set to "CRUSHER PLYR 720 XBOX" (id 87) at 50%, same test file played (`afplay` exit 0), then output restored to "External Headphones" (id 98) at 50%. Aux cable stayed in.
+- Live during/just after the BT run: votes `0x0420F4D8` = `00 00 01 01`, path bytes `0x0420F43C` = `05 01 1E 01`, `line_in` state `0x042479DC` = 4. A2DP playback did not change the aux arbiter or route state. User result: pulses felt and tone heard over Bluetooth.
+- Result: with aux plugged in and aux winning the arbiter, Bluetooth audio still reaches the speakers and Crusher. So the speaker output stage, Crusher, and the DSP output mix work. The aux vote/mask does not block Bluetooth output.
+- Narrowed: aux sound is lost between the 3.5 mm jack and the DSP mix (analog input switching, ADC/AFE input config, or the DSP line-in streams 5/6). Not gain, mute, or speaker output.
+- Static: `0x58` is a companion MCU with its own firmware. Master boot `0x0824DB30` reads its version (`0x0824D4F8`); if not 5, sends `01 01` (`0x0824D4A8`) and reflashes it (`0x0824D9CC`) from Master flash `0x087EC000`, 0x1600 bytes in 0x38-byte chunks. That flash region is outside the DFU body.
+- Live: dumped `0x087EC000`, 5632 bytes, read-only batch READ_ADDRESS (`downstream/dump_ram.swift`). SHA-256 `6f5c2c5016b075b4a3625e1da994557e38581e604d7e6bdf18294a315715c361`. Strings `RST_TO_LD`, `APP Start!`; version bytes end in `05`.
+- Static (MCU image): 8051 code. Nuvoton N76E003/MS51 class (inferred: TA SFR `0xC7` timed writes, SFRS `0x91` paging, I2C vector `0x33`). I2C own address register `I2ADDR` = `0xB0` → 7-bit `0x58` (confirms identity).
+- Static (MCU): six push-pull outputs on P1.2, P1.1, P1.0, P0.0, P0.1, P0.3 = N76E003 PWM0..PWM5 pins (lighting PWM, inferred).
+- Static (MCU): command handler `0x0FAA`. Sub 1 (`02 01 hi lo`): mask low byte bit 0 → P0.4, bit 1 → P1.5, bit 2 → P0.5. Sub 2: replies version + pin state (P1.7 input <<3, P0.5 <<2, P1.5 <<1, P0.4).
+- Static (MCU): boot `0x117B` drives P0.4 low, P0.5 high, P1.5 low, P3.0 low; P1.7 = input. So P0.5 (mask bit 2) is high by default whenever the MCU starts.
+- Static (Master): module 1 event `0xA5` sets bits 0,1 and clears bit 2. It is posted 600 ms after power-on paths (`0x0823466C`, `0x0823476C`, `0x08239D28`, boot `0x0824A99A`). Power-off path `0x08239754` clears bits 1,0 and sets bit 2.
+- Inference (moderate): bits 0/1 = powered-mode enables; bit 2 (P0.5) = the power-off analog state, probably the passive aux path. The aux arbiter re-asserts bit 2 while powered, so powered aux = bits 0,1,2 all on (`0x0007`), a combination not seen at boot or power-off. Physical pin function unverified (no schematic).
+- Static: RACE ids `0x0000..0x0003` → handler `0x0824C114` (table `0x082EFDE8`). Id `0x0002` sub 0 sets mask bit 2 = (value == 0). Reversible test candidate; it writes device state.
+- Live (approved write): RACE `0x0002` sub 0 value 1 via relay → reply `05 5B 03 00 02 00 00` (status 0). Mask `0x0420F4C4` `0x0007` → `0x0003` (bit 2 / P0.5 cleared). Aux + BT connected, Petrichor playing to External Headphones. Listening result (user): still silent.
+- Live (approved write): restore RACE `0x0002` sub 0 value 0 → status 0; mask `0x0003` → `0x0007`. Headset back to the pre-test mask.
+- Result: clearing bit 2 (P0.5) with aux playing did not restore sound. Bit 2 alone is not the fault (assumes the I2C write reached the MCU; pin not read back).
+- Static: scenario 7 = wired audio. Sub-ids 0–2 USB, 3/7 line-out, 4–6 line-in. Ops table `0x082FC22C`.
+- Static: line-in config callback `0x082453DC`: scenario 7, sub 4, rate 48000 (`+8`), `+0xC`=2, `+0x10`=6, `+0x48`=`0x0101`, `+0x4A`=7. Open `0x08246E98` → `0x08227F60` → `0x0821F524` (DSP IPC msg 1).
+- Static: start `0x0824706C` → `0x0821F5F4` sends DSP IPC msg `0x1C` with the config block (`+4..+0x47`, `+0x48`, 6 bytes from `+0x49`). DSP IPC sender `0x0821EC9C`.
+- Static: scenario op `+0xC` `0x08229C4C`, sub 4–6 → `0x08221B80`: sets a global, posts module 3 event `0x92`. Op `+4` `0x08229D20` (stop) sub 4–6 → `0x081B58BC(0|2)` → `0x081B57EC`.
+- Static: no MCU-side code found that selects an analog input pin or ADC channel for line-in. Input selection is passed to the DSP (inferred).
+- Static: strings in Master only (not Slave): `AT+EAUDIO=LINEIN_PEQ_MODE,`, `AT+EAUDIO=LINEIN_PEQ_SYNC,`, `AT+LINE_IN_DET`, `AT+LINE_IN_VOL`, `GET_LINE_IN`, `audio_i2s_output_simultaneously`. Both images have `AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN` and `mic_user_hfp_dual_chip`.
+- Static: line-in uses the audio-transmitter framework (string `audio_transmitter` `0x082FC218`). Init `0x08227F60` copies the 0x48-byte config into a transmitter entry (`+0` state, `+1` DSP stream, `+0xC` config). Scenario 7 ops entry `0x082FC2B8`: `+0` null, `+4` stop `0x08229D20`, `+8` `0x08229B8C`, `+0xC` `0x08229C4C`.
+- Live: transmitter 3 (`0x0423F828`) = state 3, stream 5, config `07 04`, rate 48000, `2`, `6`. Transmitter 4 = state 3, stream 6, config `07 03` (line-out), same rate.
+- Live: route record 0 (`line_in`, name `0x082FE5D7`): `+0x15`=1 (resource path), `+0x36`=3, `+0x40` → resource slot 8 `0x0423E950`. Slot 8 = `+0` `0x03000000`, type 7, `+0x10` in-use, callbacks `0x08246CE0/CDA/CD4/D38/CB0`. Line-in holds its audio resource.
+- Static: `0x08221C08(type, idx)` clamps idx to 10 and maps it through gain table `0x082FC05C` (dB×100): -10000, -2000, -1397, -1045, -795, -602, -443, -309, -193, -91, 0. Type 1/4 → word `0x0423F35C`; type 7 (line-in) → word `0x0423F364`, then `0x08221B80` copies it to `0x0423F360` and posts module 3 event `0x92`.
+- Static: `0x0423F360` is read in `0x082218xx` and added to a computed stream gain (`ldr r6,[0x0423F360]; add r6,r0`). Line-in gain offset, inferred.
+- Live: `0x0423F35C` = 0 (Bluetooth 0 dB). `0x0423F360` = `0x0423F364` = `0xD8F0` = -10000 → line-in at -100.00 dB (table index 0). This is a firmware mute of the aux stream.
+- Static: boot `0x0824571E` reads 1 byte of NVKEY `0xF601` into `0x0420F440`; read failure → 10 (0 dB). Then `0x08221C08(7, byte)`.
+- Live: NVKEY `0xF601` = `00` (RACE `0x0A0C` read). RAM `0x0420F440` = `00`.
+- Static: key events `0x211`/`0x210` (handler near `0x0823CC7C`) add/subtract a step to byte `0x0420F35C`, range 0..20. Then line-in gain = `0x08221C08(7, byte)` and event `0x93` → `0x08221C08(1, 20 - byte)`. Byte = aux/BT mix: 0 = BT only (aux -100 dB), 10 = both 0 dB, 20 = aux only.
+- Live: mix byte `0x0420F35C` = 0 → BT only. Matches the symptom: BT plays, aux is silent while powered.
+- Static: `0x0824B510` sets the mix byte from a command value: 20 → `0x08243C84`, 10 → `0x08243DE0`, 0 → `0x08243CD4` (prompt/indicator, inferred), then gains as above.
+- Static: event group 1, event `0x4C` (in dispatcher `0x0824A870`, 1-byte payload) is the mix setter. Its only poster is RACE `0x2C82` sub `0x000B` (handler `0x0823F3E4`). The app's RACE schema (`command_race.xml`) names `0x2C82/0x2C83` config `0x000B` `SET/GET_GAME_CHAT_MIX_RATIO`. MODELS.md lists `gameChatMix` for both PLYR 720 models.
+- Static: `0x2C83` sub `0x000B` getter `0x082396A0` returns byte `0x0424754E` (cached ratio).
+- Static: NVKEY `0xF601` is written by `0x081C6324` at `0x08238DD0` (set) and `0x08239116` (step, clamped to 20). So the mix ratio persists across power cycles.
+- Live (read-only RACE `0x2C83` `000B`): reply `05 5B 06 00 83 2C 00 0B 00 00` → status 0, game/chat mix ratio = 0. Config `000C` also returns 0. Cache `0x0424754C..4F` = `00 00 00 00`.
+- Result: game/chat mix ratio 0 sets the line-in gain to table index 0 (-100 dB) and the Bluetooth gain to index 10 (0 dB). This explains "aux detected, BT plays, aux silent while powered". Powered-off aux bypasses the firmware, so it plays (inferred).
+- Live (approved write): `SET_GAME_CHAT_MIX_RATIO` 10 via relay (`mix_test.sh 10`, inner `05 5A 05 00 82 2C 0B 00 0A`) → reply status 0. Ratio getter before 0, after 10 (`0x0A`). Gains after: `0x0423F35C`, `0x0423F360`, `0x0423F364` all 0 → Bluetooth and line-in both 0 dB.
+- Result (user, same session, headset powered, aux in): aux audio plays. Root cause confirmed: saved game/chat mix ratio 0 muted the line-in gain (-100 dB). NVKEY `0xF601` now holds the new ratio (write path, not read back).
+- Live (user write): `mix_test.sh 20` → status 0; getter 10 → 20 (`0x14`). Gains after: `0x0423F35C`/`60`/`64` all 0.
+- Live after user power cycle (read-only `verify_mix.sh after-cycle`): NVKEY `0xF601` = `14`; getter = 20; ratio byte `0x0420F35C` = `0x14`; boot copy `0x0420F440` = `0x14`; cache `0x0424754E` = `0x14`; gains `0x0423F35C`/`60`/`64` = 0. User: aux plays after the power cycle. NVKEY persistence and boot restore confirmed.
+- NVKEY read reply layout confirmed: `0C 0A <status> <id lo hi> <len lo hi> <data>`. The earlier `F601` reply `... 01 00 00` was value 0.
+- Open: at ratio 20 the model predicts Bluetooth index 0 (−100 dB), but Master word `0x0423F35C` stays 0 dB. The `20 − ratio` path (event `0x93` → `0x0823CE36` → `0x08221C08(1, …)`) did not update it. `0x0823E550(1, 0x93, …)` may forward the event elsewhere (for example the Slave chip); not traced.
+- Bluetooth listening test at ratio 20: Mac output "CRUSHER PLYR 720 XBOX" at 50%, `bass-test.wav` (`afplay` exit 0). Live during playback (`verify_mix.sh bt-ratio20`): ratio 20, gains `0x0423F35C`/`60`/`64` = 0. User: pulses felt, tone heard.
+- Result: ratio 20 does not mute Bluetooth on this headset. The `20 − ratio` Bluetooth path (event `0x93`) has no audible effect here. Ratio 20 leaves both aux and Bluetooth at full level (observed). Why the event 0x93 path does not lower Bluetooth is not traced.

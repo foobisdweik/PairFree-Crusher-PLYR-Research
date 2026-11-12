@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794452021.17926
+    },
+    {
+      "hex" : "055a0e00010d0002055a06000c0a01f61000",
+      "kind" : "request",
+      "time" : 1794452021.301451
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794452021.3036461
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794452021.333849
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794452021.3360891
+    },
+    {
+      "error" : "none",
+      "hex" : "055d1000010d0002055b08000c0a0001f6010014",
+      "kind" : "notification",
+      "time" : 1794452021.3790622
+    }
+  ],
+  "query" : "Master READ_NVKEY_RESP_NVID F601 max16 bytes",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

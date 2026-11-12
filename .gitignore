@@ -57,3 +57,9 @@ Thumbs.db
 
 # Agent notes hold personal paths: kept on the owner machine only
 CLAUDE.md
+
+# Vendor firmware images, flash dumps, and Ghidra projects that embed them
+docs/research/**/current-firmware/*.bin
+docs/research/**/mcu58-flash-*.bin
+*.gpr
+*.rep/

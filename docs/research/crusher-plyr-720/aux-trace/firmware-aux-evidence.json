@@ -1,0 +1,661 @@
+{
+  "scope": "Static analysis of exact SG200X Master and Slave version1.0.0.34. No hardware access.",
+  "files": [
+    {
+      "role": "Master",
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/decoded/SG200X_Master_Headset_DFU_v1.0.0.34.decoded.bin",
+      "size": 3280896,
+      "sha256": "202b0da5549f850ce539166c0f5bd4bc4c6a0435970ba66df2a16821c8416879",
+      "affine_string_pointer_mapping": {
+        "formula": "candidate_runtime_address = file_offset + delta",
+        "delta": "0x806b000",
+        "distinct_AT_strings_with_aligned_references": 316,
+        "status": "Repeated pointer values are verified. The formula is strongly supported for these strings. The full MCU load region is not established."
+      },
+      "strings": [
+        {
+          "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN",
+          "file_offset": "0x28c148",
+          "candidate_runtime_address": "0x82f7148",
+          "aligned_pointer_references": [
+            "0x16c644"
+          ]
+        },
+        {
+          "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_CLOSE",
+          "file_offset": "0x28c176",
+          "candidate_runtime_address": "0x82f7176",
+          "aligned_pointer_references": [
+            "0x16c654"
+          ]
+        },
+        {
+          "text": "AT+EAUDIO=LINEIN_PEQ_MODE,",
+          "file_offset": "0x28c3cf",
+          "candidate_runtime_address": "0x82f73cf",
+          "aligned_pointer_references": [
+            "0x16cc78"
+          ]
+        },
+        {
+          "text": "AT+EAUDIO=LINEIN_PEQ_SYNC,",
+          "file_offset": "0x28c3ea",
+          "candidate_runtime_address": "0x82f73ea",
+          "aligned_pointer_references": [
+            "0x16cc84"
+          ]
+        },
+        {
+          "text": "linein",
+          "file_offset": "0x291324",
+          "candidate_runtime_address": "0x82fc324",
+          "aligned_pointer_references": [
+            "0x2ac4e4"
+          ]
+        },
+        {
+          "text": "line_in",
+          "file_offset": "0x293547",
+          "candidate_runtime_address": "0x82fe547",
+          "aligned_pointer_references": [
+            "0x1cd60c",
+            "0x1da95c"
+          ]
+        },
+        {
+          "text": "AT+LINE_IN_DET",
+          "file_offset": "0x293bca",
+          "candidate_runtime_address": "0x82febca",
+          "aligned_pointer_references": [
+            "0x2b2afc"
+          ]
+        },
+        {
+          "text": "AT+LINE_IN_VOL",
+          "file_offset": "0x293bd9",
+          "candidate_runtime_address": "0x82febd9",
+          "aligned_pointer_references": [
+            "0x2b2b0c"
+          ]
+        },
+        {
+          "text": "LINE_IN - ON",
+          "file_offset": "0x2941b5",
+          "candidate_runtime_address": "0x82ff1b5",
+          "aligned_pointer_references": [
+            "0x1d812c"
+          ]
+        },
+        {
+          "text": "LINE_IN - OFF",
+          "file_offset": "0x2941c2",
+          "candidate_runtime_address": "0x82ff1c2",
+          "aligned_pointer_references": [
+            "0x1d8110"
+          ]
+        },
+        {
+          "text": "GET_LINE_IN",
+          "file_offset": "0x294218",
+          "candidate_runtime_address": "0x82ff218",
+          "aligned_pointer_references": [
+            "0x1d810c"
+          ]
+        },
+        {
+          "text": "AT+APP",
+          "file_offset": "0x294259",
+          "candidate_runtime_address": "0x82ff259",
+          "aligned_pointer_references": [
+            "0x2b2b48"
+          ]
+        },
+        {
+          "text": "app_atcmd_handler",
+          "file_offset": "0x294260",
+          "candidate_runtime_address": "0x82ff260",
+          "aligned_pointer_references": [
+            "0x1d80ec"
+          ]
+        }
+      ],
+      "sample_mapping_checks": [
+        {
+          "text": "AT+MPORT - show or modify mux port assignment and switch.",
+          "file_offset": "0x2848d4",
+          "runtime_value": "0x82ef8d4",
+          "reference_offsets": [
+            "0x16e2e4"
+          ]
+        },
+        {
+          "text": "AT+APLSIRI?",
+          "file_offset": "0x284c3c",
+          "runtime_value": "0x82efc3c",
+          "reference_offsets": [
+            "0x1a2afc"
+          ]
+        },
+        {
+          "text": "AT+BCS=",
+          "file_offset": "0x285cf7",
+          "runtime_value": "0x82f0cf7",
+          "reference_offsets": [
+            "0x20ada4"
+          ]
+        },
+        {
+          "text": "AT+USBSTR",
+          "file_offset": "0x289649",
+          "runtime_value": "0x82f4649",
+          "reference_offsets": [
+            "0x2b1694"
+          ]
+        },
+        {
+          "text": "AT+USBSTR_RESET",
+          "file_offset": "0x289653",
+          "runtime_value": "0x82f4653",
+          "reference_offsets": [
+            "0x2b16a4"
+          ]
+        },
+        {
+          "text": "AT+USBSTR_SAVE",
+          "file_offset": "0x289663",
+          "runtime_value": "0x82f4663",
+          "reference_offsets": [
+            "0x2b16b4"
+          ]
+        },
+        {
+          "text": "AT+USB_BASICINFO",
+          "file_offset": "0x289672",
+          "runtime_value": "0x82f4672",
+          "reference_offsets": [
+            "0x2b16c4"
+          ]
+        },
+        {
+          "text": "AT+USB_INIT",
+          "file_offset": "0x289683",
+          "runtime_value": "0x82f4683",
+          "reference_offsets": [
+            "0x2b16d4"
+          ]
+        },
+        {
+          "text": "AT+USB_DEINIT",
+          "file_offset": "0x28968f",
+          "runtime_value": "0x82f468f",
+          "reference_offsets": [
+            "0x2b16e4"
+          ]
+        },
+        {
+          "text": "AT+ECHAR",
+          "file_offset": "0x289f0d",
+          "runtime_value": "0x82f4f0d",
+          "reference_offsets": [
+            "0x28a070"
+          ]
+        },
+        {
+          "text": "AT+EPMUREG",
+          "file_offset": "0x289f16",
+          "runtime_value": "0x82f4f16",
+          "reference_offsets": [
+            "0x28a080"
+          ]
+        },
+        {
+          "text": "AT+EREG",
+          "file_offset": "0x289f21",
+          "runtime_value": "0x82f4f21",
+          "reference_offsets": [
+            "0x28a090"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Slave",
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/decoded/SG200X_Slave_Headset_DFU_v1.0.0.34.decoded.bin",
+      "size": 2289664,
+      "sha256": "fc0d5b3d56853fde48c807f20b09498cf20e6481d4cec5088245ab9f4e0e431d",
+      "affine_string_pointer_mapping": {
+        "formula": "candidate_runtime_address = file_offset + delta",
+        "delta": "0x8015000",
+        "distinct_AT_strings_with_aligned_references": 286,
+        "status": "Repeated pointer values are verified. The formula is strongly supported for these strings. The full MCU load region is not established."
+      },
+      "strings": [
+        {
+          "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN",
+          "file_offset": "0x1d91b6",
+          "candidate_runtime_address": "0x81ee1b6",
+          "aligned_pointer_references": [
+            "0xcf79c"
+          ]
+        },
+        {
+          "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_CLOSE",
+          "file_offset": "0x1d91e4",
+          "candidate_runtime_address": "0x81ee1e4",
+          "aligned_pointer_references": [
+            "0xcf7ac"
+          ]
+        },
+        {
+          "text": "linein",
+          "file_offset": "0x1dd9d4",
+          "candidate_runtime_address": "0x81f29d4",
+          "aligned_pointer_references": [
+            "0x1f1594"
+          ]
+        },
+        {
+          "text": "AT+APP",
+          "file_offset": "0x1e1511",
+          "candidate_runtime_address": "0x81f6511",
+          "aligned_pointer_references": [
+            "0x1f4054"
+          ]
+        },
+        {
+          "text": "app_atcmd_handler",
+          "file_offset": "0x1e1518",
+          "candidate_runtime_address": "0x81f6518",
+          "aligned_pointer_references": [
+            "0x130574"
+          ]
+        }
+      ],
+      "sample_mapping_checks": [
+        {
+          "text": "AT+MPORT - show or modify mux port assignment and switch.",
+          "file_offset": "0x1d2fb8",
+          "runtime_value": "0x81e7fb8",
+          "reference_offsets": [
+            "0xd1200"
+          ]
+        },
+        {
+          "text": "AT+APLSIRI?",
+          "file_offset": "0x1d3318",
+          "runtime_value": "0x81e8318",
+          "reference_offsets": [
+            "0xf72a8"
+          ]
+        },
+        {
+          "text": "AT+BCS=",
+          "file_offset": "0x1d43db",
+          "runtime_value": "0x81e93db",
+          "reference_offsets": [
+            "0x160580"
+          ]
+        },
+        {
+          "text": "AT+ECHAR",
+          "file_offset": "0x1d7229",
+          "runtime_value": "0x81ec229",
+          "reference_offsets": [
+            "0x1d7374"
+          ]
+        },
+        {
+          "text": "AT+EPMUREG",
+          "file_offset": "0x1d7232",
+          "runtime_value": "0x81ec232",
+          "reference_offsets": [
+            "0x1d7384"
+          ]
+        },
+        {
+          "text": "AT+EREG",
+          "file_offset": "0x1d723d",
+          "runtime_value": "0x81ec23d",
+          "reference_offsets": [
+            "0x1d7394"
+          ]
+        },
+        {
+          "text": "AT+SFLASH",
+          "file_offset": "0x1d7245",
+          "runtime_value": "0x81ec245",
+          "reference_offsets": [
+            "0x1d73a4"
+          ]
+        },
+        {
+          "text": "AT+ERTC",
+          "file_offset": "0x1d724f",
+          "runtime_value": "0x81ec24f",
+          "reference_offsets": [
+            "0x1d73b4"
+          ]
+        },
+        {
+          "text": "AT+EAUXADC",
+          "file_offset": "0x1d7257",
+          "runtime_value": "0x81ec257",
+          "reference_offsets": [
+            "0x1d73c4"
+          ]
+        },
+        {
+          "text": "AT+ENVDM",
+          "file_offset": "0x1d7262",
+          "runtime_value": "0x81ec262",
+          "reference_offsets": [
+            "0x1d73d4"
+          ]
+        },
+        {
+          "text": "AT+MPORT",
+          "file_offset": "0x1d726b",
+          "runtime_value": "0x81ec26b",
+          "reference_offsets": [
+            "0x1d73e4"
+          ]
+        },
+        {
+          "text": "AT+EGPIO",
+          "file_offset": "0x1d7274",
+          "runtime_value": "0x81ec274",
+          "reference_offsets": [
+            "0x1d73f4"
+          ]
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "claim": "AT+LINE_IN_DET and AT+LINE_IN_VOL occur in a repeated command table pattern. Each name pointer is followed by a different nonzero word and then zero words.",
+      "status": "verified-structure",
+      "limit": "The next words are likely handler pointers. This requires instruction-level verification."
+    },
+    {
+      "claim": "The Master mapping delta0x0806b000 resolves command names, nearby logs and literal pointers to the exact file strings. The Slave mapping delta0x08015000 resolves many AT command names.",
+      "status": "strongly-supported-mapping",
+      "limit": "This does not establish a single load address for either complete composite firmware image."
+    },
+    {
+      "claim": "The candidate volume handler has nearby literal pointers to up, down and level.",
+      "status": "verified-pointer-association",
+      "limit": "These are probable argument words. Their syntax, numeric range and effect remain unverified."
+    },
+    {
+      "claim": "The candidate AT+APP handler has a nearby literal pointer to GET_LINE_IN. Its same literal area references LINE_IN - ON and LINE_IN - OFF.",
+      "status": "verified-pointer-association",
+      "limit": "GET_LINE_IN is probably an AT+APP subcommand for reporting detection. The exact syntax and branch condition remain unverified."
+    },
+    {
+      "claim": "The exact strings AT+LINE_IN_DET, AT+LINE_IN_VOL and GET_LINE_IN were absent from Slave under the printable-string scan.",
+      "status": "verified-search-result",
+      "limit": "This does not prove that Slave lacks line-in processing. Both images contain linein and pure line-in playback test labels."
+    },
+    {
+      "claim": "The repeated candidate function pointers have low bit1. Candidate bytes at their cleared addresses begin70b5, f0b5 or2de9f045. CM4 labels appear elsewhere in these images.",
+      "status": "verified-bytes",
+      "limit": "These facts support a Thumb-code hypothesis. No disassembly under a guessed architecture was performed."
+    },
+    {
+      "claim": "Static evidence does not establish whether Bluetooth presence suppresses line-in, whether detection failed, or whether an audio route is muted.",
+      "status": "unknown",
+      "limit": "No current device state, command response or controlled sound result was available in this batch."
+    },
+    {
+      "claim": "The candidate AT+LINE_IN_DET handler processes request type2. It updates byte0x04247686 only when the parsed integer is0 or1. It then passes that byte into a dispatcher call with fields0,4,0x27,0x7d.",
+      "status": "candidate-decompilation",
+      "evidence": {
+        "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/aux-trace/aux-handlers.c",
+        "line_start": 16,
+        "line_end": 26
+      },
+      "limit": "This is a write or override path. It must not be offered as a read-only detection query. The dispatcher fields are not yet named."
+    },
+    {
+      "claim": "The candidate AT+LINE_IN_VOL handler maps up to0, down to1 and level to2. It parses two comma-separated numeric fields with base10 and stores each in one byte. It dispatches a three-byte buffer.",
+      "status": "candidate-decompilation",
+      "evidence": {
+        "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/aux-trace/aux-handlers.c",
+        "line_start": 58,
+        "line_end": 101
+      },
+      "limit": "Exact caller syntax, numeric limits, units, lifetime and dispatcher interpretation remain unknown. No range validation is visible in this handler, but downstream validation may exist."
+    },
+    {
+      "claim": "The candidate AT+APP handler matches GET_LINE_IN and calls0x0824199c. A zero result selects LINE_IN - OFF. A nonzero result selects LINE_IN - ON.",
+      "status": "candidate-decompilation",
+      "evidence": {
+        "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/aux-trace/aux-handlers.c",
+        "line_start": 193,
+        "line_end": 229
+      },
+      "limit": "The called function still needs analysis. Other AT+APP branches can change state. A specific read-only transport path has not been verified."
+    }
+  ],
+  "commands": [
+    {
+      "name": "AT+LINE_IN_DET",
+      "table_file_offset": "0x2b2afc",
+      "four_words": [
+        "0x82febca",
+        "0x824163d",
+        "0x0",
+        "0x0"
+      ],
+      "name_string_file_offset": "0x293bca",
+      "candidate_function_pointer": "0x824163d",
+      "candidate_function_file_offset": "0x1d663c",
+      "function_first32bytes": "70b50546adf5836d4ff48162002104a811f0f8f82e7c022e2ed1a8682b680130",
+      "status": "Name pointer and bytes verified. The following word is a candidate handler pointer. The instruction set and calling convention were not imported or assumed.",
+      "argument_evidence": [],
+      "operation_class": "write-or-override. Do not send as a read-only probe.",
+      "candidate_state_byte": "0x04247686",
+      "candidate_allowed_values": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "AT+LINE_IN_VOL",
+      "table_file_offset": "0x2b2b0c",
+      "four_words": [
+        "0x82febd9",
+        "0x8241509",
+        "0x0",
+        "0x0"
+      ],
+      "name_string_file_offset": "0x293bd9",
+      "candidate_function_pointer": "0x8241509",
+      "candidate_function_file_offset": "0x1d6508",
+      "function_first32bytes": "f0b50446adf21c4d4ff48162002104a811f092f9277c022f06d103202568a668",
+      "status": "Name pointer and bytes verified. The following word is a candidate handler pointer. The instruction set and calling convention were not imported or assumed.",
+      "argument_evidence": [
+        {
+          "literal_pointer_file_offset": "0x1d6628",
+          "word": "0x82febbc",
+          "text": "up",
+          "text_file_offset": "0x293bbc"
+        },
+        {
+          "literal_pointer_file_offset": "0x1d6634",
+          "word": "0x82febbf",
+          "text": "down",
+          "text_file_offset": "0x293bbf"
+        },
+        {
+          "literal_pointer_file_offset": "0x1d6638",
+          "word": "0x82febc4",
+          "text": "level",
+          "text_file_offset": "0x293bc4"
+        }
+      ],
+      "operation_class": "write",
+      "candidate_payload_layout": "operation:u8 (up0/down1/level2), numeric_field1:u8, numeric_field2:u8",
+      "candidate_numeric_parser_base": 10
+    },
+    {
+      "name": "AT+APP",
+      "table_file_offset": "0x2b2b48",
+      "four_words": [
+        "0x82ff259",
+        "0x8242ef1",
+        "0x0",
+        "0x0"
+      ],
+      "name_string_file_offset": "0x294259",
+      "candidate_function_pointer": "0x8242ef1",
+      "candidate_function_file_offset": "0x1d7ef0",
+      "function_first32bytes": "2de9f0450446adf23c4d4ff4816200210ca80ff09dfc257c022d40f0e8802368",
+      "status": "Name pointer and bytes verified. The following word is a candidate handler pointer. The instruction set and calling convention were not imported or assumed.",
+      "argument_evidence": [
+        {
+          "literal_pointer_file_offset": "0x1d810c",
+          "word": "0x82ff218",
+          "text": "GET_LINE_IN",
+          "text_file_offset": "0x294218"
+        },
+        {
+          "literal_pointer_file_offset": "0x1d8110",
+          "word": "0x82ff1c2",
+          "text": "LINE_IN - OFF",
+          "text_file_offset": "0x2941c2"
+        },
+        {
+          "literal_pointer_file_offset": "0x1d812c",
+          "word": "0x82ff1b5",
+          "text": "LINE_IN - ON",
+          "text_file_offset": "0x2941b5"
+        }
+      ],
+      "operation_class": "mixed. GET_LINE_IN appears to report state, while other branches change state."
+    },
+    {
+      "name": "AT+MIC_DET",
+      "table_file_offset": "0x2b2b5c",
+      "four_words": [
+        "0x82ff272",
+        "0x8243515",
+        "0x0",
+        "0x0"
+      ],
+      "name_string_file_offset": "0x294272",
+      "candidate_function_pointer": "0x8243515",
+      "candidate_function_file_offset": "0x1d8514",
+      "function_first32bytes": "70b50546adf5836d4ff48162002104a80ff08cf92b7c022b37d1a8682b680130",
+      "status": "Name pointer and bytes verified. The following word is a candidate handler pointer. The instruction set and calling convention were not imported or assumed.",
+      "argument_evidence": []
+    }
+  ],
+  "next_evidence": [
+    "Validate the MCU region boundaries and architecture using container metadata and reset/vector evidence.",
+    "Verify candidate handler instructions and their references after the region mapping is independently established.",
+    "Recover the up/down/level parser and exact numeric limits before sending AT+LINE_IN_VOL.",
+    "Find the transport that exposes the AT table. An AT name does not prove that the normal RACE connection accepts it.",
+    "Trace the detection result into source selection and audio transmitter state. Compare Bluetooth-present and Bluetooth-absent branches.",
+    "Read live detection and route state only after safe read commands and their transport are confirmed.",
+    "Trace0x0824199c to establish what GET_LINE_IN actually measures.",
+    "Trace dispatcher0x082317e0 to identify the detection and volume event handlers.",
+    "Confirm whether physical jack detection writes0x04247686, or whether that byte is only a manual override.",
+    "Trace the byte through source selection and Bluetooth arbitration before attributing powered aux silence to either."
+  ],
+  "bounded_evidence_windows": [
+    {
+      "offset": "0x2b2af0",
+      "length": 60,
+      "hex": "0000000000000000ffffffffcaeb2f083d1624080000000000000000d9eb2f0809152408000000000000000053ee2f08ad1f24080000000000000000"
+    },
+    {
+      "offset": "0x1d6610",
+      "length": 44,
+      "hex": "08b92770a2e780232046cdf814340024adf012f9b2e700bfbceb2f08c68c0d0664713108bfeb2f08c4eb2f08"
+    },
+    {
+      "offset": "0x1d80e8",
+      "length": 76,
+      "hex": "d0f12f0860f22f0864713108e6f12f08edf12f08097d2f08f7f12f0800f22f0807f22f0818f22f08c2f12f0846f22f08a0a30d0624f22f082bf22f0835f22f083cf22f08b5f12f084ef22f08"
+    }
+  ],
+  "decompilation_evidence": {
+    "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/aux-trace/aux-handlers.c",
+    "sha256": "940d259cea3b5d9defb5e866a69033f20c33c9c6826c82c7855e3797a92fc25c",
+    "limit": "The source labels its ARM Thumb interpretation and runtime mapping as candidates. These semantics depend on that interpretation. Helper names remain unresolved."
+  },
+  "resolved_literals": [
+    {
+      "runtime_literal_address": "0x82416b8",
+      "file_offset": "0x1d66b8",
+      "little_endian_word": "0x60d8d19",
+      "resolved_text": null,
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x82416bc",
+      "file_offset": "0x1d66bc",
+      "little_endian_word": "0x8317164",
+      "resolved_text": null,
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x82416c0",
+      "file_offset": "0x1d66c0",
+      "little_endian_word": "0x4247686",
+      "resolved_text": null,
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x8241628",
+      "file_offset": "0x1d6628",
+      "little_endian_word": "0x82febbc",
+      "resolved_text": "up",
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x8241634",
+      "file_offset": "0x1d6634",
+      "little_endian_word": "0x82febbf",
+      "resolved_text": "down",
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x8241638",
+      "file_offset": "0x1d6638",
+      "little_endian_word": "0x82febc4",
+      "resolved_text": "level",
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x8241630",
+      "file_offset": "0x1d6630",
+      "little_endian_word": "0x8317164",
+      "resolved_text": null,
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x824162c",
+      "file_offset": "0x1d662c",
+      "little_endian_word": "0x60d8cc6",
+      "resolved_text": null,
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x8243110",
+      "file_offset": "0x1d8110",
+      "little_endian_word": "0x82ff1c2",
+      "resolved_text": "LINE_IN - OFF",
+      "status": "verified-bytes"
+    },
+    {
+      "runtime_literal_address": "0x824312c",
+      "file_offset": "0x1d812c",
+      "little_endian_word": "0x82ff1b5",
+      "resolved_text": "LINE_IN - ON",
+      "status": "verified-bytes"
+    }
+  ]
+}

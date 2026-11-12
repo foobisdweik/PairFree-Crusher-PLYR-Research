@@ -1,0 +1,174 @@
+{
+  "binary": {
+    "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+    "sha256": "d9ce96ce502e280d5f08ba961233bd262d48ec2e572dd5c4dd4aab0b9222d1d2",
+    "bytes": 10769616
+  },
+  "scope": "Static native analysis only. No headset commands were sent by this agent.",
+  "sdk_audio_path_read": {
+    "race_id": "0x0901",
+    "command": "GET_MMI_ENUM",
+    "module": "0x000A",
+    "reconstructed_base_request_hex": "05 5A 04 00 01 09 0A 00",
+    "status": "confirmed SDK parser mapping; not confirmed working on PLYR",
+    "expected_v2_payload": "module:u16le, status:u8, audioPath:u8",
+    "accepted_audio_path_values": [
+      0,
+      1
+    ],
+    "value_labels": "unknown",
+    "physical_meaning": "unknown; must not equate 0/1 with AUX/USB",
+    "trace": [
+      {
+        "address": "0xCFD4C",
+        "fact": "Converts a raw uint16 module ID to an internal enum."
+      },
+      {
+        "address": "0x708112",
+        "fact": "The raw-to-enum table maps module 0x0A to enum 10.",
+        "table_hex": "000102030405060708090a140b141414141414140c0d0e0f10111213"
+      },
+      {
+        "address": "0xCF47C",
+        "fact": "Entry 10 is a signed relative displacement. Base 0xCDFFC plus that displacement is 0xCE51C.",
+        "entry_hex": "20050000"
+      },
+      {
+        "address": "0xCE51C",
+        "fact": "This branch enters the audioPath length check at 0xCE980 or 0xCE984."
+      },
+      {
+        "address": "0xCE984",
+        "fact": "Requires more than three payload bytes."
+      },
+      {
+        "address": "0xCDF04",
+        "fact": "Stores the module enum and reads status from payload offset 2. Only status zero reaches the module switch."
+      },
+      {
+        "address": "0xCE9FC",
+        "fact": "Reads payload byte 3."
+      },
+      {
+        "address": "0xCEA0C",
+        "fact": "Masks the result to one byte and rejects values greater than or equal to 2."
+      },
+      {
+        "address": "0xCEA28",
+        "fact": "Stores the accepted byte at GetMmiRxParser object offset 0x33."
+      },
+      {
+        "address": "0x707C58",
+        "symbol": "_OBJC_IVAR_$__TtC18AirohaUnifyLibrary14GetMmiRxParser.audioPath",
+        "value": "0x33"
+      },
+      {
+        "address": "0x7A636C",
+        "fact": "AudioPathEnum descriptor has no field descriptor and declares two empty cases. Case names are unavailable."
+      }
+    ]
+  },
+  "eq_task_nvkey_read": {
+    "function_bounds": [
+      "0x38C564",
+      "0x38D11C"
+    ],
+    "family": "AB1568 SavePEQCoefDataTask",
+    "debug_name": "sendCmd_GetAudioPath(host:role:internalListener:)",
+    "nvkey_id": "0xF233",
+    "requested_length": 1000,
+    "command": "READ_NVKEY",
+    "race_id": "0x0A00",
+    "reconstructed_base_request_hex": "05 5A 06 00 00 0A 33 F2 E8 03",
+    "status": "static reconstruction only; not a proven live-input query",
+    "trace": [
+      {
+        "address": "0x38C7AC",
+        "fact": "Sets command enum value 0x26."
+      },
+      {
+        "address": "0x38C7C8",
+        "fact": "Loads immediate 0xF233 and stores its low uint16 into a byte buffer."
+      },
+      {
+        "address": "0x38C810",
+        "fact": "Constructs the nvkeyID key for the parameter map."
+      },
+      {
+        "address": "0x38C85C",
+        "fact": "References the string lengthOfReadBytes at file offset 0x74F020."
+      },
+      {
+        "address": "0x38C884",
+        "fact": "Loads static byte-array object 0x8F1260."
+      },
+      {
+        "address": "0x8F1260",
+        "fact": "The object declares two elements. Its data bytes at 0x8F1280 are E8 03.",
+        "header_hex": "0000000000000000000000000000000002000000000000000400000000000000e8030000000000000000000000000000"
+      },
+      {
+        "address": "0x26A5FC",
+        "fact": "Stores the command enum and obtains its command definition through 0x94668."
+      },
+      {
+        "address": "0x94668",
+        "fact": "Dispatches on command enum using uint16 table at 0x706068 and base 0x946A0."
+      },
+      {
+        "address": "0x7060B4",
+        "fact": "Entry 0x26 selects branch 0x96AA0."
+      },
+      {
+        "address": "0x96B58",
+        "fact": "Builds Swift small-string literal 055A$0000A$1$2."
+      },
+      {
+        "address": "0x8EBC48",
+        "fact": "The parameter mapping assigns $1 to nvkeyID and $2 to lengthOfReadBytes."
+      }
+    ],
+    "other_family_limits": [
+      "AB155x and AB1562 versions also load 0xF233.",
+      "The AB1585 task at 0x47E488 instead loads NVKEY 0xE401 at 0x47E6EC.",
+      "Do not transfer the AB1568 NVKEY value to the PLYR master merely because it uses an Airoha chip."
+    ]
+  },
+  "witness_call_correction": {
+    "address": "0x38CFBC",
+    "fact": "The indirect call uses an AB1568InternalTaskListener witness. It is not established as a packet send.",
+    "type_reference": "0x705700",
+    "resolved_symbolic_reference": "0x79A674",
+    "resolved_symbol": "_symbolic ______pSg 18AirohaUnifyLibrary26AB1568InternalTaskListenerP",
+    "consequence": "The immediate arguments 3 and 4 must not be decoded as wire opcodes."
+  },
+  "live_results_reported_by_parent": {
+    "verification": "These results came from the parent agent. This agent did not repeat the hardware tests.",
+    "model": "S6PXW-T964",
+    "firmware": "v1.0.0.35",
+    "get_mmi_state": {
+      "request": "05 5A 02 00 80 2C",
+      "response": "05 5B 03 00 80 2C 03"
+    },
+    "get_mmi_enum_audio_path": {
+      "request": "05 5A 04 00 01 09 0A 00",
+      "result": "The BLE write was acknowledged, but no matching reply arrived within 4 seconds.",
+      "other_notification": "05 5C 03 00 03 31 01"
+    }
+  },
+  "limitations": [
+    "No working live PLYR query for current AUX or USB input was established.",
+    "No names for AudioPathEnum values 0 and 1 were recovered.",
+    "The GET_MMI_ENUM packet is a confirmed SDK format, but the parent reported no matching PLYR reply.",
+    "An acknowledged BLE write does not establish that firmware implemented or accepted the command.",
+    "NVKEY reads in EQ-save tasks may concern stored processing settings rather than the active physical input.",
+    "The static packet reconstructions omit any transport-specific forwarding or wrapping that may be required.",
+    "No Ghidra or REA provider was started by this agent."
+  ],
+  "tools": [
+    "nm -n",
+    "xcrun llvm-objdump with bounded address windows",
+    "Python struct reads of jump tables, metadata, and static byte-array objects",
+    "Streamed ranges from /tmp/skull-sdk-all.asm"
+  ]
+}

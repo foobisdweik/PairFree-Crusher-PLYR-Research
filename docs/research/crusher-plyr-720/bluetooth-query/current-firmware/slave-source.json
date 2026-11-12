@@ -1,0 +1,10 @@
+{
+  "url": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.35.bin",
+  "url_provenance": "Version .35 substituted into manifest-derived .34 Slave URL.",
+  "bytes": 1402554,
+  "sha256": "53629f02bccfbd3eb80ac5317b52cbe7fcc1dc6c83b38d4dd2d2a5d48f7bfeb4",
+  "decoded_bytes": 2289664,
+  "decoded_sha256": "275a8380461aea6616192be3d1118b7df17217c596f256aadfb49a9fe21f0af3",
+  "outer_hash_verified": true,
+  "flashed": false
+}

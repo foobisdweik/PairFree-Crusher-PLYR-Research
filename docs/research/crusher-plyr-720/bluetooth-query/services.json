@@ -1,0 +1,133 @@
+{
+  "name" : "BLE-CRUSHER PLYR 720",
+  "scope" : "Service discovery only. No characteristic values read and no control writes.",
+  "services" : [
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : true,
+          "properties" : 18,
+          "read" : true,
+          "uuid" : "2A19",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "180F"
+    },
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 12,
+          "read" : false,
+          "uuid" : "43484152-2DAB-3241-6972-6F6861424C45",
+          "write" : true,
+          "write_without_response" : true
+        },
+        {
+          "indicate" : false,
+          "notify" : true,
+          "properties" : 16,
+          "read" : false,
+          "uuid" : "43484152-2DAB-3141-6972-6F6861424C45",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "5052494D-2DAB-0341-6972-6F6861424C45"
+    },
+    {
+      "characteristics" : [
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A23",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A24",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A25",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A26",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A27",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A28",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A29",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A2A",
+          "write" : false,
+          "write_without_response" : false
+        },
+        {
+          "indicate" : false,
+          "notify" : false,
+          "properties" : 2,
+          "read" : true,
+          "uuid" : "2A50",
+          "write" : false,
+          "write_without_response" : false
+        }
+      ],
+      "error" : "none",
+      "uuid" : "180A"
+    }
+  ],
+  "status" : "service discovery completed"
+}

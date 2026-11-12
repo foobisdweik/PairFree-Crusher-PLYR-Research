@@ -1,0 +1,3788 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "scope": "Evidence consolidation. No live control commands or firmware writes occurred.",
+  "status_semantics": "source-confirmed means a local source states the claim. It does not mean current hardware validation.",
+  "handoff": {
+    "path": "/Users/iphoobis/Downloads/THX_on_ARM64_Handoff.md",
+    "sha256": "b7d5398c67f6b84d914c54cc2e59d3f06749d75261e95cdfe8979e411dc57491",
+    "authority": "Reference report; not independently verified VM state."
+  },
+  "batches": [
+    {
+      "name": "bluetooth",
+      "scope": "Six assigned PairFree files only. These describe host-side accessory commands, not recovered Bluetooth controller HCI, LMP, or LLCP handlers. No VM, hardware, network, or Ghidra analysis occurred.",
+      "gaps": [
+        "The exact Bluetooth service and per-model transport configuration for product 0x29 or 0x2A are not recovered in these files.",
+        "The specific command ids and payloads for powered aux routing, THX, LED control, game/chat mix, and firmware update remain unknown here.",
+        "The documents reference an external decompilation tree at E:\\Builds\\research\\decompiled\\skullcandy. The assigned repository does not contain that evidence in these six files.",
+        "No firmware package, memory map, executable image, encryption scheme, package signature format, or decryption key is established.",
+        "No PLYR720 Bluetooth command capture or local trust transcript is established.",
+        "An authenticated session cipher does not identify a firmware encryption cipher.",
+        "A THX feature flag in the catalog does not prove that THX processing runs inside the headset."
+      ]
+    },
+    {
+      "name": "data",
+      "scope": {
+        "repository": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research",
+        "included": [
+          "data tree inventory and keyword search",
+          "tools tree inventory and keyword search",
+          "docs/RESEARCH.md",
+          "docs/UPSTREAM.md"
+        ],
+        "excluded": [
+          "docs/skullcandy assigned to another batch",
+          "AirohaPeq.kt assigned to another batch",
+          "external Windows artifacts",
+          "network downloads",
+          "VM and hardware"
+        ],
+        "inventory": {
+          "data_files": 88,
+          "data_bytes": 3124413,
+          "tools_files": 241,
+          "tools_bytes": 499412,
+          "data_skullcandy_exists": false,
+          "skullcandy_crusher_plyr_content_matches_in_data_tools": 0,
+          "firmware_capture_project_candidates": 0
+        },
+        "inventory_method": "Walked the repository except .git, node_modules, .venv and __pycache__. Searched text content in data and tools. Candidate extensions were .bin, .fw, .hex, .dfu, .gpr, .zip, .apk, .so, .elf, .pcap, .pcapng, .btsnoop and .cap."
+      },
+      "gaps": [
+        "There is no data/skullcandy directory in the supplied PairFree checkout.",
+        "No files in the data or tools trees mention Skullcandy, Crusher or PLYR.",
+        "No firmware binary, APK, native .so, Ghidra project or packet capture exists under the candidate extensions in the inventoried repository.",
+        "The scoped evidence does not identify a PLYR 720 firmware container, processor, load address, encryption mode, signature scheme or decryption key.",
+        "The external Windows artifact paths are references, not files available in these two supplied directories.",
+        "No actual hardware behavior was confirmed in this batch.",
+        "Commands from other Airoha products must remain separate until the PLYR transport and command behavior are matched."
+      ]
+    },
+    {
+      "name": "usb",
+      "scope": {
+        "repository": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon",
+        "commit": "8b0fc1f1e771760ff74bed1cb4091dd9ee41ad4b",
+        "inventory_files": 25,
+        "inventory_bytes": 200539,
+        "batches": [
+          [
+            "docs/PROTOCOL.md",
+            "bridge/hidbridge.py",
+            "dll/hidbridge_dll.c",
+            "tools/hidprobe.py",
+            "tools/hidlog.c"
+          ],
+          [
+            "scripts/patch_asar.py",
+            "README.md",
+            "CONTRIBUTING.md",
+            "udev/99-skullcandy.rules",
+            "dll/hid.def"
+          ]
+        ],
+        "binary": {
+          "path": "dll/hid_bridge.dll",
+          "type": "PE32+ x86-64 DLL",
+          "sha256": "4f00c670cb388ba939e9c312417b2bc8b7dc83e7c372339d17508711fc96c277"
+        }
+      },
+      "gaps": [
+        "No Crusher PLYR720-specific USB report capture or validated report descriptor exists here.",
+        "The AB1565 identification applies to SLYR Pro, not to Crusher PLYR720.",
+        "The native helper uses Linux-only hidraw and ioctl. It is not a macOS bridge implementation.",
+        "No raw capture validates the documented packet excerpt independently.",
+        "No firmware update sequence, encrypted container, checksum scheme, signing scheme, boot ROM, debug interface, memory map, or cryptographic key is present.",
+        "No command in this repository proves THX processing on the headset.",
+        "The command ID 0x0A0C and parameters 02 10 e8 03 need confirmation on Crusher PLYR720.",
+        "The documented channel and length interpretations need more than one sample.",
+        "Existing logger truncation prevents complete replay of reports longer than 48 bytes.",
+        "No new physical tests were performed. No VM or headset was accessed.",
+        "The reply outer-length interpretation and 63-byte transfer size differ by one byte. The document lacks the full report needed to resolve this."
+      ]
+    }
+  ],
+  "files_reviewed": [
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/main/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeq.kt",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/test/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeqTest.kt",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/MODELS.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+    "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/VIRTUAL_TESTING.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/CONTRIBUTING.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hid.def",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+    "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/udev/99-skullcandy.rules"
+  ],
+  "findings": [
+    {
+      "id": "BT01",
+      "topic": "evidence limits",
+      "claim": "The repository documents research from Skullcandy 5.0.6. It reports no Skullcandy implementation and no connected hardware.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 3,
+          "line_end": 14
+        }
+      ],
+      "model_scope": "All Skullcandy research in these four documents",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT02",
+      "topic": "model identity",
+      "claim": "Crusher PLYR 720 has product id 0x29 and model S6PCW. Crusher PLYR 720 XBOX has product id 0x2A and model S6PXW. Both catalog entries select bluetoothClassic and leAudio.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/MODELS.md",
+          "line_start": 42,
+          "line_end": 43
+        }
+      ],
+      "model_scope": "Crusher PLYR 720 and Crusher PLYR 720 XBOX",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT03",
+      "topic": "model features",
+      "claim": "Both catalog entries include mic gain, sidetone, clear voice, Crusher bass boost, Crusher controls, customEqualizer4x, presets, enhanced sound perception, game/chat mix, gaming EQ, LED settings, multipoint, THX headtracking, and THX spatial audio. These are unions across firmware entries.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/MODELS.md",
+          "line_start": 42,
+          "line_end": 43
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/MODELS.md",
+          "line_start": 3,
+          "line_end": 5
+        }
+      ],
+      "model_scope": "Crusher PLYR 720 and Crusher PLYR 720 XBOX",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT04",
+      "topic": "transport selection",
+      "claim": "Android connection types do not identify command protocols. The app contains legacy BLE, GAIA, RACE, JieLi, and Bragi paths. A model name alone does not select a path.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 39,
+          "line_end": 48
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT05",
+      "topic": "Bragi framing",
+      "claim": "The documented frame is 7E FF flags protocol length_u16_BE header_CRC8 payload optional_FCS_u16_BE. The seven-byte header includes its CRC. Normal flags are 0x80 when the FCS is present.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 63,
+          "line_end": 75
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT06",
+      "topic": "Bragi protocol selectors",
+      "claim": "The payload selectors are 0x90 user plane, 0x91 RTP, 0x92 secure RTP, 0x93 protobuf, 0x94 BOS-RPC, and 0x95 secure BOS-RPC.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 71,
+          "line_end": 75
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT07",
+      "topic": "Bragi checksums",
+      "claim": "Header CRC-8/ROHC uses reflected polynomial 0xE0, initial 0xFF, no final XOR, over bytes 0..5. CRC-16/MCRF4XX uses reflected polynomial 0x8408, initial 0xFFFF, no final XOR, over header bytes 1..6 and payload. The FCS is stored high byte first.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 77,
+          "line_end": 81
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT08",
+      "topic": "Bragi stream parser",
+      "claim": "The reader accepts partial headers, partial payloads, multiple frames, and split FCS bytes. Its internal buffer holds 4096 bytes. Oversized announced lengths need explicit rejection in a new implementation.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 73,
+          "line_end": 75
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT09",
+      "topic": "Bragi layering",
+      "claim": "Some serializers pass an RPC body through another framing layer. Other serializers add PPP directly. The selected transport must determine the wrapping.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 83,
+          "line_end": 85
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT10",
+      "topic": "RPC layout",
+      "claim": "The plaintext RPC body starts with flags/type, service, method, and tag bytes. Type uses bits 2..3: request 0, response 1, status 2, abort 3. The serializer sets final flag 0x10. Replies require tag, service, and method matching.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 87,
+          "line_end": 98
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT11",
+      "topic": "RPC status",
+      "claim": "A STATUS body must contain zero in its first byte for success under the documented vendor implementation. An empty body does not explicitly indicate success. Status 0x64 means that another subscription replaced the subscription.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 100,
+          "line_end": 104
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT12",
+      "topic": "analytical vector",
+      "claim": "The device.dev_info frame 7E FF 80 94 00 06 2D 10 02 01 00 08 00 54 80 is an analytical vector. It is not a hardware capture and does not prove authentication.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 106,
+          "line_end": 114
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT13",
+      "topic": "secure session",
+      "claim": "Service 25 handles authenticated access. device.dev_info field 12 reports its requirement. The SDK contains ECDH and AES-GCM, AES-CCM, and ChaCha20-Poly1305 paths. No secure session or pairing was attempted.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 154,
+          "line_end": 166
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT14",
+      "topic": "firmware encryption limit",
+      "claim": "The secure-session evidence describes local accessory communication. It does not establish whether the firmware package is encrypted or identify a firmware key.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 154,
+          "line_end": 166
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT15",
+      "topic": "RACE frame lead",
+      "claim": "The Java helper uses 05 5A for requests, 05 5B for replies, and 05 5D for notifications. It uses a little-endian 16-bit length and a command id. The SDK timeout is 8000 milliseconds. These files do not supply the complete RACE layout.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 184,
+          "line_end": 189
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT16",
+      "topic": "native code lead",
+      "claim": "The Dart snapshot exposes strings for Crusher EQ volume, spatial audio, headtracking, LEDs, and other features. Strings do not establish command ids or model-to-chip mapping.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 168,
+          "line_end": 175
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT17",
+      "topic": "Skullcandy PEQ limit",
+      "claim": "The Skullcandy libnative-peq.so hash is ffa603fecd3e496a12c5b1f541b56b2c83566801f19200db9ed92cc27bb0ee68. NativePeq_getCofeParam was inspected at 0x1C2A4. This does not prove compatibility with the existing PairFree coefficient implementation.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 177,
+          "line_end": 182
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT18",
+      "topic": "reusable PEQ math",
+      "claim": "AirohaPeq implements math derived from JBL Headphones 5.37.10. PEQ takes bandwidth in Hz, but SERIALIZE takes Q. Supported sample rates are 32000, 44100, 48000, 88200, and 96000 Hz.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/main/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeq.kt",
+          "line_start": 15,
+          "line_end": 45
+        }
+      ],
+      "model_scope": "JBL-derived Airoha math; Crusher PLYR 720 compatibility unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT19",
+      "topic": "PEQ serialization",
+      "claim": "The implementation returns 3 + 10 * band_count shorts. It starts with the band count. Each stage contains five 32-bit coefficients split into high and low shorts. The final 32-bit master gain uses Q26.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/main/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeq.kt",
+          "line_start": 60,
+          "line_end": 64
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/main/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeq.kt",
+          "line_start": 136,
+          "line_end": 143
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/main/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeq.kt",
+          "line_start": 215,
+          "line_end": 218
+        }
+      ],
+      "model_scope": "JBL-derived Airoha math; Crusher PLYR 720 compatibility unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT20",
+      "topic": "PEQ tests",
+      "claim": "The test code compares coefficients and peak values with JBL library vectors. It requires at least 30 cases. These tests are not Skullcandy device captures, and this analysis did not execute them.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/android/protocol/src/test/kotlin/io/github/omegadestroyer/pairfree/protocol/airoha/AirohaPeqTest.kt",
+          "line_start": 14,
+          "line_end": 39
+        }
+      ],
+      "model_scope": "JBL-derived Airoha math; Crusher PLYR 720 compatibility unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT21",
+      "topic": "virtual test limit",
+      "claim": "The virtual test used Crusher 1080 ANC, not PLYR 720. The app displayed Internet Required. No RFCOMM control channel or application command was captured.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/VIRTUAL_TESTING.md",
+          "line_start": 3,
+          "line_end": 8
+        }
+      ],
+      "model_scope": "Crusher 1080 ANC only",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT22",
+      "topic": "UUID scope limit",
+      "claim": "54C5BF4C-C52F-4635-98DC-EEBF97C6726F is a Bragi service lead attributed to the untested Earshot Crusher 1080 notes. A4602B24-... is a separate Airoha service lead. Neither identifies the PLYR 720 service in these files.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 54,
+          "line_end": 61
+        }
+      ],
+      "model_scope": "Crusher 1080 ANC reference only",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT23",
+      "topic": "Crusher settings",
+      "claim": "Bragi service 23 exposes config_get 1, state_get 2, and state_set 3. The config reports maximum intensity, an intensity read-only flag, and optional mode count. The set fields are optional active, intensity, and mode. Modes 0/1/2 mean high/medium/low only where supported.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 133,
+          "line_end": 148
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT24",
+      "topic": "asynchronous settings",
+      "claim": "Hearing mode configuration uses protobuf fields mode 1, activate 2, optional preset 3, and optional gain 4. The schema warns that Airoha can delay acoustic application by 500 milliseconds. Unsolicited state can precede the reply.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 135,
+          "line_end": 138
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "BT25",
+      "topic": "EQ distinction",
+      "claim": "Bragi EQ uses frequency, floating gain, and Q. Device limits specify band count, ranges, and quantization. Its protobuf fields cannot be replaced with native coefficients without compatibility evidence.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 140,
+          "line_end": 143
+        }
+      ],
+      "model_scope": "Skullcandy Android 5.0.6 SDK; applicability to Crusher PLYR 720 unverified",
+      "batch": "bluetooth"
+    },
+    {
+      "id": "data-001",
+      "topic": "artifact_provenance",
+      "claim": "The research identifies app.skullcandy 5.0.6. Its reference bundle SHA-256 is 255153c95a3a12131af83350dc962a22b20eb49b6e73ce4a92800e82af254e9a. This identifies the original bundle, not an extracted base APK.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 23,
+          "line_end": 33
+        }
+      ],
+      "model_scope": "Skullcandy app inventory. This does not establish Crusher PLYR 720 support.",
+      "batch": "data"
+    },
+    {
+      "id": "data-002",
+      "topic": "artifact_provenance",
+      "claim": "The earlier research inventoried four Skullcandy APK files and 26 native .so entries. Its supplied native split is arm64-v8a. These counts do not prove that all native functions were decoded.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 37,
+          "line_end": 50
+        }
+      ],
+      "model_scope": "Skullcandy app 5.0.6",
+      "batch": "data"
+    },
+    {
+      "id": "data-003",
+      "topic": "missing_artifacts",
+      "claim": "The document places raw artifacts and disassembly at E:\\Builds\\research\\vendor-audit-2026-11-06. It places earlier decompilations at E:\\Builds\\research\\decompiled. It says none was copied into this repository. Those external locations were not inspected during this batch.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 52,
+          "line_end": 57
+        }
+      ],
+      "model_scope": "Skullcandy app research",
+      "batch": "data"
+    },
+    {
+      "id": "data-004",
+      "topic": "firmware_availability",
+      "claim": "The recorded research fetched no firmware and executed no Bluetooth commands. Therefore its findings are static app evidence, rather than a recording of this headset.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 96,
+          "line_end": 105
+        }
+      ],
+      "model_scope": "All five vendors in the research pass, including Skullcandy",
+      "batch": "data"
+    },
+    {
+      "id": "data-005",
+      "topic": "crypto_scope",
+      "claim": "The documented successful bundled-file decryption concerns HeyMelody. It does not establish a Skullcandy firmware decryption method or key.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 68,
+          "line_end": 74
+        }
+      ],
+      "model_scope": "HeyMelody only. Excluded from Skullcandy decryption evidence.",
+      "batch": "data"
+    },
+    {
+      "id": "data-006",
+      "topic": "native_analysis_lead",
+      "claim": "The prior analysis inspected Skullcandy native exports and JNI entry points for EQ. The document directs addresses and hashes to vendor notes. That does not establish access to controller firmware.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 71,
+          "line_end": 72
+        }
+      ],
+      "model_scope": "Skullcandy mobile app",
+      "batch": "data"
+    },
+    {
+      "id": "data-007",
+      "topic": "analytical_packet_provenance",
+      "claim": "The Bragi device.dev_info example has header CRC 2D and FCS 5480. The values were recalculated analytically. They were not captured from a headset.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 96,
+          "line_end": 100
+        }
+      ],
+      "model_scope": "Bragi protocol example. Crusher PLYR 720 applicability is unknown.",
+      "batch": "data"
+    },
+    {
+      "id": "data-008",
+      "topic": "reference_implementation_limit",
+      "claim": "The Earshot revision a581f96efb5a91b0622a5be9600a02a72b4e1649 implements Crusher 1080 ANC. Its implementation is explicitly untested on hardware. It is not proof of Crusher PLYR 720 behavior.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 73,
+          "line_end": 77
+        }
+      ],
+      "model_scope": "Crusher 1080 ANC reference only",
+      "batch": "data"
+    },
+    {
+      "id": "data-009",
+      "topic": "rpc_status",
+      "claim": "The recorded Skullcandy SDK parser requires STATUS body byte zero to exist and equal zero for success. An absent body follows the error path. Earshot accepts an absent or empty body, so its behavior differs. Hardware confirmation remains pending.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 79,
+          "line_end": 81
+        }
+      ],
+      "model_scope": "Skullcandy 5.0.6 Bragi SDK. Crusher PLYR 720 applicability is unknown.",
+      "batch": "data"
+    },
+    {
+      "id": "data-010",
+      "topic": "model_scope",
+      "claim": "The research lists 56 Skullcandy catalog records. Seven records are speakers, and some records contain metadata only. Per-model Dart routes remain partly undecoded. Therefore the catalog count does not measure confirmed protocol support.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/RESEARCH.md",
+          "line_start": 8,
+          "line_end": 19
+        }
+      ],
+      "model_scope": "Skullcandy catalog union",
+      "batch": "data"
+    },
+    {
+      "id": "usb-01",
+      "topic": "coverage",
+      "claim": "The repository documents SLYR Pro on Linux with Skull-HQ 3.2.0 and Wine 11.x. It does not establish Crusher PLYR720 support.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 13,
+          "line_end": 15
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 215,
+          "line_end": 219
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-02",
+      "topic": "device",
+      "claim": "The documented SLYR Pro has VID 0x34F0, PID 0x2220, and an AB1565 chip response. Interface MI_05 exposes vendor collection col02 with usage page 0xFF13 and usage 0x01.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 10,
+          "line_end": 22
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-03",
+      "topic": "transport",
+      "claim": "The documentation reports real replies through Linux HIDIOCGFEATURE. It reports empty interrupt reads and empty Wine GetInputReport replies. These are historical SLYR Pro observations, not new physical tests.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 26,
+          "line_end": 45
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-04",
+      "topic": "frame",
+      "claim": "The documented request uses report 0x06 with 62 bytes including zero padding. The documented FEATURE response uses report 0x07 with 63 bytes. Only a prefix of each packet is printed.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 61
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-05",
+      "topic": "frame",
+      "claim": "The document infers an outer little-endian length at offsets 1-2, channel 0x05 at offset 3, request/reply types 0x5A/0x5B at offset 4, another length at offsets 5-6, and command ID at offsets 7-8. It labels this interpretation as based on one sample.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 63,
+          "line_end": 81
+        }
+      ],
+      "model_scope": "SLYR Pro; Crusher PLYR720 transfer is unverified",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-06",
+      "topic": "local bridge",
+      "claim": "The bridge uses TCP at 127.0.0.1:38099. Requests have [op:u8][rid:u8][len:u16le]. Only WRITE and SETFEATURE carry len payload bytes. Responses have [status:u8][len:u16le][data]. This is a local software protocol, not a headset protocol.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-07",
+      "topic": "local bridge",
+      "claim": "The helper selects the first sorted hidraw node matching VID 0x34F0 and the optional product filter. It does not select a usage page, interface, or original Windows handle. Multiple attached Skullcandy devices may therefore route to the wrong node.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 28,
+          "line_end": 33
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 47,
+          "line_end": 61
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-08",
+      "topic": "local bridge",
+      "claim": "The DLL forwards GetInputReport and GetFeature to bridge GETFEATURE. It forwards SetOutputReport to WRITE and SetFeature to SETFEATURE for any handle with VID 0x34F0. Other devices use hidwine.dll.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 32,
+          "line_end": 41
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 134,
+          "line_end": 175
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-09",
+      "topic": "retry",
+      "claim": "The DLL allows at most two attempts per operation. It resets the socket after send or receive failure. It has no explicit socket deadline. An empty GETFEATURE reply ends the attempt loop.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 44,
+          "line_end": 70
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 73,
+          "line_end": 124
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-10",
+      "topic": "retry",
+      "claim": "The helper reopens a missing device on demand and reopens after a write error. Feature-read errors return empty bytes without reopening. All device operations share one lock.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 63,
+          "line_end": 117
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-11",
+      "topic": "framing risks",
+      "claim": "The helper treats any positive write count as success, even if fewer bytes were written than requested. The DLL truncates an oversized response length without draining the remainder. The latter could desynchronize the TCP stream if the helper ever sends an oversized response.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 83,
+          "line_end": 89
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 142,
+          "line_end": 147
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 99,
+          "line_end": 106
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-12",
+      "topic": "detection patch",
+      "claim": "The patch reads the first 18 bytes of Linux USB descriptor files when node-hid has no Skullcandy device. It returns vendorId and productId from offsets 8 and 10. It does not create real command replies or a usable HID path.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 31,
+          "line_end": 56
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 59,
+          "line_end": 79
+        }
+      ],
+      "model_scope": "Skull-HQ host software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-13",
+      "topic": "forced responses",
+      "claim": "The reviewed bridge code does not synthesize device state, firmware versions, THX state, or successful HID data. It transports bytes and converts transport results to booleans. The detection patch supplies descriptor-derived enumeration records.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/dll/hidbridge_dll.c",
+          "line_start": 127,
+          "line_end": 175
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/scripts/patch_asar.py",
+          "line_start": 31,
+          "line_end": 56
+        }
+      ],
+      "model_scope": "Bridge software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-14",
+      "topic": "capture tooling",
+      "claim": "hidprobe writes the supplied bytes without padding, waits 30 ms, fetches a 63-byte feature report by default, then waits up to 0.5 seconds for interrupt input. It uses the first matching device.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+          "line_start": 64,
+          "line_end": 73
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidprobe.py",
+          "line_start": 92,
+          "line_end": 120
+        }
+      ],
+      "model_scope": "Probe software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-15",
+      "topic": "capture limits",
+      "claim": "hidlog logs at most 48 bytes of each report. The logger passes calls to Wine rather than the native bridge. Consequently, its replies may contain the same Wine failures that the bridge addresses.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+          "line_start": 44,
+          "line_end": 49
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/tools/hidlog.c",
+          "line_start": 58,
+          "line_end": 80
+        }
+      ],
+      "model_scope": "Logger software only",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-16",
+      "topic": "access rules",
+      "claim": "The checked-in Linux access rules match only PID 0x2220. They do not grant matching permissions for Crusher PID 0x5220 or dongle PID 0x5320.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/udev/99-skullcandy.rules",
+          "line_start": 1,
+          "line_end": 7
+        }
+      ],
+      "model_scope": "SLYR Pro defaults",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-17",
+      "topic": "firmware relevance",
+      "claim": "The repository contains one built x64 HID bridge DLL. It contains no firmware image, decryption implementation, firmware key, firmware updater, or Bluetooth controller project among its 25 non-Git files. The only decoded device command is the SLYR Pro device-info example.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 81
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/README.md",
+          "line_start": 151,
+          "line_end": 165
+        }
+      ],
+      "model_scope": "Repository inventory",
+      "batch": "usb"
+    },
+    {
+      "id": "usb-18",
+      "topic": "length ambiguity",
+      "claim": "The response prefix has outer length 0x003B and inner length 0x000D. If the outer length counts bytes after offset 2, it describes 62 total bytes, but the prose reports a 63-byte FEATURE transfer. The inner length ends at offset 19 if it counts bytes after offset 6. That matches the 20-byte printed prefix, but the remaining transfer bytes are not shown. Padding, transfer size, and meaningful frame size must remain separate.",
+      "status": "inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 49,
+          "line_end": 78
+        }
+      ],
+      "model_scope": "SLYR Pro single documented exchange",
+      "batch": "usb"
+    }
+  ],
+  "commands": [
+    {
+      "name": "bos_action_button_rpc.proto:get_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:get_action",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:set_action",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:inject",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:invoke",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:subscribe",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_action_button_rpc.proto:get_info_v2",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 3,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_audio_out_rpc.proto:mode_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 21,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 8,
+          "line_end": 8
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_audio_out_rpc.proto:mode_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 21,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 8,
+          "line_end": 8
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:hello",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:authenticate",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:trust_establishment_start",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:trust_establishment_commit",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:trust_establishment_nonce",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:trust_establishment_confirm",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_authenticated_access.proto:trust_establishment_abort",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 25,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 9,
+          "line_end": 9
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_bluetooth.proto:devicename_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 7,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 10,
+          "line_end": 10
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_bluetooth.proto:devicename_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 7,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 10,
+          "line_end": 10
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_calibration.proto:start",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 18,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 11,
+          "line_end": 11
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_calibration.proto:stop",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 18,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 11,
+          "line_end": 11
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_calibration.proto:info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 18,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 11,
+          "line_end": 11
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_calibration.proto:reset",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 18,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 11,
+          "line_end": 11
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_crusher.proto:config_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 23,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 12,
+          "line_end": 12
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_crusher.proto:state_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 23,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 12,
+          "line_end": 12
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_crusher.proto:state_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 23,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 12,
+          "line_end": 12
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:start",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:stop",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:state",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:list_algos",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:list_channels",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_data_streamer.proto:subscribe",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 14,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 13,
+          "line_end": 13
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:dev_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:sys_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:batt_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:mode_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:time_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_device_info_rpc.proto:time_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 2,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 14,
+          "line_end": 14
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_feature_rpc.proto:get_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 9,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 15,
+          "line_end": 15
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_feature_rpc.proto:set_state",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 9,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 15,
+          "line_end": 15
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:mode_read",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:mode_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:mode_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_read_state",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_read_conf",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_enable",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 8
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:peq_disable",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 9
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:sidetone_read",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 10
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:sidetone_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 11
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_hearing.proto:sidetone_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 4,
+        "method_decimal": 12
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 16,
+          "line_end": 16
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_insertion.proto:mode_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 12,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_insertion.proto:mode_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 12,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_insertion.proto:trigger_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 12,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_insertion.proto:trigger_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 12,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_language_rpc.proto:lang_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 6,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 18,
+          "line_end": 18
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_language_rpc.proto:lang_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 6,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 18,
+          "line_end": 18
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_low_latency_rpc.proto:get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 8,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 19,
+          "line_end": 19
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_low_latency_rpc.proto:set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 8,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 19,
+          "line_end": 19
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:play",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:stop",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:pause",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:next",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:prev",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_media_player_rpc.proto:get_playback_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 15,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:reset",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:activate",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:deactivate",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:set_user_id",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:set_intensity",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_mimi_rpc.proto:set_preset",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 10,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_power_manager.proto:timeout_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 13,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 22,
+          "line_end": 22
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_rpc_echo.proto:echo",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 1,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 23,
+          "line_end": 23
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_sounds.proto:options_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 22,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 24,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_sounds.proto:options_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 22,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 24,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio.proto:info_get",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 17,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 25,
+          "line_end": 25
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio.proto:audio_source_mode_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 17,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 25,
+          "line_end": 25
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:hop_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:hop_read",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_read",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_walk_detection_state",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_ref_axis_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_upright_calibrate_update",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:iht_manual_recentering_trigger",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 8
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:lwh_configure",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 9
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:lwh_read",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 10
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:set_client_dolby_audio_processing_support",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 11
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:read_client_dolby_audio_processing_support",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 12
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:set_hrtf_processing_override",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 13
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_spatial_audio_dolby.proto:read_hrtf_processing_override",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 19,
+        "method_decimal": 14
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_test_diagnostics.proto:get_memory_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 100,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_test_diagnostics.proto:get_task_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 100,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_test_diagnostics.proto:get_models",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 100,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_test_diagnostics.proto:get_pool_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 100,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_test_diagnostics.proto:boot_count",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 100,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 1
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:disable",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 2
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:enable",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 3
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:streaming_stop",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 4
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:streaming_start",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 5
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:mode_set",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 6
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:subscribe",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 7
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:get_vc_crash_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 100
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "bos_voice_control_rpc.proto:vc_reset_crash_info",
+      "transport": "Bragi BOS-RPC; PLYR720 transport selection unverified",
+      "opcode": {
+        "service_decimal": 5,
+        "method_decimal": 101
+      },
+      "request": "flags/type | service_u8 | method_u8 | tag_u8 | schema-specific protobuf",
+      "response": "Matched service/method/tag; response or status; subscriptions may yield multiple responses",
+      "model_scope": "Bundled Bragi schemas; no proof that PLYR720 implements this service",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/SERVICES.md",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/skullcandy/PROTOCOL.md",
+          "line_start": 89,
+          "line_end": 104
+        }
+      ],
+      "batch": "bluetooth"
+    },
+    {
+      "name": "BOS-RPC STATUS success parsing",
+      "transport": "Bragi BOS-RPC. Exact physical transport is outside this batch.",
+      "opcode": null,
+      "request": null,
+      "response": "Require at least one body byte. The first body byte must be 00 for success.",
+      "model_scope": "Skullcandy 5.0.6 Bragi SDK. Crusher PLYR 720 is unverified.",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/UPSTREAM.md",
+          "line_start": 79,
+          "line_end": 81
+        }
+      ],
+      "batch": "data"
+    },
+    {
+      "name": "get device info (document label)",
+      "transport": "USB HID output -> FEATURE reply",
+      "opcode": "0x0A0C",
+      "request": "06 0a 00 05 5a 06 00 0c 0a 02 10 e8 03; documentation says zero-pad to 62 bytes",
+      "response": "07 3b 00 05 5b 0d 00 0c 0a 00 02 10 06 00 41 42 31 35 36 35 ...; documentation says 63 bytes",
+      "model_scope": "SLYR Pro 34F0:2220 only; applicability to Crusher PLYR720 is unverified",
+      "status": "source-confirmed capture excerpt; frame interpretation inferred",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/docs/PROTOCOL.md",
+          "line_start": 47,
+          "line_end": 81
+        }
+      ],
+      "batch": "usb"
+    },
+    {
+      "name": "bridge WRITE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 1,
+      "request": "header plus full output report",
+      "response": "status; zero length",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "batch": "usb"
+    },
+    {
+      "name": "bridge GETFEATURE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 2,
+      "request": "header only; rid and requested length",
+      "response": "status; returned report length and bytes",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "batch": "usb"
+    },
+    {
+      "name": "bridge SETFEATURE",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 3,
+      "request": "header plus full feature report",
+      "response": "status; zero length",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "batch": "usb"
+    },
+    {
+      "name": "bridge READ",
+      "transport": "local TCP 127.0.0.1:38099",
+      "opcode": 4,
+      "request": "header only; requested length",
+      "response": "status; interrupt bytes if available",
+      "model_scope": "Bridge software only; not a headset opcode",
+      "status": "source-confirmed",
+      "evidence": [
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 18,
+          "line_end": 24
+        },
+        {
+          "path": "/Users/iphoobis/Developer/skullcandy-hq-apple-silicon/bridge/hidbridge.py",
+          "line_start": 129,
+          "line_end": 155
+        }
+      ],
+      "batch": "usb"
+    }
+  ],
+  "additional_evidence": {
+    "ios_app": "ios-app-evidence.json",
+    "ios_native": "ios-native-evidence.json",
+    "race_schemas": "race-commands.json",
+    "downloaded_firmware": "firmware/downloads.json",
+    "firmware_container": "firmware-route.json",
+    "decoded_firmware": "decoded-findings.json",
+    "decoded_manifest": "firmware/decoded/manifest.json",
+    "elf_manifest": "firmware/decoded/elf/manifest.json"
+  }
+}

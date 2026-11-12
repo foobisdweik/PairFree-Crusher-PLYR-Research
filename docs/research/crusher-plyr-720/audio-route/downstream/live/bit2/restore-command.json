@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794450209.8199801
+    },
+    {
+      "hex" : "055a0c00010d0002055a040002000000",
+      "kind" : "request",
+      "time" : 1794450209.87836
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794450209.880837
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794450209.9595299
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794450209.9622579
+    },
+    {
+      "error" : "none",
+      "hex" : "055d0b00010d0002055b0300020000",
+      "kind" : "notification",
+      "time" : 1794450209.9626651
+    }
+  ],
+  "query" : "RELAY_RACE inner 055a040002000000",
+  "scope" : "One approved RACE command (state change).",
+  "status" : "response window completed"
+}

@@ -1,0 +1,144 @@
+{
+  "frames_checked": 22,
+  "scope": "Packet lengths and nested frame lengths only. Semantic interpretation is separate.",
+  "frames": [
+    {
+      "capture": "mmi-state-response.json",
+      "direction": "request",
+      "opcode": "0x2c80",
+      "packet_bytes": 6
+    },
+    {
+      "capture": "mmi-state-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "mmi-state-response.json",
+      "direction": "notification",
+      "opcode": "0x2c80",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "audio-path-response.json",
+      "direction": "request",
+      "opcode": "0x901",
+      "packet_bytes": 8
+    },
+    {
+      "capture": "audio-path-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "line-input-ram-response.json",
+      "direction": "request",
+      "opcode": "0x1680",
+      "packet_bytes": 12
+    },
+    {
+      "capture": "line-input-ram-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "line-input-ram-response.json",
+      "direction": "notification",
+      "opcode": "0x1680",
+      "packet_bytes": 17
+    },
+    {
+      "capture": "build-version-response.json",
+      "direction": "request",
+      "opcode": "0x1e08",
+      "packet_bytes": 6
+    },
+    {
+      "capture": "build-version-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "build-version-response.json",
+      "direction": "notification",
+      "opcode": "0x1e08",
+      "packet_bytes": 119
+    },
+    {
+      "capture": "relay-id-response.json",
+      "direction": "request",
+      "opcode": "0xd00",
+      "packet_bytes": 6
+    },
+    {
+      "capture": "relay-id-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "relay-id-response.json",
+      "direction": "notification",
+      "opcode": "0xd00",
+      "packet_bytes": 8
+    },
+    {
+      "capture": "relay-build-response.json",
+      "direction": "request",
+      "opcode": "0xd01",
+      "packet_bytes": 14
+    },
+    {
+      "capture": "relay-build-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "relay-build-response.json",
+      "direction": "notification",
+      "opcode": "0xd01",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "relay-build-response.json",
+      "direction": "notification",
+      "opcode": "0xd01",
+      "packet_bytes": 127,
+      "inner_opcode": "0x1e08",
+      "relay_id": "0x200"
+    },
+    {
+      "capture": "relay-line-input-ram-response.json",
+      "direction": "request",
+      "opcode": "0xd01",
+      "packet_bytes": 20
+    },
+    {
+      "capture": "relay-line-input-ram-response.json",
+      "direction": "notification",
+      "opcode": "0x3103",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "relay-line-input-ram-response.json",
+      "direction": "notification",
+      "opcode": "0xd01",
+      "packet_bytes": 7
+    },
+    {
+      "capture": "relay-line-input-ram-response.json",
+      "direction": "notification",
+      "opcode": "0xd01",
+      "packet_bytes": 25,
+      "inner_opcode": "0x1680",
+      "relay_id": "0x200",
+      "read_address": "0x4247684",
+      "read_data_hex": "00010100"
+    }
+  ]
+}
