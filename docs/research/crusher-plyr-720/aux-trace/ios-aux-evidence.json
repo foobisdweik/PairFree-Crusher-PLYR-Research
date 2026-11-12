@@ -1,0 +1,893 @@
+{
+  "scope": {
+    "binaries": [
+      {
+        "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+        "bytes": 10769616,
+        "sha256": "d9ce96ce502e280d5f08ba961233bd262d48ec2e572dd5c4dd4aab0b9222d1d2"
+      },
+      {
+        "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework/App",
+        "bytes": 11989040,
+        "sha256": "5a7c29154da6e0d9744c668ff85d5bbcd637e4a8092ea5f99281488a3449961f"
+      }
+    ],
+    "no_device_access": true,
+    "no_app_execution": true,
+    "no_firmware_trace": true
+  },
+  "uuids": [
+    {
+      "uuid": "5052494D-2DAB-0341-6972-6F6861424C45",
+      "role": "SDK default command service",
+      "file_offset": "0x779100",
+      "assignment_addresses": [
+        "0x3779B4",
+        "0x3779DC"
+      ],
+      "ivar": "_OBJC_IVAR_$__TtC18AirohaUnifyLibrary18AirohaServiceCharc.CMD_SERVICE",
+      "ivar_symbol_address": "0x91A340",
+      "binary": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+      "model_limit": "Airoha SDK defaults. No PLYR connection was observed. The SDK permits overrides."
+    },
+    {
+      "uuid": "43484152-2DAB-3241-6972-6F6861424C45",
+      "role": "SDK default write characteristic (CMD_POINT)",
+      "file_offset": "0x779130",
+      "assignment_addresses": [
+        "0x377A64",
+        "0x377A8C"
+      ],
+      "ivar": "_OBJC_IVAR_$__TtC18AirohaUnifyLibrary18AirohaServiceCharc.CMD_POINT",
+      "ivar_symbol_address": "0x91A350",
+      "binary": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+      "model_limit": "Airoha SDK defaults. No PLYR connection was observed. The SDK permits overrides."
+    },
+    {
+      "uuid": "43484152-2DAB-3141-6972-6F6861424C45",
+      "role": "SDK default notify/indication characteristic (IND_POINT)",
+      "file_offset": "0x779160",
+      "assignment_addresses": [
+        "0x377A0C",
+        "0x377A34"
+      ],
+      "ivar": "_OBJC_IVAR_$__TtC18AirohaUnifyLibrary18AirohaServiceCharc.IND_POINT",
+      "ivar_symbol_address": "0x91A348",
+      "binary": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+      "model_limit": "Airoha SDK defaults. No PLYR connection was observed. The SDK permits overrides."
+    }
+  ],
+  "app_uuid_strings": [
+    {
+      "uuid": "00001100-D102-11E1-9B23-00025B00A5A5",
+      "file_offset": "0x9DD710",
+      "role": "unresolved from strings alone",
+      "model_scope": "App includes many products; PLYR mapping unverified"
+    },
+    {
+      "uuid": "00001101-D102-11E1-9B23-00025B00A5A5",
+      "file_offset": "0x932590",
+      "role": "unresolved from strings alone",
+      "model_scope": "App includes many products; PLYR mapping unverified"
+    },
+    {
+      "uuid": "00001102-D102-11E1-9B23-00025B00A5A5",
+      "file_offset": "0x8E1390",
+      "role": "unresolved from strings alone",
+      "model_scope": "App includes many products; PLYR mapping unverified"
+    }
+  ],
+  "symbols": [
+    "00000000000825c4 T dispatch thunk of AirohaUnifyLibrary.AirohaServices.getCommandServiceUUIDString() -> Swift.String",
+    "00000000001ccfd0 T dispatch thunk of AirohaUnifyLibrary.AirohaServices.getTxCharacteristicUUIDString() -> Swift.String",
+    "00000000001ccfec T dispatch thunk of AirohaUnifyLibrary.AirohaServices.getRxCharacteristicUUIDString() -> Swift.String",
+    "000000000021bfac T dispatch thunk of AirohaUnifyLibrary.AirohaEQPayload.isRealtimeUpdateOnLineinUSB0.getter : Swift.Bool",
+    "000000000021bfc8 T dispatch thunk of AirohaUnifyLibrary.AirohaEQPayload.isRealtimeUpdateOnLineinUSB0.setter : Swift.Bool",
+    "000000000021bfe4 T dispatch thunk of AirohaUnifyLibrary.AirohaEQPayload.isRealtimeUpdateOnLineinUSB0.modify : Swift.Bool",
+    "00000000002bfc58 T dispatch thunk of AirohaUnifyLibrary.AirohaServices.getScanServiceUUIDs() -> [__C.CBUUID]?",
+    "0000000000376928 t -[AirohaUnifyLibrary.AirohaServices getScanServiceUUIDs]",
+    "0000000000376990 t -[AirohaUnifyLibrary.AirohaServices getCommandServiceUUIDString]",
+    "0000000000376a5c t -[AirohaUnifyLibrary.AirohaServices getTxCharacteristicUUIDString]",
+    "0000000000376b28 t -[AirohaUnifyLibrary.AirohaServices getRxCharacteristicUUIDString]",
+    "0000000000376f6c t -[AirohaUnifyLibrary.AirohaServices setServiceCharacteristicUUIDsWithServiceUUID:writeCharacteristicUUID:notifyIndicationCharacteristicUUID:]",
+    "0000000000377938 t -[AirohaUnifyLibrary.AirohaServiceCharc init]",
+    "0000000000377cb4 t -[AirohaUnifyLibrary.AirohaServiceCharc getScanServiceUUIDs]",
+    "0000000000377d18 t -[AirohaUnifyLibrary.AirohaServiceCharc getCommandServiceUUIDString]",
+    "0000000000377d24 t -[AirohaUnifyLibrary.AirohaServiceCharc getTxCharacteristicUUIDString]",
+    "0000000000377d30 t -[AirohaUnifyLibrary.AirohaServiceCharc getRxCharacteristicUUIDString]",
+    "00000000003789f0 T dispatch thunk of AirohaUnifyLibrary.AirohaServices.setServiceCharacteristicUUIDs(serviceUUID: __C.CBUUID, writeCharacteristicUUID: __C.CBUUID, notifyIndicationCharacteristicUUID: __C.CBUUID) -> ()"
+  ],
+  "strings": [
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x707cf3",
+      "value": "AudioPathEnum"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x70d0ba",
+      "value": "AudioPathStru"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x70d210",
+      "value": "AudioPathSettingStru"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7140b0",
+      "value": "AudioPath_Enum"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x717dd7",
+      "value": "AudioPath_Enum"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x71a7a7",
+      "value": "AudioPath_Enum"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7516c0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x75c830",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x75d6ce",
+      "value": "audioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x75da20",
+      "value": "GetMmiEnum:payload.count AudioPath < 4"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x766af0",
+      "value": "] parsing audioPath fail"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x766bc0",
+      "value": "getMmiEnum:RxDataFormat:parsing AudioPath audioPath fail"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x766c00",
+      "value": "getMmiEnum:RxDataFormat:parsing AudioPath shareMode fail"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x76b8e0",
+      "value": "isRealtimeUpdateOnLineinUSB0"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x76c7f0",
+      "value": "_getCurrentAudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x770c70",
+      "value": "_backupAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x779e20",
+      "value": "sendCmd_GetAudioPath(host:role:internalListener:)"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d1b80",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d41d0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d4ad0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d4b9e",
+      "value": "audioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d4c2d",
+      "value": "AudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d5d30",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d5ea0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d6e00",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d72c0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d79d0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d84f0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d8990",
+      "value": "isRealtimeUpdateOnLineinUSB0"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d8d80",
+      "value": "_getCurrentAudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d8f18",
+      "value": "numOfAudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d8f80",
+      "value": "audioPathID"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7d9b40",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7da860",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7da880",
+      "value": "_backupAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dabd0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dbb60",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dbcfe",
+      "value": "audioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dbdb9",
+      "value": "AudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dc560",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dc970",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dcdb0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dd770",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7ddae0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7ddb00",
+      "value": "_backupAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7de060",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7de2e0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7de4f0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7de590",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7df160",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7dfee0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e0436",
+      "value": "audioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e04fb",
+      "value": "AudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e1a70",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e1bb0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e1f20",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e26d0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e30b0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e3e60",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e41f0",
+      "value": "_audioPathIsEmpty"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e5de0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e5e00",
+      "value": "_backupAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e60c0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e67a0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e7166",
+      "value": "audioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e7222",
+      "value": "AudioPath"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e78a0",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e7e70",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e7e90",
+      "value": "_backupAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x7e7f60",
+      "value": "_currentAudioPathNVKEY"
+    },
+    {
+      "binary": "AirohaUnifyLibrary",
+      "file_offset": "0x950788",
+      "value": "8isRealtimeUpdateOnLineinUSB0Sbv"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x8df340",
+      "value": "auxPlayPause"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x8e1390",
+      "value": "00001102-D102-11E1-9B23-00025B00A5A5"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x8ffe00",
+      "value": "auxTrackForward"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x932590",
+      "value": "00001101-D102-11E1-9B23-00025B00A5A5"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x95ca80",
+      "value": "lineIn"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x9a4d00",
+      "value": "auxTrackBack"
+    },
+    {
+      "binary": "App",
+      "file_offset": "0x9dd710",
+      "value": "00001100-D102-11E1-9B23-00025B00A5A5"
+    }
+  ],
+  "ordinary_read_schemas": [
+    {
+      "name": "GET_POWER_MODE",
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x020C"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x020C"
+          },
+          {
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "name": "power_mode",
+            "type": "uint8"
+          }
+        ]
+      },
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 496,
+      "line_end": 511,
+      "plyr_support": "unverified",
+      "purpose_limit": "No PLYR-specific line-input or source mapping is established."
+    },
+    {
+      "name": "READ_NVKEY_RESP_NVID",
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0A0C"
+          },
+          {
+            "name": "nvkey_id",
+            "type": "uint16"
+          },
+          {
+            "name": "length_of_read_bytes",
+            "type": "uint16"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0A0C"
+          },
+          {
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "name": "nvkey_id",
+            "type": "uint16"
+          },
+          {
+            "name": "payload",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      },
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 790,
+      "line_end": 808,
+      "plyr_support": "unverified",
+      "purpose_limit": "No PLYR-specific line-input or source mapping is established."
+    },
+    {
+      "name": "GET_MMI_ENUM_V2",
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0901"
+          },
+          {
+            "name": "module",
+            "type": "uint16"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0901"
+          },
+          {
+            "name": "module",
+            "type": "uint16"
+          },
+          {
+            "name": "status",
+            "type": "uint8"
+          },
+          {
+            "name": "data",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      },
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 1151,
+      "line_end": 1168,
+      "plyr_support": "unverified",
+      "purpose_limit": "No PLYR-specific line-input or source mapping is established."
+    },
+    {
+      "name": "GET_MMI_ENUM",
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0901"
+          },
+          {
+            "name": "module",
+            "type": "uint16"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x0901"
+          },
+          {
+            "name": "tlv_data",
+            "type": "uint8_array",
+            "array_length": "*"
+          }
+        ]
+      },
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 1169,
+      "line_end": 1184,
+      "plyr_support": "unverified",
+      "purpose_limit": "No PLYR-specific line-input or source mapping is established."
+    },
+    {
+      "name": "GET_MMI_STATE",
+      "formats": {
+        "RequestFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5A"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x2C80"
+          }
+        ],
+        "ResponseFormat": [
+          {
+            "name": "packet_type",
+            "type": "uint8",
+            "value": "0x05"
+          },
+          {
+            "name": "race_type",
+            "type": "uint8",
+            "value": "0x5B"
+          },
+          {
+            "name": "packet_len",
+            "type": "uint16",
+            "value": "__LEN_TO_END__"
+          },
+          {
+            "name": "race_id",
+            "type": "uint16",
+            "value": "0x2C80"
+          },
+          {
+            "name": "mmi_state",
+            "type": "uint8"
+          }
+        ]
+      },
+      "source": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/command_race.xml",
+      "line_start": 2031,
+      "line_end": 2045,
+      "plyr_support": "unverified",
+      "purpose_limit": "No PLYR-specific line-input or source mapping is established."
+    }
+  ],
+  "audio_path_debug_xrefs": [
+    {
+      "function_start": "0x38C564",
+      "function_end": "0x38D11C",
+      "debug_string_xref": "0x38CEF8"
+    },
+    {
+      "function_start": "0x4079B0",
+      "function_end": "0x408480",
+      "debug_string_xref": "0x407DAC"
+    },
+    {
+      "function_start": "0x47E488",
+      "function_end": "0x47F040",
+      "debug_string_xref": "0x47EE1C"
+    },
+    {
+      "function_start": "0x54EC8C",
+      "function_end": "0x54F884",
+      "debug_string_xref": "0x54F104"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "The SDK provides three default BLE UUIDs with roles confirmed by constructor assignments and ivar symbols. PLYR selection is unverified.",
+      "status": "artifact-confirmed defaults; model mapping unknown"
+    },
+    {
+      "claim": "The SDK exposes setServiceCharacteristicUUIDsWithServiceUUID:writeCharacteristicUUID:notifyIndicationCharacteristicUUID:. Therefore the defaults can be replaced at runtime.",
+      "status": "artifact-confirmed symbol"
+    },
+    {
+      "claim": "GET_MMI_ENUM and GET_MMI_ENUM_V2 both use RACE ID 0x0901 with a uint16 module field. They describe different reply layouts. An implementation must choose the matching version.",
+      "status": "artifact-confirmed schemas"
+    },
+    {
+      "claim": "The audio-path debug string has four code references. Their enclosing functions are listed for later decompilation. No exact module value for current audio path was established.",
+      "status": "artifact-confirmed debug references; packet mapping unknown"
+    },
+    {
+      "claim": "The symbol isRealtimeUpdateOnLineinUSB0 belongs to AirohaEQPayload. Its name concerns updating EQ while line-in or USB is active. It does not establish an input-detection query.",
+      "status": "symbol confirmed; interpretation inferred from name"
+    },
+    {
+      "claim": "App.framework contains lineIn, auxPlayPause, auxTrackForward, and auxTrackBack strings. These names do not establish packet formats or PLYR support.",
+      "status": "artifact-confirmed strings; packet mapping unknown"
+    },
+    {
+      "claim": "No confirmed PLYR command for line-input state, current source, or audio mode was recovered in this bounded batch.",
+      "status": "limited negative result"
+    }
+  ],
+  "limitations": [
+    "The SDK and Flutter app contain code for many headset models.",
+    "No BLE service discovery or packet capture occurred.",
+    "No read command was sent to a headset.",
+    "No speculative module value or NVKEY was proposed for probing.",
+    "Audio-source strings may belong to playback libraries or other products.",
+    "GET_POWER_MODE concerns power. It must not be relabeled as audio mode.",
+    "The schema file alone does not establish integer byte order."
+  ],
+  "commands_used": [
+    "Python printable-ASCII filters over the two named binaries",
+    "nm -n AirohaUnifyLibrary",
+    "xcrun swift-demangle --compact",
+    "xcrun llvm-objdump --disassemble --no-show-raw-insn with bounded address windows",
+    "Python ARM64 ADRP+ADD scanning for debug-string references",
+    "Python LC_FUNCTION_STARTS decoding for enclosing function boundaries",
+    "Python ElementTree extraction of selected read schemas"
+  ]
+}

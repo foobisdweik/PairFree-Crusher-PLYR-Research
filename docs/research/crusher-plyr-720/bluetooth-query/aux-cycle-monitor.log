@@ -1,0 +1,632 @@
+{"kind":"connected","time":1794423805.9823079}
+{"hex":"055a0200802c","kind":"request","time":1794423806.9812441}
+{"kind":"monitor_ready","time":1794423806.981462}
+{"error":"none","hex":"055c0300033101","kind":"notification","time":1794423806.9839101}
+{"error":"none","kind":"write_ack","time":1794423807.0732369}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423807.0738339}
+{"hex":"055a0200802c","kind":"request","time":1794423809.98634}
+{"error":"none","kind":"write_ack","time":1794423810.054219}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423810.054388}
+{"hex":"055a0200802c","kind":"request","time":1794423812.9863501}
+{"error":"none","kind":"write_ack","time":1794423813.0380979}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423813.0382419}
+{"hex":"055a0200802c","kind":"request","time":1794423815.9863369}
+{"error":"none","kind":"write_ack","time":1794423816.091049}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423816.094872}
+{"hex":"055a0200802c","kind":"request","time":1794423818.9865499}
+{"error":"none","kind":"write_ack","time":1794423819.0306191}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423819.0307221}
+{"hex":"055a0200802c","kind":"request","time":1794423821.9864001}
+{"error":"none","kind":"write_ack","time":1794423822.0186791}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423822.0189052}
+{"hex":"055a0200802c","kind":"request","time":1794423824.991812}
+{"error":"none","kind":"write_ack","time":1794423825.0296731}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423825.0321479}
+{"hex":"055a0200802c","kind":"request","time":1794423827.9865332}
+{"error":"none","kind":"write_ack","time":1794423828.0466309}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423828.046988}
+{"hex":"055a0200802c","kind":"request","time":1794423830.986311}
+{"error":"none","kind":"write_ack","time":1794423831.0368118}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423831.0392621}
+{"hex":"055a0200802c","kind":"request","time":1794423833.9875469}
+{"error":"none","kind":"write_ack","time":1794423834.0516849}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423834.0544429}
+{"hex":"055a0200802c","kind":"request","time":1794423836.9863391}
+{"error":"none","kind":"write_ack","time":1794423837.0947361}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423837.0970211}
+{"hex":"055a0200802c","kind":"request","time":1794423839.98722}
+{"error":"none","kind":"write_ack","time":1794423840.035491}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423840.035763}
+{"hex":"055a0200802c","kind":"request","time":1794423842.986443}
+{"error":"none","kind":"write_ack","time":1794423843.230114}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423843.230581}
+{"hex":"055a0200802c","kind":"request","time":1794423845.986392}
+{"error":"none","kind":"write_ack","time":1794423846.184531}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423846.185071}
+{"hex":"055a0200802c","kind":"request","time":1794423848.990535}
+{"error":"none","kind":"write_ack","time":1794423849.037725}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423849.038449}
+{"hex":"055a0200802c","kind":"request","time":1794423851.9887938}
+{"error":"none","kind":"write_ack","time":1794423852.0325069}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423852.033165}
+{"hex":"055a0200802c","kind":"request","time":1794423854.9865}
+{"error":"none","kind":"write_ack","time":1794423855.0337791}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423855.0341702}
+{"hex":"055a0200802c","kind":"request","time":1794423857.9863119}
+{"error":"none","kind":"write_ack","time":1794423858.0245571}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423858.027271}
+{"hex":"055a0200802c","kind":"request","time":1794423860.986505}
+{"error":"none","kind":"write_ack","time":1794423861.025846}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423861.0285211}
+{"hex":"055a0200802c","kind":"request","time":1794423863.986299}
+{"error":"none","kind":"write_ack","time":1794423864.0334911}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423864.0348001}
+{"hex":"055a0200802c","kind":"request","time":1794423866.98631}
+{"error":"none","kind":"write_ack","time":1794423867.051734}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423867.054466}
+{"hex":"055a0200802c","kind":"request","time":1794423869.986371}
+{"error":"none","kind":"write_ack","time":1794423870.055954}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423870.0588241}
+{"hex":"055a0200802c","kind":"request","time":1794423872.9867589}
+{"error":"none","kind":"write_ack","time":1794423873.089901}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423873.0918031}
+{"hex":"055a0200802c","kind":"request","time":1794423875.987555}
+{"error":"none","kind":"write_ack","time":1794423876.055717}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423876.05814}
+{"hex":"055a0200802c","kind":"request","time":1794423878.9898062}
+{"error":"none","kind":"write_ack","time":1794423879.044389}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423879.0447531}
+{"hex":"055a0200802c","kind":"request","time":1794423881.987607}
+{"error":"none","kind":"write_ack","time":1794423882.023366}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423882.0237}
+{"hex":"055a0200802c","kind":"request","time":1794423884.9862571}
+{"error":"none","kind":"write_ack","time":1794423885.0180058}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423885.018141}
+{"hex":"055a0200802c","kind":"request","time":1794423887.9861391}
+{"error":"none","kind":"write_ack","time":1794423888.0290451}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423888.029259}
+{"hex":"055a0200802c","kind":"request","time":1794423890.986804}
+{"error":"none","kind":"write_ack","time":1794423891.0998189}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423891.102643}
+{"hex":"055a0200802c","kind":"request","time":1794423893.9873471}
+{"error":"none","kind":"write_ack","time":1794423894.0380149}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423894.040297}
+{"hex":"055a0200802c","kind":"request","time":1794423896.986326}
+{"error":"none","kind":"write_ack","time":1794423897.14451}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423897.144769}
+{"hex":"055a0200802c","kind":"request","time":1794423899.9861679}
+{"error":"none","kind":"write_ack","time":1794423900.13767}
+{"error":"none","hex":"055b0300802c03","kind":"notification","time":1794423900.138797}
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794423805.9823079
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423806.9812441
+    },
+    {
+      "kind" : "monitor_ready",
+      "time" : 1794423806.981462
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794423806.9839101
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423807.0732369
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423807.0738339
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423809.98634
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423810.054219
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423810.054388
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423812.9863501
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423813.0380979
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423813.0382419
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423815.9863369
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423816.091049
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423816.094872
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423818.9865499
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423819.0306191
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423819.0307221
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423821.9864001
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423822.0186791
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423822.0189052
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423824.991812
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423825.0296731
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423825.0321479
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423827.9865332
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423828.0466309
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423828.046988
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423830.986311
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423831.0368118
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423831.0392621
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423833.9875469
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423834.0516849
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423834.0544429
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423836.9863391
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423837.0947361
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423837.0970211
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423839.98722
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423840.035491
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423840.035763
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423842.986443
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423843.230114
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423843.230581
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423845.986392
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423846.184531
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423846.185071
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423848.990535
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423849.037725
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423849.038449
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423851.9887938
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423852.0325069
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423852.033165
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423854.9865
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423855.0337791
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423855.0341702
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423857.9863119
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423858.0245571
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423858.027271
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423860.986505
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423861.025846
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423861.0285211
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423863.986299
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423864.0334911
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423864.0348001
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423866.98631
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423867.051734
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423867.054466
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423869.986371
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423870.055954
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423870.0588241
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423872.9867589
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423873.089901
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423873.0918031
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423875.987555
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423876.055717
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423876.05814
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423878.9898062
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423879.044389
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423879.0447531
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423881.987607
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423882.023366
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423882.0237
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423884.9862571
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423885.0180058
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423885.018141
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423887.9861391
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423888.0290451
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423888.029259
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423890.986804
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423891.0998189
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423891.102643
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423893.9873471
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423894.0380149
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423894.040297
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423896.986326
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423897.14451
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423897.144769
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423899.9861679
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423900.13767
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423900.138797
+    }
+  ],
+  "query" : "GET_MMI_STATE",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "monitor completed"
+}

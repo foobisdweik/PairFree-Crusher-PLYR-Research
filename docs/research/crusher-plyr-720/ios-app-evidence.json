@@ -1,0 +1,1951 @@
+{
+  "scope": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework",
+  "inventory": {
+    "file_count": 738,
+    "bytes": 43914081
+  },
+  "provenance": [
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework/flutter_assets/assets/products/product-manifest.json",
+      "bytes": 357391,
+      "sha256": "4b66d9ab5af4689b965aa143d5aa929646c0ce9de1e33fe2b82ca24e00da85cc"
+    },
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework/App",
+      "bytes": 11989040,
+      "sha256": "5a7c29154da6e0d9744c668ff85d5bbcd637e4a8092ea5f99281488a3449961f"
+    },
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework/Info.plist",
+      "bytes": 775,
+      "sha256": "f38c059d2b56415da4b3344bf050b13798363a51c592aedf3d26e54393b52323"
+    }
+  ],
+  "bundle_metadata": {
+    "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+    "CFBundleExecutable": "App",
+    "CFBundleIdentifier": "io.flutter.flutter.app",
+    "CFBundleInfoDictionaryVersion": "6.0",
+    "CFBundleName": "App",
+    "CFBundlePackageType": "FMWK",
+    "CFBundleShortVersionString": "1.0",
+    "CFBundleSignature": "????",
+    "CFBundleVersion": "1.0"
+  },
+  "manifest_metadata": {
+    "lastUpdated": 1791522563749,
+    "product_count": 56
+  },
+  "products": [
+    {
+      "json_pointer": "/allProducts/33",
+      "configuration": {
+        "productName": "Crusher PLYR 720",
+        "productId": "0x29",
+        "modelId": [
+          "S6PCW"
+        ],
+        "otaEnabled": true,
+        "otaSupported": true,
+        "connectionTypeAndroid": [
+          "bluetoothClassic",
+          "leAudio"
+        ],
+        "connectionTypeiOS": [
+          "ble"
+        ],
+        "alternateProductNames": [
+          "SG200-Slave",
+          "Crusher PLYR"
+        ],
+        "firmwareVersions": [
+          {
+            "version": "SG200_v1.0.0.8",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.14",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.22",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.22.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.22.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.23",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.23.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.23.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.25",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.25.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.25.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.26",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.26.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.26.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.28",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.28.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.28.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.30",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.30.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.30.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.32",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.32.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.32.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200_v1.0.0.33",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.33.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.33.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ],
+            "forcedUpdate": true,
+            "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+            "forcedUpdateDescription": "fota_intro_general_update_description"
+          },
+          {
+            "version": "SG200_v1.0.0.34",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.34.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.34.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 1760594400000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ],
+            "forcedUpdate": true,
+            "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+            "forcedUpdateDescription": "fota_intro_general_update_description"
+          }
+        ]
+      },
+      "firmware_entries": [
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/0",
+          "version": "SG200_v1.0.0.8",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/1",
+          "version": "SG200_v1.0.0.14",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/2",
+          "version": "SG200_v1.0.0.22",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.22.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.22.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/3",
+          "version": "SG200_v1.0.0.23",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.23.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.23.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/4",
+          "version": "SG200_v1.0.0.25",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.25.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.25.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/5",
+          "version": "SG200_v1.0.0.26",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.26.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.26.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/6",
+          "version": "SG200_v1.0.0.28",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.28.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.28.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/7",
+          "version": "SG200_v1.0.0.30",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.30.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.30.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/8",
+          "version": "SG200_v1.0.0.32",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.32.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.32.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/9",
+          "version": "SG200_v1.0.0.33",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.33.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.33.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ],
+          "forcedUpdate": true,
+          "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+          "forcedUpdateDescription": "fota_intro_general_update_description"
+        },
+        {
+          "json_pointer": "/allProducts/33/firmwareVersions/10",
+          "version": "SG200_v1.0.0.34",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Slave_Headset_DFU_v1.0.0.34.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200_Master_Headset_DFU_v1.0.0.34.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 1760594400000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ],
+          "forcedUpdate": true,
+          "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+          "forcedUpdateDescription": "fota_intro_general_update_description"
+        }
+      ],
+      "status": "source-confirmed; URLs not fetched; no hardware validation"
+    },
+    {
+      "json_pointer": "/allProducts/34",
+      "configuration": {
+        "productName": "Crusher PLYR 720 XBOX",
+        "productId": "0x2A",
+        "modelId": [
+          "S6PXW"
+        ],
+        "otaEnabled": true,
+        "otaSupported": true,
+        "connectionTypeAndroid": [
+          "bluetoothClassic",
+          "leAudio"
+        ],
+        "connectionTypeiOS": [
+          "ble"
+        ],
+        "alternateProductNames": [
+          "SG200X-Slave"
+        ],
+        "firmwareVersions": [
+          {
+            "minAppVersion": "3.7.6",
+            "version": "v0.1.0",
+            "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "minAppVersion": "3.7.6",
+            "version": "SG200X_v1.0.0.22",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.22.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.22.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "minAppVersion": "3.7.6",
+            "version": "SG200X_v1.0.0.23",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.23.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.23.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "minAppVersion": "3.7.6",
+            "version": "SG200X_v1.0.0.25",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.25.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.25.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "minAppVersion": "3.7.6",
+            "version": "SG200X_v1.0.0.26",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.26.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.26.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "minAppVersion": "3.7.6",
+            "version": "SG200X_v1.0.0.28",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.28.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.28.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200X_v1.0.0.30",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.30.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.30.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200X_v1.0.0.32",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.32.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.32.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ]
+          },
+          {
+            "version": "SG200X_v1.0.0.33",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.33.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.33.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 637260480000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ],
+            "forcedUpdate": true,
+            "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+            "forcedUpdateDescription": "fota_intro_general_update_description"
+          },
+          {
+            "version": "SG200X_v1.0.0.34",
+            "minAppVersion": "3.7.6",
+            "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.34.bin",
+            "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.34.bin",
+            "releaseNotes": "release_notes_generic",
+            "releaseDate": 1760594400000000000,
+            "iOSUpdateEligible": true,
+            "androidUpdateEligible": true,
+            "androidPollingIntervalSeconds": 5,
+            "featureManifest": [
+              "thxSpatialAudio",
+              "thxHeadTracking",
+              "crusherTechnology",
+              "crusherBassBoost",
+              "adjustableSidetoneMode",
+              "enhancedSoundPerception",
+              "definedEqualizer",
+              "definedEqualizerToggle",
+              "gamingEqualizer",
+              "customEqualizer4x",
+              "ledCustomizer",
+              "gameChatMix",
+              "adjustableMicGain",
+              "multipointPairingToggle",
+              "clearVoiceSmartMic"
+            ],
+            "forcedUpdate": true,
+            "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+            "forcedUpdateDescription": "fota_intro_general_update_description"
+          }
+        ]
+      },
+      "firmware_entries": [
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/0",
+          "minAppVersion": "3.7.6",
+          "version": "v0.1.0",
+          "downloadSlave": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "downloadMaster": "https://skullcandy.s3.amazonaws.com/unavailable",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/1",
+          "minAppVersion": "3.7.6",
+          "version": "SG200X_v1.0.0.22",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.22.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.22.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/2",
+          "minAppVersion": "3.7.6",
+          "version": "SG200X_v1.0.0.23",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.23.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.23.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/3",
+          "minAppVersion": "3.7.6",
+          "version": "SG200X_v1.0.0.25",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.25.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.25.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/4",
+          "minAppVersion": "3.7.6",
+          "version": "SG200X_v1.0.0.26",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.26.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.26.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/5",
+          "minAppVersion": "3.7.6",
+          "version": "SG200X_v1.0.0.28",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.28.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.28.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/6",
+          "version": "SG200X_v1.0.0.30",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.30.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.30.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/7",
+          "version": "SG200X_v1.0.0.32",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.32.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.32.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ]
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/8",
+          "version": "SG200X_v1.0.0.33",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.33.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.33.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 637260480000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ],
+          "forcedUpdate": true,
+          "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+          "forcedUpdateDescription": "fota_intro_general_update_description"
+        },
+        {
+          "json_pointer": "/allProducts/34/firmwareVersions/9",
+          "version": "SG200X_v1.0.0.34",
+          "minAppVersion": "3.7.6",
+          "downloadSlave": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Slave_Headset_DFU_v1.0.0.34.bin",
+          "downloadMaster": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.34.bin",
+          "releaseNotes": "release_notes_generic",
+          "releaseDate": 1760594400000000000,
+          "iOSUpdateEligible": true,
+          "androidUpdateEligible": true,
+          "androidPollingIntervalSeconds": 5,
+          "featureManifest": [
+            "thxSpatialAudio",
+            "thxHeadTracking",
+            "crusherTechnology",
+            "crusherBassBoost",
+            "adjustableSidetoneMode",
+            "enhancedSoundPerception",
+            "definedEqualizer",
+            "definedEqualizerToggle",
+            "gamingEqualizer",
+            "customEqualizer4x",
+            "ledCustomizer",
+            "gameChatMix",
+            "adjustableMicGain",
+            "multipointPairingToggle",
+            "clearVoiceSmartMic"
+          ],
+          "forcedUpdate": true,
+          "forcedUpdateSubHeader": "fota_intro_this_firmware_update_includes",
+          "forcedUpdateDescription": "fota_intro_general_update_description"
+        }
+      ],
+      "status": "source-confirmed; URLs not fetched; no hardware validation"
+    }
+  ],
+  "binary_string_evidence": [
+    {
+      "file_offset": 9093616,
+      "file_offset_hex": "0x8ac1f0",
+      "text": "formatRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9095216,
+      "file_offset_hex": "0x8ac830",
+      "text": "package:skullcandy_app/utils/race_commands/bragi/bragi_read_serial_number_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9103888,
+      "file_offset_hex": "0x8aea10",
+      "text": "Unexpected response data for RaceCommandBragiButtonSettingsSet: r",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9124704,
+      "file_offset_hex": "0x8b3b60",
+      "text": "package:skullcandy_app/utils/race_commands/thx/set_thx_spatial_audio_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9125968,
+      "file_offset_hex": "0x8b4050",
+      "text": "package:skullcandy_app/api/fota/skdyotaservice.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9128704,
+      "file_offset_hex": "0x8b4b00",
+      "text": "ReadThxHeadTrackingRaceCommand.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9153056,
+      "file_offset_hex": "0x8baa20",
+      "text": "SetThxSpatialAudioIntensityRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9165488,
+      "file_offset_hex": "0x8bdab0",
+      "text": "package:skullcandy_app/utils/race_commands/thx/set_thx_head_tracking_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9167424,
+      "file_offset_hex": "0x8be240",
+      "text": "SetThxHeadTrackingRaceCommand.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9186576,
+      "file_offset_hex": "0x8c2d10",
+      "text": "setThxSpatialAudioEnabled",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9207824,
+      "file_offset_hex": "0x8c8010",
+      "text": "ReadThxSpatialAudioIntensityRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9219216,
+      "file_offset_hex": "0x8cac90",
+      "text": "BragiReadSerialNumberRaceCommandr",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9227456,
+      "file_offset_hex": "0x8cccc0",
+      "text": ".SG200SetEqMapping",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9239040,
+      "file_offset_hex": "0x8cfa00",
+      "text": "ReadThxHeadTrackingRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9258384,
+      "file_offset_hex": "0x8d4590",
+      "text": "package:skullcandy_app/api/models/bragi/bragi_race_command_messages.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9264704,
+      "file_offset_hex": "0x8d5e40",
+      "text": "response payload for setThxSpatialAudioEnabled did not indicate Spatial Audio enabled/disabled.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9283760,
+      "file_offset_hex": "0x8da8b0",
+      "text": "CrcConfirmCmd.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9283856,
+      "file_offset_hex": "0x8da910",
+      "text": "Unexpected CrcConfirmCmd response: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9284208,
+      "file_offset_hex": "0x8daa70",
+      "text": "setThxSpatialAudioIntensity, cannot get model of connected product!",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9293984,
+      "file_offset_hex": "0x8dd0a0",
+      "text": "package:skullcandy_app/api/fota/skdyairohaotaapi.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9295488,
+      "file_offset_hex": "0x8dd680",
+      "text": "RaceCommandRequestBuilder",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9302848,
+      "file_offset_hex": "0x8df340",
+      "text": "auxPlayPause",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9313456,
+      "file_offset_hex": "0x8e1cb0",
+      "text": "setThxHeadTrackingState",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9320080,
+      "file_offset_hex": "0x8e3690",
+      "text": "getThxHeadTrackingState failed with error.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9323936,
+      "file_offset_hex": "0x8e45a0",
+      "text": "package:skullcandy_app/utils/race_commands/thx/read_thx_spatial_audio_intensity_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9343744,
+      "file_offset_hex": "0x8e9300",
+      "text": "Failed to decode response data for RaceCommandBragiButtonSettingsGet: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9395936,
+      "file_offset_hex": "0x8f5ee0",
+      "text": "Right-FotaPackage",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9422544,
+      "file_offset_hex": "0x8fc6d0",
+      "text": "Failed to decode response data for RaceCommandBragiButtonSettingsSet: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9426688,
+      "file_offset_hex": "0x8fd700",
+      "text": "SG200StoreEqArrayIndex",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9436672,
+      "file_offset_hex": "0x8ffe00",
+      "text": "auxTrackForward",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9439648,
+      "file_offset_hex": "0x9009a0",
+      "text": "setThxSpatialAudioIntensity failed.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9483184,
+      "file_offset_hex": "0x90b3b0",
+      "text": "Error getting THX spatial audio enabled state: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9505920,
+      "file_offset_hex": "0x910c80",
+      "text": "package:skullcandy_app/api/models/bragi/bragi_race_command_messages.g.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9526160,
+      "file_offset_hex": "0x915b90",
+      "text": "setThxHeadTrackingState failed with error.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9585360,
+      "file_offset_hex": "0x9242d0",
+      "text": "assets/images/icon_thx.svg",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9629920,
+      "file_offset_hex": "0x92f0e0",
+      "text": "setThxSpatialAudioIntensity",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9632848,
+      "file_offset_hex": "0x92fc50",
+      "text": "init:ENCRYPTED_SIZE",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9637376,
+      "file_offset_hex": "0x930e00",
+      "text": "response payload for getThxHeadTrackingState did not indicate Head Tracking enabled/disabled.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9640128,
+      "file_offset_hex": "0x9318c0",
+      "text": "SKDYOtaService.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9652368,
+      "file_offset_hex": "0x934890",
+      "text": "RaceCommandBragiButtonSettingsGet.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9687776,
+      "file_offset_hex": "0x93d2e0",
+      "text": "package:skullcandy_app/utils/race_commands/thx/read_thx_head_tracking_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9705856,
+      "file_offset_hex": "0x941980",
+      "text": "SetThxSpatialAudioRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9736944,
+      "file_offset_hex": "0x9492f0",
+      "text": "package:skullcandy_app/api/fota/skdyairohaotaerror.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9757856,
+      "file_offset_hex": "0x94e4a0",
+      "text": "package:skullcandy_app/utils/race_commands/gestures/bragiOS/race_command_bragi_button_settings_get.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9767648,
+      "file_offset_hex": "0x950ae0",
+      "text": "response payload for getThxSpatialAudioEnabled did not indicate Spatial Audio enabled/disabled.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9786384,
+      "file_offset_hex": "0x955410",
+      "text": "_MixinApplication131&Object&RaceCommandRequestBuilder&RaceCommandResponseDecoder@18353248",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9788656,
+      "file_offset_hex": "0x955cf0",
+      "text": "Unexpected CrcConfirmFullCmd response: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9797024,
+      "file_offset_hex": "0x957da0",
+      "text": "package:skullcandy_app/utils/race_commands/bragi/bragi_read_sku_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9816704,
+      "file_offset_hex": "0x95ca80",
+      "text": "lineIn",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9819088,
+      "file_offset_hex": "0x95d3d0",
+      "text": "BragiRaceCommandRequest",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9821392,
+      "file_offset_hex": "0x95dcd0",
+      "text": "getThxHeadTrackingState: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9827152,
+      "file_offset_hex": "0x95f350",
+      "text": "_$BragiRaceCommandRequestToJson@1002205119",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9838160,
+      "file_offset_hex": "0x961e50",
+      "text": "getThxHeadTrackingState",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9856832,
+      "file_offset_hex": "0x966740",
+      "text": "SKDYAirohaOTAApir",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9870368,
+      "file_offset_hex": "0x969c20",
+      "text": "CrcConfirmFullCmd.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9873440,
+      "file_offset_hex": "0x96a820",
+      "text": "ThxSpatialAudioWidgetState",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9881440,
+      "file_offset_hex": "0x96c760",
+      "text": "_MixinApplication130&Object&RaceCommandRequestBuilder@18353248",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9881840,
+      "file_offset_hex": "0x96c8f0",
+      "text": "ThxSpatialAudioSliderState",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9889184,
+      "file_offset_hex": "0x96e5a0",
+      "text": "fotaPackageSizeInvalid",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9929072,
+      "file_offset_hex": "0x978170",
+      "text": "auxVoiceAssistant",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9944416,
+      "file_offset_hex": "0x97bd60",
+      "text": "_isBufferEncrypted@16069316",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9944944,
+      "file_offset_hex": "0x97bf70",
+      "text": "auxMicrophone",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9960304,
+      "file_offset_hex": "0x97fb70",
+      "text": "thxRaceId",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 9993136,
+      "file_offset_hex": "0x987bb0",
+      "text": "SetThxHeadTrackingRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10027152,
+      "file_offset_hex": "0x990090",
+      "text": "response payload for setThxSpatialAudioIntensity did not indicate Spatial Audio intensity.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10042608,
+      "file_offset_hex": "0x993cf0",
+      "text": "ReadThxSpatialAudioRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10044352,
+      "file_offset_hex": "0x9943c0",
+      "text": "ENCRYPTED_SIZE",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10048208,
+      "file_offset_hex": "0x9952d0",
+      "text": "BragiReadSkuRaceCommand",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10055424,
+      "file_offset_hex": "0x996f00",
+      "text": "FotaPackage",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10080400,
+      "file_offset_hex": "0x99d090",
+      "text": "response payload for setThxHeadTrackingState did not indicate Spatial Audio enabled/disabled.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10085920,
+      "file_offset_hex": "0x99e620",
+      "text": "ReadThxSpatialAudioIntensityRaceCommand.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10089440,
+      "file_offset_hex": "0x99f3e0",
+      "text": "getThxSpatialAudioEnabled",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10104160,
+      "file_offset_hex": "0x9a2d60",
+      "text": "setThxSpatialAudioEnabled failed with error.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10112256,
+      "file_offset_hex": "0x9a4d00",
+      "text": "auxTrackBack",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10133984,
+      "file_offset_hex": "0x9aa1e0",
+      "text": "get:ENCRYPTED_SIZE",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10138768,
+      "file_offset_hex": "0x9ab490",
+      "text": "package:skullcandy_app/api/fota/skdyairohaotaservice.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10143104,
+      "file_offset_hex": "0x9ac580",
+      "text": "SKDYOtaService",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10152976,
+      "file_offset_hex": "0x9aec10",
+      "text": "package:skullcandy_app/utils/race_commands/thx/set_thx_spatial_audio_intensity_race_command.dartr",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10158608,
+      "file_offset_hex": "0x9b0210",
+      "text": "Error getting THX head tracking state: ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10173632,
+      "file_offset_hex": "0x9b3cc0",
+      "text": "SetThxSpatialAudioIntensityRaceCommand.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10174400,
+      "file_offset_hex": "0x9b3fc0",
+      "text": ".SG200StoreEqArrayIndex",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10192832,
+      "file_offset_hex": "0x9b87c0",
+      "text": "init:thxRaceId",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10201584,
+      "file_offset_hex": "0x9ba9f0",
+      "text": "auxCallAnswerEndr",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10202144,
+      "file_offset_hex": "0x9bac20",
+      "text": "RaceCommandBragiButtonSettingsGet",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10211632,
+      "file_offset_hex": "0x9bd130",
+      "text": "_buildSkdyOtaService@238478774",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10285584,
+      "file_offset_hex": "0x9cf210",
+      "text": "getThxSpatialAudioEnabled failed with error.",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10287104,
+      "file_offset_hex": "0x9cf800",
+      "text": "package:skullcandy_app/utils/race_commands/gestures/bragiOS/race_command_bragi_button_settings_set.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10346688,
+      "file_offset_hex": "0x9de0c0",
+      "text": "SetThxSpatialAudioIntensityRaceCommand: command returns error! ",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10365616,
+      "file_offset_hex": "0x9e2ab0",
+      "text": "CrcConfirmFullCmd",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10365888,
+      "file_offset_hex": "0x9e2bc0",
+      "text": "package:skullcandy_app/utils/race_commands/thx/read_thx_spatial_audio_race_command.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10372224,
+      "file_offset_hex": "0x9e4480",
+      "text": "SKDYAirohaOtaService",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10391168,
+      "file_offset_hex": "0x9e8e80",
+      "text": "CrcConfirmCmd",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10422912,
+      "file_offset_hex": "0x9f0a80",
+      "text": "RaceCommandBragiButtonSettingsSet",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10431504,
+      "file_offset_hex": "0x9f2c10",
+      "text": "_shouldUpdateInResponseToThxStatusChange@337490246",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10436352,
+      "file_offset_hex": "0x9f3f00",
+      "text": "package:skullcandy_app/utils/race_commands/sg200_eq/race_command_sg200_store_eq_array_index.dartr",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10471152,
+      "file_offset_hex": "0x9fc6f0",
+      "text": "Unexpected response data for RaceCommandBragiButtonSettingsGet: r",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10471440,
+      "file_offset_hex": "0x9fc810",
+      "text": "package:skullcandy_app/utils/race_commands/sg200_eq/race_command_sg200_set_eq_mapping.dart",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10507280,
+      "file_offset_hex": "0xa05410",
+      "text": "SG200SetEqMapping",
+      "status": "string-only; function behavior and model association unverified"
+    },
+    {
+      "file_offset": 10510784,
+      "file_offset_hex": "0xa061c0",
+      "text": "_ThxFeatureGuideState@1402484785r",
+      "status": "string-only; function behavior and model association unverified"
+    }
+  ],
+  "findings": [
+    {
+      "id": "IOS01",
+      "claim": "The manifest selects BLE for iOS for both PLYR720 variants. It selects Bluetooth Classic and LE Audio for Android.",
+      "status": "source-confirmed",
+      "json_pointers": [
+        "/allProducts/33/connectionTypeiOS",
+        "/allProducts/34/connectionTypeiOS",
+        "/allProducts/33/connectionTypeAndroid",
+        "/allProducts/34/connectionTypeAndroid"
+      ]
+    },
+    {
+      "id": "IOS02",
+      "claim": "Product 0x29 is S6PCW, uses the SG200 firmware family, and advertises SG200-Slave and Crusher PLYR aliases. Product 0x2A is S6PXW, uses SG200X, and advertises SG200X-Slave.",
+      "status": "source-confirmed",
+      "json_pointers": [
+        "/allProducts/33",
+        "/allProducts/34"
+      ]
+    },
+    {
+      "id": "IOS03",
+      "claim": "The manifest lists separate Master and Slave download URLs. The highest listed firmware version is v1.0.0.34 for both products. Version 1.0.0.35 does not occur in these product records.",
+      "status": "source-confirmed",
+      "json_pointers": [
+        "/allProducts/33/firmwareVersions",
+        "/allProducts/34/firmwareVersions"
+      ]
+    },
+    {
+      "id": "IOS04",
+      "claim": "The entries require minAppVersion 3.7.6, enable updates on iOS and Android, and set androidPollingIntervalSeconds to 5. Some early entries point to an unavailable placeholder. The manifest does not prove that any URL currently serves data.",
+      "status": "source-confirmed",
+      "json_pointers": [
+        "/allProducts/33/firmwareVersions",
+        "/allProducts/34/firmwareVersions"
+      ]
+    },
+    {
+      "id": "IOS05",
+      "claim": "The strings identify SG200 EQ mapping and stored EQ array-index builders, THX state/read/write builders, FotaPackage, and CRC confirmation builders. The strings do not establish command bytes or firmware encryption.",
+      "status": "source-confirmed; interpretation limited to string presence",
+      "evidence_kind": "binary_string_evidence"
+    }
+  ],
+  "gaps": [
+    "The selected product records contain no Bluetooth service UUID or explicit RACE transport configuration.",
+    "The Master/Slave role names are manifest labels. These records do not establish their internal chip topology.",
+    "The aux strings may describe button actions or generic audio state. Their presence does not establish a powered aux routing command.",
+    "ENCRYPTED_SIZE and _isBufferEncrypted are generic string leads. Their presence does not prove that the firmware binaries use encryption.",
+    "The Dart binary needs method recovery to identify command opcodes, payload formats, and model-selection paths.",
+    "No secrets assets were read. No URL was fetched. No hardware traffic was sent."
+  ]
+}

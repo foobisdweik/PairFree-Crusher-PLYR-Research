@@ -1,0 +1,582 @@
+{
+  "scope": "Exact decoded SG200X Master version1.0.0.34. Static pointers, strings and Thumb BL encoding. No VM, hardware, shared Ghidra writes or transport writes.",
+  "image": {
+    "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/decoded/SG200X_Master_Headset_DFU_v1.0.0.34.decoded.bin",
+    "bytes": 3280896,
+    "sha256": "202b0da5549f850ce539166c0f5bd4bc4c6a0435970ba66df2a16821c8416879",
+    "runtime_delta": "0x806b000"
+  },
+  "direct_call_evidence": [
+    {
+      "target": "0x81d2800",
+      "call_sites": [
+        {
+          "runtime_address": "0x81d2b26",
+          "file_offset": "0x167b26",
+          "instruction_hex": "fff76bfe"
+        }
+      ],
+      "candidate_pointer_references": []
+    },
+    {
+      "target": "0x823e2f0",
+      "call_sites": [],
+      "candidate_pointer_references": [
+        "0x823e54c"
+      ]
+    },
+    {
+      "target": "0x824199c",
+      "call_sites": [
+        {
+          "runtime_address": "0x82342d6",
+          "file_offset": "0x1c92d6",
+          "instruction_hex": "0df061fb"
+        },
+        {
+          "runtime_address": "0x823e076",
+          "file_offset": "0x1d3076",
+          "instruction_hex": "03f091fc"
+        },
+        {
+          "runtime_address": "0x8242fe8",
+          "file_offset": "0x1d7fe8",
+          "instruction_hex": "fef7d8fc"
+        }
+      ],
+      "candidate_pointer_references": []
+    },
+    {
+      "target": "0x8242ef0",
+      "call_sites": [],
+      "candidate_pointer_references": [
+        "0x831db4c"
+      ]
+    }
+  ],
+  "strings": [
+    {
+      "file_offset": "0x288a05",
+      "runtime_address": "0x82f3a05",
+      "text": "RACE_CMD",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81da9bc",
+          "file_offset": "0x16f9bc"
+        },
+        {
+          "runtime_address": "0x81ec084",
+          "file_offset": "0x181084"
+        },
+        {
+          "runtime_address": "0x81ec4f4",
+          "file_offset": "0x1814f4"
+        },
+        {
+          "runtime_address": "0x81ec56c",
+          "file_offset": "0x18156c"
+        },
+        {
+          "runtime_address": "0x81ed03c",
+          "file_offset": "0x18203c"
+        },
+        {
+          "runtime_address": "0x81ed81c",
+          "file_offset": "0x18281c"
+        },
+        {
+          "runtime_address": "0x81ed894",
+          "file_offset": "0x182894"
+        },
+        {
+          "runtime_address": "0x81eda28",
+          "file_offset": "0x182a28"
+        },
+        {
+          "runtime_address": "0x81edb04",
+          "file_offset": "0x182b04"
+        },
+        {
+          "runtime_address": "0x81edd60",
+          "file_offset": "0x182d60"
+        },
+        {
+          "runtime_address": "0x81eddb0",
+          "file_offset": "0x182db0"
+        },
+        {
+          "runtime_address": "0x81ee07c",
+          "file_offset": "0x18307c"
+        },
+        {
+          "runtime_address": "0x8253334",
+          "file_offset": "0x1e8334"
+        },
+        {
+          "runtime_address": "0x82f3a3c",
+          "file_offset": "0x288a3c"
+        },
+        {
+          "runtime_address": "0x8324ea4",
+          "file_offset": "0x2b9ea4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28969d",
+      "runtime_address": "0x82f469d",
+      "text": "USB_ATCI",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x831704c",
+          "file_offset": "0x2ac04c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x289e4c",
+      "runtime_address": "0x82f4e4c",
+      "text": "atci_input_command_handler",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81d2a3c",
+          "file_offset": "0x167a3c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x289e67",
+      "runtime_address": "0x82f4e67",
+      "text": "atci_input_command:%s",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81d2a40",
+          "file_offset": "0x167a40"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x289e7d",
+      "runtime_address": "0x82f4e7d",
+      "text": "atci_input_command_handler",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81d2a44",
+          "file_offset": "0x167a44"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28dc1d",
+      "runtime_address": "0x82f8c1d",
+      "text": "query crash info fail, race header error",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81dc29c",
+          "file_offset": "0x17129c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28dc48",
+      "runtime_address": "0x82f8c48",
+      "text": "query crash info fail, race id error",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81dc2a0",
+          "file_offset": "0x1712a0"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28dc6f",
+      "runtime_address": "0x82f8c6f",
+      "text": "query crash info fail, race length error",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81dc2a4",
+          "file_offset": "0x1712a4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28e924",
+      "runtime_address": "0x82f9924",
+      "text": "race_tx_default",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81ebc78",
+          "file_offset": "0x180c78"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28e959",
+      "runtime_address": "0x82f9959",
+      "text": "race_sleep_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81ecba4",
+          "file_offset": "0x181ba4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28e96a",
+      "runtime_address": "0x82f996a",
+      "text": "race_idle_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81ecbb4",
+          "file_offset": "0x181bb4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28ea3c",
+      "runtime_address": "0x82f9a3c",
+      "text": "RACE_COSYS",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81ed80c",
+          "file_offset": "0x18280c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28ea64",
+      "runtime_address": "0x82f9a64",
+      "text": "race_usb_com_1_rx_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x831d0e8",
+          "file_offset": "0x2b20e8"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28ea7c",
+      "runtime_address": "0x82f9a7c",
+      "text": "race_usb_com_2_rx_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x831d0f4",
+          "file_offset": "0x2b20f4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28eb18",
+      "runtime_address": "0x82f9b18",
+      "text": "race_dump_data",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81f4008",
+          "file_offset": "0x189008"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28ec30",
+      "runtime_address": "0x82f9c30",
+      "text": "race_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81f4808",
+          "file_offset": "0x189808"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28f020",
+      "runtime_address": "0x82fa020",
+      "text": "race_audio_loopback_test_test",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81f912c",
+          "file_offset": "0x18e12c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28f03e",
+      "runtime_address": "0x82fa03e",
+      "text": "race_audio_loopback_test_check",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81f9134",
+          "file_offset": "0x18e134"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x28f05d",
+      "runtime_address": "0x82fa05d",
+      "text": "race_cosys_timer",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x81f9d5c",
+          "file_offset": "0x18ed5c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x293829",
+      "runtime_address": "0x82fe829",
+      "text": "[APP_RACE_DUAL_EVENT], timestamp. master:%s, slave:%s",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x823e4d0",
+          "file_offset": "0x1d34d0"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x29385f",
+      "runtime_address": "0x82fe85f",
+      "text": "app_race_cmd_co_sys_data_received_callback",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x823e4d4",
+          "file_offset": "0x1d34d4"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x294218",
+      "runtime_address": "0x82ff218",
+      "text": "GET_LINE_IN",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x824310c",
+          "file_offset": "0x1d810c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x294be5",
+      "runtime_address": "0x82ffbe5",
+      "text": "race command",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x8306c8c",
+          "file_offset": "0x29bc8c"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x29eb94",
+      "runtime_address": "0x8309b94",
+      "text": "race_app_race",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x8317618",
+          "file_offset": "0x2ac618"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x29eba2",
+      "runtime_address": "0x8309ba2",
+      "text": "race_app_bt",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x83175e0",
+          "file_offset": "0x2ac5e0"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x29ebae",
+      "runtime_address": "0x8309bae",
+      "text": "race_app_cosys",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x83175fc",
+          "file_offset": "0x2ac5fc"
+        }
+      ]
+    },
+    {
+      "file_offset": "0x29ec7b",
+      "runtime_address": "0x8309c7b",
+      "text": "PAIR_RACE",
+      "aligned_pointer_references": [
+        {
+          "runtime_address": "0x8253330",
+          "file_offset": "0x1e8330"
+        },
+        {
+          "runtime_address": "0x8324eb0",
+          "file_offset": "0x2b9eb0"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "function": "0x0823dff4",
+      "topic": "RACE-side getter access",
+      "evidence": "A Thumb BL at0x0823e076 targets getter0x0824199c. The caller has a prologue at0x0823dff4. It lies near RACE application code.",
+      "status": "direct-call verified. Transport and opcode unresolved.",
+      "needed": "Decompile caller and its registration table. Establish request IDs and response shape."
+    },
+    {
+      "function": "0x082342b4",
+      "topic": "Another getter caller",
+      "evidence": "A Thumb BL at0x082342d6 targets getter0x0824199c.",
+      "status": "direct-call verified. Handler role unresolved.",
+      "needed": "Decompile caller and identify incoming event context."
+    },
+    {
+      "function": "0x081d2800",
+      "topic": "ATCI input command handler",
+      "evidence": "A literal at0x081d2a3c points to atci_input_command_handler. The candidate function begins with2de9f04f. One BL caller occurs at0x081d2b26 in candidate0x081d2acc.",
+      "status": "candidate identification with exact pointer/call evidence.",
+      "needed": "Trace the input port and caller registration. Do not assume Bluetooth."
+    },
+    {
+      "function": "0x0823e2f0",
+      "topic": "Co-system RACE callback",
+      "evidence": "The literal pool at0x0823e4d4 references app_race_cmd_co_sys_data_received_callback. A function pointer0x0823e2f1 appears at0x0823e54c.",
+      "status": "candidate callback identification.",
+      "needed": "Determine which co-system module and command IDs enter this callback."
+    }
+  ],
+  "bounded_windows": [
+    {
+      "runtime_start": "0x823dff4",
+      "file_start": "0x1d2ff4",
+      "length": 220,
+      "hex": "7fb50546144603a80a460df10d0100f08dfca64b1d708cb12388adf80e30bdf80e30b3f5927f7dd8b3f5877f55d8222b65d81f2b67d8023b012b63e09df80d109df80c0003f0c0feadf80e0008f02afca0b1224696499748aff03cfe012408f017fc70b1002294499248aff033febdf80e30b3f5a87f03d1002428e00446eee7012403f091fc28b100228c498948aff021fe0124fbf7e0fae0b1002288498548aff018febdf80e30a3f1ff02092a08d96ff487715a18072a03d9a3f59072042aadd801227f497b48aff004fe0124204604b070bd002ca2d0e4e76ff4"
+    },
+    {
+      "runtime_start": "0x82342b4",
+      "file_start": "0x1c92b4",
+      "length": 60,
+      "hex": "10b50b4b9b6863b195f746fc441e18bf01242346012207490748b9f0fbfc204610bd0df061fb00280cbf02240024f0e7bc732404d7cd0c0664713108"
+    },
+    {
+      "runtime_start": "0x81d2acc",
+      "file_start": "0x167acc",
+      "length": 116,
+      "hex": "f0b5002785b004460197a8b10122164916481bf1f3f8d4e90156681cfff764fc31460446cde9020502aa01a819f0f6f920b920461af066fb05b0f0bd019bab4204d03a460a4909481bf188ff0022019bf0b2e254fff7baff2046fff76bfe2046fff74ffce8e700bf8ebb02069c713108b4bb0206"
+    },
+    {
+      "runtime_start": "0x823e4c4",
+      "file_start": "0x1d34c4",
+      "length": 28,
+      "hex": "9f610d06647131089d01210429e82f085fe82f08fa610d0636620d06"
+    },
+    {
+      "runtime_start": "0x823e544",
+      "file_start": "0x1d3544",
+      "length": 12,
+      "hex": "01200149bbf7d2baf1e22308"
+    },
+    {
+      "runtime_start": "0x8306c74",
+      "file_start": "0x29bc74",
+      "length": 40,
+      "hex": "71de2408a1462f08000300000000000005000000bdcb1e08e5fb2f08000200000000000004000000"
+    }
+  ],
+  "unknowns": [
+    "No exact Bluetooth request opcode was established by this batch.",
+    "No status payload layout was established by this batch.",
+    "AT+APP GET_LINE_IN remains AT syntax. Its presence does not prove that Bluetooth accepts it.",
+    "RACE co-system code can describe chip-to-chip traffic. It must not be equated with host Bluetooth traffic without a traced registration path.",
+    "The task labels race command and ATCI identify separate firmware tasks. They do not establish a tunnel between them.",
+    "The new decompilation rules out the nearby getter caller as a simple status builder. It is an action-gating function."
+  ],
+  "reproduction": "The generator /tmp/skull_btquery_firmware.py scans aligned32-bit pointers and decodes Thumb BL immediate fields. Calls remain static evidence until function boundaries and incoming registration paths are verified.",
+  "decompiled_source": {
+    "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/firmware-handlers.c",
+    "bytes": 17932,
+    "sha256": "d3368ccbc87cd4cd4771908356de148c624ab9fcffe6a3b47094d266bcf4e6fe",
+    "qualification": "Candidate ARM Thumb interpretation with pointer-derived runtime mapping. Helper names remain unresolved."
+  },
+  "candidate_semantics": [
+    {
+      "address": "0x0823dff4",
+      "claim": "This function checks line-in state while deciding whether an action should proceed. It does not construct a line-in status response.",
+      "evidence_lines": [
+        295,
+        324,
+        511,
+        513
+      ],
+      "status": "decompilation-supported",
+      "limit": "Action IDs here are not established Bluetooth command IDs."
+    },
+    {
+      "address": "0x0823e2f0",
+      "claim": "This callback requires total byte length to equal12 plus the word at payload offset8. It interprets word0 as a module and word1 as an event. Payload begins at offset12.",
+      "evidence_lines": [
+        555,
+        568,
+        583,
+        591,
+        594
+      ],
+      "status": "decompilation-supported",
+      "layout": [
+        {
+          "offset": 0,
+          "width": 4,
+          "interpretation": "module identifier"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "interpretation": "event identifier"
+        },
+        {
+          "offset": 8,
+          "width": 4,
+          "interpretation": "payload length"
+        },
+        {
+          "offset": 12,
+          "width": "payload length",
+          "interpretation": "payload"
+        }
+      ],
+      "limit": "This is a co-system callback. It does not establish any host Bluetooth packet layout."
+    },
+    {
+      "address": "0x0823e2f0",
+      "claim": "Module0x23 has special events0x0c,0x0d,0x0e and0x11. Event0x11 calls the stored-value writer with IDs0xf602,0xf603 or0xf66c for lengths2,3 or6.",
+      "evidence_lines": [
+        611,
+        659
+      ],
+      "status": "decompilation-supported",
+      "limit": "These are write paths. Do not present them as read-only jack-state queries."
+    },
+    {
+      "address": "0x082342b4",
+      "claim": "When its configuration word iszero, this wrapper maps line-in state zero to value2, and nonzero to value0. Otherwise it reads another state and returns0 or1.",
+      "evidence_lines": [
+        518,
+        544
+      ],
+      "status": "decompilation-supported",
+      "limit": "The wrapper is referenced by function pointers. Its role in a wire status command is unresolved."
+    }
+  ],
+  "additional_targets": [
+    {
+      "address": "0x081d2fdc",
+      "reason": "Candidate function containing ATCI registration literals0x081d303c and0x081d3040. The literals point to input callback0x081d2acc and candidate output callback0x081d3100."
+    },
+    {
+      "address": "0x081ecbbc",
+      "reason": "Entry recorded in the firmware task table under race command. Its dispatch may reveal external opcode handlers."
+    },
+    {
+      "address": "0x082344cc",
+      "reason": "Candidate state handler that references getter wrapper0x082342b4 through a function pointer. Its wire-protocol relevance remains unknown."
+    }
+  ]
+}

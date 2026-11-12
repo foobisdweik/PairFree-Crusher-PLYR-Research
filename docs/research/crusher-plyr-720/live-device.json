@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-11",
+  "source": "system_profiler SPBluetoothDataType -json",
+  "scope": "macOS-reported Bluetooth identity only; not a protocol capture",
+  "warning": "Bluetooth vendor/product fields are not USB VID/PID. Reported firmware 1.0.0 is not a verified full build number.",
+  "devices": [
+    {
+      "name": "CRUSHER PLYR 720 XBOX",
+      "section": "device_connected",
+      "properties": {
+        "device_firmwareVersion": "1.0.0",
+        "device_minorType": "Headset",
+        "device_productID": "0x0004",
+        "device_rssi": "-44",
+        "device_services": "0x900039 < HFP AVRCP A2DP HID GATT ACL >",
+        "device_vendorID": "0x0094"
+      }
+    }
+  ]
+}

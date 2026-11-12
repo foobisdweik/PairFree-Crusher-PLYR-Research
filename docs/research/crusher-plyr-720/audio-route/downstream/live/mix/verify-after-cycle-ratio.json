@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794452026.1136661
+    },
+    {
+      "hex" : "055a0c00010d0002055a0400832c0b00",
+      "kind" : "request",
+      "time" : 1794452026.2002201
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794452026.202533
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794452026.233274
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794452026.234942
+    },
+    {
+      "error" : "none",
+      "hex" : "055d0e00010d0002055b0600832c000b0014",
+      "kind" : "notification",
+      "time" : 1794452026.2638059
+    }
+  ],
+  "query" : "Master GET_APP_COMMON_CONF 000B",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

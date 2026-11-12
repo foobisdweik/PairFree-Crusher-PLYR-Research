@@ -1,0 +1,1390 @@
+{
+  "image": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin",
+  "image_bytes": 3280896,
+  "image_sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+  "mapping_delta": "0x806b000",
+  "qualification": "This is a pointer-derived MCU mapping. It is not a map of every embedded region.",
+  "literals": [
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x81ed1f0",
+      "file_offset": "0x1821f0",
+      "word": "0x60466ef",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x81ed1f4",
+      "file_offset": "0x1821f4",
+      "word": "0x831764c",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x823626c",
+      "file_offset": "0x1cb26c",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8236270",
+      "file_offset": "0x1cb270",
+      "word": "0x60cec16",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8240064",
+      "file_offset": "0x1d5064",
+      "word": "0x60d7e98",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8240068",
+      "file_offset": "0x1d5068",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824006c",
+      "file_offset": "0x1d506c",
+      "word": "0x60d7eec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8240070",
+      "file_offset": "0x1d5070",
+      "word": "0x60d7f2b",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245508",
+      "file_offset": "0x1da508",
+      "word": "0x420f43d",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824550c",
+      "file_offset": "0x1da50c",
+      "word": "0x60dcd6d",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245510",
+      "file_offset": "0x1da510",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245514",
+      "file_offset": "0x1da514",
+      "word": "0x82fdb9b",
+      "printable_target": "%d"
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245518",
+      "file_offset": "0x1da518",
+      "word": "0x60dcdaf",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x82455f8",
+      "file_offset": "0x1da5f8",
+      "word": "0x4247994",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x82455fc",
+      "file_offset": "0x1da5fc",
+      "word": "0x42479a1",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245600",
+      "file_offset": "0x1da600",
+      "word": "0x424799c",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245604",
+      "file_offset": "0x1da604",
+      "word": "0x42479a0",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x8245608",
+      "file_offset": "0x1da608",
+      "word": "0x8245431",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d620",
+      "file_offset": "0x1e2620",
+      "word": "0x60e3bdf",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d624",
+      "file_offset": "0x1e2624",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d65c",
+      "file_offset": "0x1e265c",
+      "word": "0x60e3c34",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d660",
+      "file_offset": "0x1e2660",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d6d0",
+      "file_offset": "0x1e26d0",
+      "word": "0x60e3d7a",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d6d4",
+      "file_offset": "0x1e26d4",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d6f4",
+      "file_offset": "0x1e26f4",
+      "word": "0x420f4d8",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d6f8",
+      "file_offset": "0x1e26f8",
+      "word": "0x60e3dbf",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d6fc",
+      "file_offset": "0x1e26fc",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d71c",
+      "file_offset": "0x1e271c",
+      "word": "0x420f4d8",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d720",
+      "file_offset": "0x1e2720",
+      "word": "0x60e3dff",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x824d724",
+      "file_offset": "0x1e2724",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x82ee4b4",
+      "file_offset": "0x2834b4",
+      "word": "0x420cea1",
+      "printable_target": null
+    },
+    {
+      "source": "downstream-functions.c",
+      "literal_runtime_address": "0x82eeb14",
+      "file_offset": "0x283b14",
+      "word": "0x4005845",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82318c0",
+      "file_offset": "0x1c68c0",
+      "word": "0xe000ed00",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82318c4",
+      "file_offset": "0x1c68c4",
+      "word": "0x8317764",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82318c8",
+      "file_offset": "0x1c68c8",
+      "word": "0x60c15c5",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82318cc",
+      "file_offset": "0x1c68cc",
+      "word": "0x60c1615",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82318d0",
+      "file_offset": "0x1c68d0",
+      "word": "0x4247204",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8231904",
+      "file_offset": "0x1c6904",
+      "word": "0x4247204",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8231908",
+      "file_offset": "0x1c6908",
+      "word": "0x8317764",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x823190c",
+      "file_offset": "0x1c690c",
+      "word": "0x60c165b",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x824599c",
+      "file_offset": "0x1da99c",
+      "word": "0x82ffc0e",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459a0",
+      "file_offset": "0x1da9a0",
+      "word": "0x82ffc2e",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459a4",
+      "file_offset": "0x1da9a4",
+      "word": "0x4247993",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459a8",
+      "file_offset": "0x1da9a8",
+      "word": "0x4247998",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459ac",
+      "file_offset": "0x1da9ac",
+      "word": "0x60dcfcd",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459b0",
+      "file_offset": "0x1da9b0",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459b4",
+      "file_offset": "0x1da9b4",
+      "word": "0x60dd006",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459b8",
+      "file_offset": "0x1da9b8",
+      "word": "0x420f440",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459bc",
+      "file_offset": "0x1da9bc",
+      "word": "0x82453dd",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459c0",
+      "file_offset": "0x1da9c0",
+      "word": "0x641e1e",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459c4",
+      "file_offset": "0x1da9c4",
+      "word": "0x82fe5d7",
+      "printable_target": "line_in"
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459c8",
+      "file_offset": "0x1da9c8",
+      "word": "0x4247994",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459cc",
+      "file_offset": "0x1da9cc",
+      "word": "0x82ff336",
+      "printable_target": "line_out"
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459d0",
+      "file_offset": "0x1da9d0",
+      "word": "0x424799c",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459d4",
+      "file_offset": "0x1da9d4",
+      "word": "0x824554d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459d8",
+      "file_offset": "0x1da9d8",
+      "word": "0x824551d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459dc",
+      "file_offset": "0x1da9dc",
+      "word": "0x824541d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459e0",
+      "file_offset": "0x1da9e0",
+      "word": "0x60dd052",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459e4",
+      "file_offset": "0x1da9e4",
+      "word": "0x60dd10f",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459e8",
+      "file_offset": "0x1da9e8",
+      "word": "0x60dd0b7",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459ec",
+      "file_offset": "0x1da9ec",
+      "word": "0x420f43f",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459f0",
+      "file_offset": "0x1da9f0",
+      "word": "0x420f43d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459f4",
+      "file_offset": "0x1da9f4",
+      "word": "0x60dd14d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459f8",
+      "file_offset": "0x1da9f8",
+      "word": "0x8245431",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x82459fc",
+      "file_offset": "0x1da9fc",
+      "word": "0x60dd1a8",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a00",
+      "file_offset": "0x1daa00",
+      "word": "0x60dd201",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a04",
+      "file_offset": "0x1daa04",
+      "word": "0x60dd276",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a08",
+      "file_offset": "0x1daa08",
+      "word": "0x60dd234",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a0c",
+      "file_offset": "0x1daa0c",
+      "word": "0x42479a0",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a10",
+      "file_offset": "0x1daa10",
+      "word": "0x42479a1",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a14",
+      "file_offset": "0x1daa14",
+      "word": "0x60dd2cd",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a18",
+      "file_offset": "0x1daa18",
+      "word": "0x420f43e",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245a1c",
+      "file_offset": "0x1daa1c",
+      "word": "0x60dd33a",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245bfc",
+      "file_offset": "0x1dabfc",
+      "word": "0x420f43d",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c00",
+      "file_offset": "0x1dac00",
+      "word": "0x420f43e",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c04",
+      "file_offset": "0x1dac04",
+      "word": "0x60dd374",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c08",
+      "file_offset": "0x1dac08",
+      "word": "0x420f43f",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c0c",
+      "file_offset": "0x1dac0c",
+      "word": "0x60dd3ed",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c10",
+      "file_offset": "0x1dac10",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c14",
+      "file_offset": "0x1dac14",
+      "word": "0x60dd3b4",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c18",
+      "file_offset": "0x1dac18",
+      "word": "0x60dd427",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c1c",
+      "file_offset": "0x1dac1c",
+      "word": "0x60dd47b",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c20",
+      "file_offset": "0x1dac20",
+      "word": "0x424799c",
+      "printable_target": null
+    },
+    {
+      "source": "event-consumer.c",
+      "literal_runtime_address": "0x8245c24",
+      "file_offset": "0x1dac24",
+      "word": "0x4247994",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x8246c5c",
+      "file_offset": "0x1dbc5c",
+      "word": "0x60ddccd",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x8246c60",
+      "file_offset": "0x1dbc60",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x8247838",
+      "file_offset": "0x1dc838",
+      "word": "0x42479b8",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x824d69c",
+      "file_offset": "0x1e269c",
+      "word": "0x420f4d8",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x824d6a0",
+      "file_offset": "0x1e26a0",
+      "word": "0x60e3d37",
+      "printable_target": null
+    },
+    {
+      "source": "handle-accessors.c",
+      "literal_runtime_address": "0x824d6a4",
+      "file_offset": "0x1e26a4",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235350",
+      "file_offset": "0x1ca350",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235354",
+      "file_offset": "0x1ca354",
+      "word": "0x60cda47",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235358",
+      "file_offset": "0x1ca358",
+      "word": "0x8234fed",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235360",
+      "file_offset": "0x1ca360",
+      "word": "0x42473dc",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235364",
+      "file_offset": "0x1ca364",
+      "word": "0x60cda74",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235368",
+      "file_offset": "0x1ca368",
+      "word": "0x42473e4",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x823536c",
+      "file_offset": "0x1ca36c",
+      "word": "0x60cdae6",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235370",
+      "file_offset": "0x1ca370",
+      "word": "0x60cdb25",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235374",
+      "file_offset": "0x1ca374",
+      "word": "0x60cdb6f",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235378",
+      "file_offset": "0x1ca378",
+      "word": "0x60cdbcb",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x823537c",
+      "file_offset": "0x1ca37c",
+      "word": "0x60cdc14",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235380",
+      "file_offset": "0x1ca380",
+      "word": "0x60cdc52",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x823563c",
+      "file_offset": "0x1ca63c",
+      "word": "0x60cdcb9",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235640",
+      "file_offset": "0x1ca640",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235644",
+      "file_offset": "0x1ca644",
+      "word": "0x4247440",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235648",
+      "file_offset": "0x1ca648",
+      "word": "0x60cdd18",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x823564c",
+      "file_offset": "0x1ca64c",
+      "word": "0x60cdd7d",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235650",
+      "file_offset": "0x1ca650",
+      "word": "0x60cddfe",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235654",
+      "file_offset": "0x1ca654",
+      "word": "0x60cde58",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235658",
+      "file_offset": "0x1ca658",
+      "word": "0x42473dc",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x823565c",
+      "file_offset": "0x1ca65c",
+      "word": "0x60cdf3e",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235660",
+      "file_offset": "0x1ca660",
+      "word": "0x60cdea5",
+      "printable_target": null
+    },
+    {
+      "source": "module1-consumers.c",
+      "literal_runtime_address": "0x8235664",
+      "file_offset": "0x1ca664",
+      "word": "0x42473e4",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81eefa4",
+      "file_offset": "0x183fa4",
+      "word": "0x604706e",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81eefa8",
+      "file_offset": "0x183fa8",
+      "word": "0x831764c",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef368",
+      "file_offset": "0x184368",
+      "word": "0x6047234",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef36c",
+      "file_offset": "0x18436c",
+      "word": "0x831764c",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef370",
+      "file_offset": "0x184370",
+      "word": "0x423b4a2",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef374",
+      "file_offset": "0x184374",
+      "word": "0x423b4a0",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef378",
+      "file_offset": "0x184378",
+      "word": "0x604726e",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef37c",
+      "file_offset": "0x18437c",
+      "word": "0x60472cb",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef4a4",
+      "file_offset": "0x1844a4",
+      "word": "0x423b4a0",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef4a8",
+      "file_offset": "0x1844a8",
+      "word": "0x6047329",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef4ac",
+      "file_offset": "0x1844ac",
+      "word": "0x831764c",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef4b0",
+      "file_offset": "0x1844b0",
+      "word": "0x6047386",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef5fc",
+      "file_offset": "0x1845fc",
+      "word": "0x82f42c9",
+      "printable_target": "AB15"
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef600",
+      "file_offset": "0x184600",
+      "word": "0x82f3baa",
+      "printable_target": "%x"
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef620",
+      "file_offset": "0x184620",
+      "word": "0x60473d1",
+      "printable_target": null
+    },
+    {
+      "source": "nvkey-read-handler.c",
+      "literal_runtime_address": "0x81ef624",
+      "file_offset": "0x184624",
+      "word": "0x831764c",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x8245428",
+      "file_offset": "0x1da428",
+      "word": "0x60dcc57",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x824542c",
+      "file_offset": "0x1da42c",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x8245598",
+      "file_offset": "0x1da598",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x824559c",
+      "file_offset": "0x1da59c",
+      "word": "0x60dceb2",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x82455a0",
+      "file_offset": "0x1da5a0",
+      "word": "0x60dcf0a",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x82ee044",
+      "file_offset": "0x283044",
+      "word": "0x400579d",
+      "printable_target": null
+    },
+    {
+      "source": "route-config-callbacks.c",
+      "literal_runtime_address": "0x82eeb14",
+      "file_offset": "0x283b14",
+      "word": "0x4005845",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82318c8",
+      "file_offset": "0x1c68c8",
+      "word": "0x60c15c5",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fbc",
+      "file_offset": "0x1d5fbc",
+      "word": "0x4247684",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fc0",
+      "file_offset": "0x1d5fc0",
+      "word": "0x60d8828",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fc4",
+      "file_offset": "0x1d5fc4",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fc8",
+      "file_offset": "0x1d5fc8",
+      "word": "0x82fe990",
+      "printable_target": "CRUSHER PLYR 720X Headset"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fcc",
+      "file_offset": "0x1d5fcc",
+      "word": "0x60d886e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fd0",
+      "file_offset": "0x1d5fd0",
+      "word": "0x82fe9aa",
+      "printable_target": "Airoha Headset Gaming ULL2"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fd4",
+      "file_offset": "0x1d5fd4",
+      "word": "0x60d88b9",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fd8",
+      "file_offset": "0x1d5fd8",
+      "word": "0x82fe9c5",
+      "printable_target": "Airoha Headset Enterprise"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fdc",
+      "file_offset": "0x1d5fdc",
+      "word": "0x60d8903",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fe0",
+      "file_offset": "0x1d5fe0",
+      "word": "0x82fe9df",
+      "printable_target": "Airoha Wireless Mic TX"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fe4",
+      "file_offset": "0x1d5fe4",
+      "word": "0x60d8952",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fe8",
+      "file_offset": "0x1d5fe8",
+      "word": "0x82fe9f6",
+      "printable_target": "Airoha Headset 8CH"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240fec",
+      "file_offset": "0x1d5fec",
+      "word": "0x60d8995",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240ff0",
+      "file_offset": "0x1d5ff0",
+      "word": "0x82fea09",
+      "printable_target": "Airoha Headset IOT"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240ff4",
+      "file_offset": "0x1d5ff4",
+      "word": "0x60d89d8",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240ff8",
+      "file_offset": "0x1d5ff8",
+      "word": "0x82fea1c",
+      "printable_target": "Airoha Headset DCHS Custom"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8240ffc",
+      "file_offset": "0x1d5ffc",
+      "word": "0x60d8a23",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241000",
+      "file_offset": "0x1d6000",
+      "word": "0x82fea37",
+      "printable_target": "Airoha Headset MIC_192K_1CH"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241004",
+      "file_offset": "0x1d6004",
+      "word": "0x60d8a6f",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241008",
+      "file_offset": "0x1d6008",
+      "word": "0x82fea53",
+      "printable_target": "Airoha Headset Audio CDC"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824100c",
+      "file_offset": "0x1d600c",
+      "word": "0x60d8ab8",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241010",
+      "file_offset": "0x1d6010",
+      "word": "0x82fea6c",
+      "printable_target": "Airoha Headset Mass Storage"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241014",
+      "file_offset": "0x1d6014",
+      "word": "0x60d8afb",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241018",
+      "file_offset": "0x1d6018",
+      "word": "0x82fea88",
+      "printable_target": "Airoha Headset CDC"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824101c",
+      "file_offset": "0x1d601c",
+      "word": "0x60d8b3e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241020",
+      "file_offset": "0x1d6020",
+      "word": "0x82fea9b",
+      "printable_target": "Airoha Headset IOT 2"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241024",
+      "file_offset": "0x1d6024",
+      "word": "0x60d8b83",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241028",
+      "file_offset": "0x1d6028",
+      "word": "0x82feab0",
+      "printable_target": "Airoha Headset HID"
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241720",
+      "file_offset": "0x1d6720",
+      "word": "0x60d8d19",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241724",
+      "file_offset": "0x1d6724",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241728",
+      "file_offset": "0x1d6728",
+      "word": "0x4247686",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417b0",
+      "file_offset": "0x1d67b0",
+      "word": "0x4247685",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417b4",
+      "file_offset": "0x1d67b4",
+      "word": "0x82ffc2e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417b8",
+      "file_offset": "0x1d67b8",
+      "word": "0x82ffc0e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417bc",
+      "file_offset": "0x1d67bc",
+      "word": "0x60d8d63",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417c0",
+      "file_offset": "0x1d67c0",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82417c4",
+      "file_offset": "0x1d67c4",
+      "word": "0x4247686",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824193c",
+      "file_offset": "0x1d693c",
+      "word": "0x82ffc0e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241940",
+      "file_offset": "0x1d6940",
+      "word": "0x4247685",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241944",
+      "file_offset": "0x1d6944",
+      "word": "0x82ffc2e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241948",
+      "file_offset": "0x1d6948",
+      "word": "0x420f3c4",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824194c",
+      "file_offset": "0x1d694c",
+      "word": "0x60d8da0",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241950",
+      "file_offset": "0x1d6950",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241954",
+      "file_offset": "0x1d6954",
+      "word": "0x60d8e35",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241958",
+      "file_offset": "0x1d6958",
+      "word": "0x60d8dec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824195c",
+      "file_offset": "0x1d695c",
+      "word": "0x824172d",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241960",
+      "file_offset": "0x1d6960",
+      "word": "0x60d8e77",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241964",
+      "file_offset": "0x1d6964",
+      "word": "0x4247686",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241968",
+      "file_offset": "0x1d6968",
+      "word": "0x60d8ec5",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x824196c",
+      "file_offset": "0x1d696c",
+      "word": "0x60d8f07",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82419f0",
+      "file_offset": "0x1d69f0",
+      "word": "0x82ffc0e",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82419f4",
+      "file_offset": "0x1d69f4",
+      "word": "0x824172d",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82419f8",
+      "file_offset": "0x1d69f8",
+      "word": "0x60d8f40",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x82419fc",
+      "file_offset": "0x1d69fc",
+      "word": "0x83171ec",
+      "printable_target": null
+    },
+    {
+      "source": "seed-functions.c",
+      "literal_runtime_address": "0x8241a00",
+      "file_offset": "0x1d6a00",
+      "word": "0x4247686",
+      "printable_target": null
+    }
+  ],
+  "exports": [
+    {
+      "name": "downstream-functions.c",
+      "bytes": 5171,
+      "sha256": "3ee68bde3b98b0edf9821489e8d76544b8d0cab34ee2d0d185c9ba216271ded3"
+    },
+    {
+      "name": "event-consumer.c",
+      "bytes": 11168,
+      "sha256": "85fafe5768f09d7906f5b7900d9aa949ecec971879f3905dd3ebd2cfef387efe"
+    },
+    {
+      "name": "handle-accessors.c",
+      "bytes": 3204,
+      "sha256": "42746333fa8c1f687eba4c5b130a8bf635c4d6abbb1802198c5bb741dc6911b8"
+    },
+    {
+      "name": "module1-consumers.c",
+      "bytes": 9199,
+      "sha256": "d331b00439ef8ad026ae18c906c693bd71d4cb4ad02f975ffc44306fb742a47f"
+    },
+    {
+      "name": "nvkey-read-handler.c",
+      "bytes": 10292,
+      "sha256": "24426c0cb7701a98f9d95677271c01e8e749043de75e914c612b404a0e942129"
+    },
+    {
+      "name": "route-config-callbacks.c",
+      "bytes": 1614,
+      "sha256": "db582a37979e8c1d3eb124ccafd121a23d91f749bcc85a647dc707f4d5595840"
+    },
+    {
+      "name": "seed-functions.c",
+      "bytes": 8058,
+      "sha256": "c33db33c79e184751f5d2a1db16feb295f20e65d8da64fbcc7750b242be9b81a"
+    }
+  ]
+}

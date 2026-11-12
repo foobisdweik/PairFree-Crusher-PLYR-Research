@@ -1,0 +1,497 @@
+[
+  {
+    "offset": "0x87a50",
+    "candidate_address": "0x80f2a50",
+    "text": "common_dongle_log"
+  },
+  {
+    "offset": "0x286e8e",
+    "candidate_address": "0x82f1e8e",
+    "text": "not to set USBPHYACR1 RG_USB20_INTR_CAL"
+  },
+  {
+    "offset": "0x286eb6",
+    "candidate_address": "0x82f1eb6",
+    "text": "USBPHYACR6 0x%X, chip_version:0x%X"
+  },
+  {
+    "offset": "0x288b4a",
+    "candidate_address": "0x82f3b4a",
+    "text": "port_mux_usb_exception_init done"
+  },
+  {
+    "offset": "0x288c27",
+    "candidate_address": "0x82f3c27",
+    "text": "MUX_USB"
+  },
+  {
+    "offset": "0x288c79",
+    "candidate_address": "0x82f3c79",
+    "text": "MUX_USB_COM_1/USB_CDC_1"
+  },
+  {
+    "offset": "0x288c91",
+    "candidate_address": "0x82f3c91",
+    "text": "MUX_USB_COM_2/USB_CDC_2"
+  },
+  {
+    "offset": "0x288cbb",
+    "candidate_address": "0x82f3cbb",
+    "text": "MUX_USB_COM_2/USB_HID"
+  },
+  {
+    "offset": "0x288e30",
+    "candidate_address": "0x82f3e30",
+    "text": "[offline_dump] FOTA ongoing, dump first priority"
+  },
+  {
+    "offset": "0x28957e",
+    "candidate_address": "0x82f457e",
+    "text": "USB_MAIN"
+  },
+  {
+    "offset": "0x289587",
+    "candidate_address": "0x82f4587",
+    "text": "USB_RESOURCE"
+  },
+  {
+    "offset": "0x2895b9",
+    "candidate_address": "0x82f45b9",
+    "text": "CRUSHER PLYR 720X USB Chat"
+  },
+  {
+    "offset": "0x2895d4",
+    "candidate_address": "0x82f45d4",
+    "text": "CRUSHER PLYR 720X USB Game"
+  },
+  {
+    "offset": "0x28961a",
+    "candidate_address": "0x82f461a",
+    "text": "USB_DBG"
+  },
+  {
+    "offset": "0x289622",
+    "candidate_address": "0x82f4622",
+    "text": "USB_CASE"
+  },
+  {
+    "offset": "0x2896d9",
+    "candidate_address": "0x82f46d9",
+    "text": "AT+USBSTR"
+  },
+  {
+    "offset": "0x2896e3",
+    "candidate_address": "0x82f46e3",
+    "text": "AT+USBSTR_RESET"
+  },
+  {
+    "offset": "0x2896f3",
+    "candidate_address": "0x82f46f3",
+    "text": "AT+USBSTR_SAVE"
+  },
+  {
+    "offset": "0x289702",
+    "candidate_address": "0x82f4702",
+    "text": "AT+USB_BASICINFO"
+  },
+  {
+    "offset": "0x289713",
+    "candidate_address": "0x82f4713",
+    "text": "AT+USB_INIT"
+  },
+  {
+    "offset": "0x28971f",
+    "candidate_address": "0x82f471f",
+    "text": "AT+USB_DEINIT"
+  },
+  {
+    "offset": "0x28972d",
+    "candidate_address": "0x82f472d",
+    "text": "USB_ATCI"
+  },
+  {
+    "offset": "0x289742",
+    "candidate_address": "0x82f4742",
+    "text": "USBAUDIO_DRV"
+  },
+  {
+    "offset": "0x289994",
+    "candidate_address": "0x82f4994",
+    "text": "USB_HID_IntrOut_Hdr out ep:%d len:%2d cb:0x%08x"
+  },
+  {
+    "offset": "0x2899c4",
+    "candidate_address": "0x82f49c4",
+    "text": "usb_hid_tx_blocking EP_%02d IN len:%2d"
+  },
+  {
+    "offset": "0x2899eb",
+    "candidate_address": "0x82f49eb",
+    "text": "usb_hid_print_reports USB_REPORT_DSCR_TYPE_%-11s type:[%02d] len:[%02d] port:[%d] is %s."
+  },
+  {
+    "offset": "0x289adb",
+    "candidate_address": "0x82f4adb",
+    "text": "USBHID"
+  },
+  {
+    "offset": "0x289ae2",
+    "candidate_address": "0x82f4ae2",
+    "text": "usb_hid_print_reports"
+  },
+  {
+    "offset": "0x289af8",
+    "candidate_address": "0x82f4af8",
+    "text": "usb_hid_tx_blocking"
+  },
+  {
+    "offset": "0x289b0c",
+    "candidate_address": "0x82f4b0c",
+    "text": "USB_HID_IntrOut_Hdr"
+  },
+  {
+    "offset": "0x289e34",
+    "candidate_address": "0x82f4e34",
+    "text": "g_usb_hid_srv_call_timer"
+  },
+  {
+    "offset": "0x289e4d",
+    "candidate_address": "0x82f4e4d",
+    "text": "USB_HID_SRV_CALL"
+  },
+  {
+    "offset": "0x289fcb",
+    "candidate_address": "0x82f4fcb",
+    "text": "AT+EAUXADC"
+  },
+  {
+    "offset": "0x28b28c",
+    "candidate_address": "0x82f628c",
+    "text": "+EAUXADC:1, measure voltage of CH2."
+  },
+  {
+    "offset": "0x28b2b5",
+    "candidate_address": "0x82f62b5",
+    "text": "+EAUXADC:adc_channel = %d adc_data = 0x%04x, adc_k_data = 0x%04x,adc_voltage = %dmV"
+  },
+  {
+    "offset": "0x28b35a",
+    "candidate_address": "0x82f635a",
+    "text": "AT+EPMUREG=AUX,"
+  },
+  {
+    "offset": "0x28beab",
+    "candidate_address": "0x82f6eab",
+    "text": "AT+EAUDIO=USB_AUDIO"
+  },
+  {
+    "offset": "0x28bffc",
+    "candidate_address": "0x82f6ffc",
+    "text": "TEMPORARY_SIDETONE_VOLUME"
+  },
+  {
+    "offset": "0x28c1d8",
+    "candidate_address": "0x82f71d8",
+    "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN"
+  },
+  {
+    "offset": "0x28c206",
+    "candidate_address": "0x82f7206",
+    "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_CLOSE"
+  },
+  {
+    "offset": "0x28c45f",
+    "candidate_address": "0x82f745f",
+    "text": "AT+EAUDIO=LINEIN_PEQ_MODE,"
+  },
+  {
+    "offset": "0x28c47a",
+    "candidate_address": "0x82f747a",
+    "text": "AT+EAUDIO=LINEIN_PEQ_SYNC,"
+  },
+  {
+    "offset": "0x28c495",
+    "candidate_address": "0x82f7495",
+    "text": "AT+EAUDIO=VOLUME_PARAM_NVDM"
+  },
+  {
+    "offset": "0x28c55e",
+    "candidate_address": "0x82f755e",
+    "text": "AT+EAUDIO=AUDIO_TRANSMITTER"
+  },
+  {
+    "offset": "0x28c57a",
+    "candidate_address": "0x82f757a",
+    "text": "AUDIO_TRANSMITTER,init"
+  },
+  {
+    "offset": "0x28c63a",
+    "candidate_address": "0x82f763a",
+    "text": "AUDIO_TRANSMITTER,start"
+  },
+  {
+    "offset": "0x28c666",
+    "candidate_address": "0x82f7666",
+    "text": "AUDIO_TRANSMITTER,stop"
+  },
+  {
+    "offset": "0x28c67d",
+    "candidate_address": "0x82f767d",
+    "text": "AUDIO_TRANSMITTER,deinit"
+  },
+  {
+    "offset": "0x28c696",
+    "candidate_address": "0x82f7696",
+    "text": "AUDIO_TRANSMITTER,set_runtime_config"
+  },
+  {
+    "offset": "0x28db8f",
+    "candidate_address": "0x82f8b8f",
+    "text": "+OFFLINE INFO:"
+  },
+  {
+    "offset": "0x28e836",
+    "candidate_address": "0x82f9836",
+    "text": "unmute_air_cis"
+  },
+  {
+    "offset": "0x28e89d",
+    "candidate_address": "0x82f989d",
+    "text": "DL_AM_MUTE"
+  },
+  {
+    "offset": "0x28e8a8",
+    "candidate_address": "0x82f98a8",
+    "text": "DL_AM_UNMUTE"
+  },
+  {
+    "offset": "0x28e8b5",
+    "candidate_address": "0x82f98b5",
+    "text": "UL_AM_MUTE"
+  },
+  {
+    "offset": "0x28e8c0",
+    "candidate_address": "0x82f98c0",
+    "text": "UL_AM_UNMUTE"
+  },
+  {
+    "offset": "0x28e8cd",
+    "candidate_address": "0x82f98cd",
+    "text": "DL_AM_SET_VOLUME"
+  },
+  {
+    "offset": "0x28e8de",
+    "candidate_address": "0x82f98de",
+    "text": "UL_AM_SET_VOLUME"
+  },
+  {
+    "offset": "0x28eaf4",
+    "candidate_address": "0x82f9af4",
+    "text": "race_usb_com_1_rx_timer"
+  },
+  {
+    "offset": "0x28eb0c",
+    "candidate_address": "0x82f9b0c",
+    "text": "race_usb_com_2_rx_timer"
+  },
+  {
+    "offset": "0x2901fc",
+    "candidate_address": "0x82fb1fc",
+    "text": "GET_VOLUME,"
+  },
+  {
+    "offset": "0x290208",
+    "candidate_address": "0x82fb208",
+    "text": "SET_VOLUME,"
+  },
+  {
+    "offset": "0x2905fe",
+    "candidate_address": "0x82fb5fe",
+    "text": "BT_HFP_VOLUME_SYNC_SPEAKER_GAIN_IND"
+  },
+  {
+    "offset": "0x290622",
+    "candidate_address": "0x82fb622",
+    "text": "BT_HFP_VOLUME_SYNC_MIC_GAIN_IND"
+  },
+  {
+    "offset": "0x291218",
+    "candidate_address": "0x82fc218",
+    "text": "audio_transmitter"
+  },
+  {
+    "offset": "0x2913b4",
+    "candidate_address": "0x82fc3b4",
+    "text": "linein"
+  },
+  {
+    "offset": "0x293049",
+    "candidate_address": "0x82fe049",
+    "text": "MIMI: ### MIMI GET VOLUME FAILED, NO ACTIVE DEVICE FOUND"
+  },
+  {
+    "offset": "0x293082",
+    "candidate_address": "0x82fe082",
+    "text": "MIMI: ### MIMI GET VOLUME FAILED, GET VOLUME FAILED"
+  },
+  {
+    "offset": "0x2930b6",
+    "candidate_address": "0x82fe0b6",
+    "text": "MIMI: ### MIMI SET VOLUME FAILED, NO ACTIVE DEVICE FOUND"
+  },
+  {
+    "offset": "0x2930ef",
+    "candidate_address": "0x82fe0ef",
+    "text": "MIMI: ### MIMI GET CURRENT VOLUME FAILED"
+  },
+  {
+    "offset": "0x293118",
+    "candidate_address": "0x82fe118",
+    "text": "MIMI: ### MIMI SET VOLUME FAILED, BT ACTION FAILED TO SET VOLUME"
+  },
+  {
+    "offset": "0x293216",
+    "candidate_address": "0x82fe216",
+    "text": "MIMI: ### MIMI SET VOLUME FAILED"
+  },
+  {
+    "offset": "0x293237",
+    "candidate_address": "0x82fe237",
+    "text": "MIMI: ### MIMI HT START SET VOLUME TO: %i"
+  },
+  {
+    "offset": "0x2932ac",
+    "candidate_address": "0x82fe2ac",
+    "text": "MIMI: ### MIMI SET VOLUME TO LAST VOLUME FAILED"
+  },
+  {
+    "offset": "0x2932dc",
+    "candidate_address": "0x82fe2dc",
+    "text": "MIMI: ### MIMI HANDLE VOLUME NOTIFICATION"
+  },
+  {
+    "offset": "0x293306",
+    "candidate_address": "0x82fe306",
+    "text": "MIMI: ### MIMI VOLUME HAS CHANGED, SEND HT PAUSE NOTIFICATION"
+  },
+  {
+    "offset": "0x29343b",
+    "candidate_address": "0x82fe43b",
+    "text": "mimi_get_volume"
+  },
+  {
+    "offset": "0x29344b",
+    "candidate_address": "0x82fe44b",
+    "text": "mimi_set_volume"
+  },
+  {
+    "offset": "0x293486",
+    "candidate_address": "0x82fe486",
+    "text": "mimi_volume_notification"
+  },
+  {
+    "offset": "0x2935d7",
+    "candidate_address": "0x82fe5d7",
+    "text": "line_in"
+  },
+  {
+    "offset": "0x2935df",
+    "candidate_address": "0x82fe5df",
+    "text": "usb_in"
+  },
+  {
+    "offset": "0x293c5a",
+    "candidate_address": "0x82fec5a",
+    "text": "AT+LINE_IN_DET"
+  },
+  {
+    "offset": "0x293c69",
+    "candidate_address": "0x82fec69",
+    "text": "AT+LINE_IN_VOL"
+  },
+  {
+    "offset": "0x294245",
+    "candidate_address": "0x82ff245",
+    "text": "LINE_IN - ON"
+  },
+  {
+    "offset": "0x294252",
+    "candidate_address": "0x82ff252",
+    "text": "LINE_IN - OFF"
+  },
+  {
+    "offset": "0x2942a8",
+    "candidate_address": "0x82ff2a8",
+    "text": "GET_LINE_IN"
+  },
+  {
+    "offset": "0x29433f",
+    "candidate_address": "0x82ff33f",
+    "text": "usb_out"
+  },
+  {
+    "offset": "0x294350",
+    "candidate_address": "0x82ff350",
+    "text": "AT+USBAUDIORATIO"
+  },
+  {
+    "offset": "0x294361",
+    "candidate_address": "0x82ff361",
+    "text": "AT+USBAUDIO"
+  },
+  {
+    "offset": "0x2a5d54",
+    "candidate_address": "0x8310d54",
+    "text": "src/LC/sched/LC_LinkPriority.c"
+  },
+  {
+    "offset": "0x2aa382",
+    "candidate_address": "0x8315382",
+    "text": "!AB1562ab1565Ab1568WidebandANC!.USB Data"
+  },
+  {
+    "offset": "0x2aa3f2",
+    "candidate_address": "0x83153f2",
+    "text": "(0 && \"[GIP] Cannot switch to USB mode in host device\")"
+  },
+  {
+    "offset": "0x2aa63c",
+    "candidate_address": "0x831563c",
+    "text": "ms_gip_handle_usb_data_received"
+  },
+  {
+    "offset": "0x2aa65c",
+    "candidate_address": "0x831565c",
+    "text": "ms_gip_handle_mode_switch_to_usb_mode"
+  },
+  {
+    "offset": "0x2aa6a7",
+    "candidate_address": "0x83156a7",
+    "text": "ms_gip_handle_usb_data_received"
+  },
+  {
+    "offset": "0x2dd254",
+    "candidate_address": "0x8348254",
+    "text": "016_MUTE_ON.mp3"
+  },
+  {
+    "offset": "0x2dd29c",
+    "candidate_address": "0x834829c",
+    "text": "017_MUTE_OFF.mp3"
+  },
+  {
+    "offset": "0x2dd404",
+    "candidate_address": "0x8348404",
+    "text": "022_DONGLE_CONNECTED.mp3"
+  },
+  {
+    "offset": "0x2dd44c",
+    "candidate_address": "0x834844c",
+    "text": "023_DONGLE_DISCONNECTED.mp3"
+  },
+  {
+    "offset": "0x2dd5fc",
+    "candidate_address": "0x83485fc",
+    "text": "038_SND_VOLUME_UP.mp3"
+  }
+]

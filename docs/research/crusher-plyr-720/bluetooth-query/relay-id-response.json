@@ -1,0 +1,33 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794438898.35114
+    },
+    {
+      "hex" : "055a0200000d",
+      "kind" : "request",
+      "time" : 1794438899.0093689
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794438899.0117259
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794438899.04338
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0400000d0002",
+      "kind" : "notification",
+      "time" : 1794438899.0453579
+    }
+  ],
+  "query" : "QUERY_RELAY_ID",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

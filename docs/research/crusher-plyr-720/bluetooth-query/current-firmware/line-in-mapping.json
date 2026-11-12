@@ -1,0 +1,32 @@
+[
+  {
+    "text": "AT+LINE_IN_DET",
+    "offset": "0x293c5a",
+    "pointer_references": [
+      {
+        "offset": "0x2b2b84",
+        "following_word": "0x82416a5"
+      }
+    ]
+  },
+  {
+    "text": "AT+LINE_IN_VOL",
+    "offset": "0x293c69",
+    "pointer_references": [
+      {
+        "offset": "0x2b2b94",
+        "following_word": "0x8241571"
+      }
+    ]
+  },
+  {
+    "text": "GET_LINE_IN",
+    "offset": "0x2942a8",
+    "pointer_references": [
+      {
+        "offset": "0x1d8174",
+        "following_word": "0x82ff252"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "url": "https://s3.us-east-1.amazonaws.com/skdy.firmware/SG200X_Master_Headset_DFU_v1.0.0.35.bin",
+  "url_provenance": "Version .35 substituted into manifest-derived .34 URL after live firmware identification.",
+  "bytes": 2115996,
+  "sha256": "ba3f162982554375d93d563727aa567281e60c9ebdfa2770243d80d192e4ccf8",
+  "decoded_bytes": 3280896,
+  "decoded_sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+  "outer_hash_verified": true,
+  "compression": "LZMA FORMAT_ALONE",
+  "flashed": false
+}

@@ -1,0 +1,189 @@
+{
+  "request_count": 33,
+  "matched_master_reads": 32,
+  "address_of_block": "0x04247684",
+  "jack_detection_address": "0x04247686",
+  "transitions": [
+    {
+      "time": 1794439083.136787,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439125.220084,
+      "block_hex": "00010000",
+      "jack_detection_byte": 0
+    },
+    {
+      "time": 1794439137.0908399,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    }
+  ],
+  "values": [
+    {
+      "time": 1794439083.136787,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439086.075824,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439089.067878,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439092.06213,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439095.110363,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439098.0954862,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439101.109648,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439104.131917,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439107.097608,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439110.2139869,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439113.078189,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439116.0773811,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439119.1125588,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439122.242512,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439125.220084,
+      "block_hex": "00010000",
+      "jack_detection_byte": 0
+    },
+    {
+      "time": 1794439128.075438,
+      "block_hex": "00010000",
+      "jack_detection_byte": 0
+    },
+    {
+      "time": 1794439131.076329,
+      "block_hex": "00010000",
+      "jack_detection_byte": 0
+    },
+    {
+      "time": 1794439134.110186,
+      "block_hex": "00010000",
+      "jack_detection_byte": 0
+    },
+    {
+      "time": 1794439137.0908399,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439140.0969481,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439143.0801492,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439146.184906,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439149.086664,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439152.087792,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439155.089991,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439158.095512,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439161.0802898,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439164.083396,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439167.06888,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439170.084137,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439173.0671868,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    },
+    {
+      "time": 1794439176.0766912,
+      "block_hex": "00010100",
+      "jack_detection_byte": 1
+    }
+  ],
+  "user_report": "Aux was removed at headphone end for approximately ten seconds and reinserted. Bluetooth remained connected.",
+  "result": "The Master byte changed 1 to 0 to 1. It correlates with the user-controlled jack cycle.",
+  "limit": "Exact physical transition timestamps were not independently recorded. These addresses are verified for SG200X Master firmware v1.0.0.35 only.",
+  "cleanup": "The owned Swift monitor was stopped after the completed cycle. No memory writes or settings commands occurred."
+}

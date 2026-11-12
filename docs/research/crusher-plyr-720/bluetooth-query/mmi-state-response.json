@@ -1,0 +1,33 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794423684.742871
+    },
+    {
+      "hex" : "055a0200802c",
+      "kind" : "request",
+      "time" : 1794423685.513994
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794423685.5163929
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794423685.546236
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300802c03",
+      "kind" : "notification",
+      "time" : 1794423685.5478702
+    }
+  ],
+  "query" : "GET_MMI_STATE",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

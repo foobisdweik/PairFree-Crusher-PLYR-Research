@@ -1,0 +1,100 @@
+/* Selected Master .35 functions. Pointer-derived MCU mapping. Static evidence only. */
+
+/* listing 08238ad0..08238af4 (linear sweep) */
+08238ad0 adds r0,#0x1e
+08238ad2 ldr r2,[0x08238d6c]
+08238ad4 subs r3,#0x0
+08238ad6 it ne
+08238ad8 mov.ne r3,#0x1
+08238ada strb r3,[r2,#0x0]
+08238adc ldrb.w r3,[sp,#0x1f]
+08238ae0 subs r3,#0x0
+08238ae2 it ne
+08238ae4 mov.ne r3,#0x1
+08238ae6 strb r3,[r6,#0x0]
+08238ae8 movs r5,#0x1
+08238aea movw r0,#0xf601
+08238aee ldr r1,[0x08238d70]
+08238af0 add r2,sp,#0x20
+08238af2 str r5,[sp,#0x20]
+08238af4 bl 0x081c62f8
+
+/* listing 08238db4..08238dd6 (linear sweep) */
+08238db4 ldr r4,[0x0823909c]
+08238db6 ldrb r2,[r5,#0x0]
+08238db8 strh.w r3,[sp,#0x48]
+08238dbc ldrb r3,[r4,#0x7]
+08238dbe strb.w r6,[sp,#0x46]
+08238dc2 cmp r2,r3
+08238dc4 beq.w 0x08238a76
+08238dc8 movs r2,#0x1
+08238dca mov r1,r5
+08238dcc movw r0,#0xf601
+08238dd0 bl 0x081c6324
+08238dd4 ldrb r3,[r5,#0x0]
+08238dd6 movs r0,#0x9
+
+/* listing 082390fa..0823911c (linear sweep) */
+082390fa adds r0,#0x48
+082390fc ldrb r2,[r4,#0x7]
+082390fe ldr r3,[sp,#0x34]
+08239100 bne 0x08239154
+08239102 add r3,r2
+08239104 cmp r3,#0x13
+08239106 it hi
+08239108 mov.hi r3,#0x14
+0823910a strb.w r3,[sp,#0x28]
+0823910e movs r2,#0x1
+08239110 add r1,sp,#0x28
+08239112 movw r0,#0xf601
+08239116 bl 0x081c6324
+0823911a ldrb.w r0,[sp,#0x28]
+
+/* listing 0823ca80..0823caa4 (linear sweep) */
+0823ca80 lsls r7,r5,#0x2
+0823ca82 lsls r6,r2,#0x7
+0823ca84 lsls r4,r0,#0x1
+0823ca86 lsls r5,r5,#0x4
+0823ca88 lsls r0,r6,#0x6
+0823ca8a cbnz r2,0x0823cad8
+0823ca8c ldr r0,[0x0823cd34]
+0823ca8e mov r1,r4
+0823ca90 movs r2,#0x7
+0823ca92 str r0,[r5,#0x0]
+0823ca94 bl 0x082528d0
+0823ca98 ldr r3,[r5,#0x0]
+0823ca9a movw r0,#0xf601
+0823ca9e strb r4,[r3,#0x5]
+0823caa0 strb r4,[r3,#0x6]
+0823caa2 movs r3,#0x1
+0823caa4 ldr r4,[0x0823cd38]
+
+/* listing 082460ce..082460f0 (linear sweep) */
+082460ce mov r1,r4
+082460d0 ldr r0,[0x08246344]
+082460d2 bl 0x081d2660
+082460d6 mov r2,r4
+082460d8 mov r3,r0
+082460da ldr r1,[0x08246348]
+082460dc ldr r0,[0x0824631c]
+082460de bl 0x082ee038
+082460e2 str r4,[sp,#0x1c]
+082460e4 ldr r4,[0x0824634c]
+082460e6 movw r0,#0xf601
+082460ea mov r1,r4
+082460ec add r2,sp,#0x1c
+082460ee bl 0x081c62f8
+
+/* listing 0824b60e..0824b630 (linear sweep) */
+0824b60e lsls r1,r0
+0824b610 bl 0x08240074
+0824b614 movs r4,#0x1
+0824b616 b.w 0x0824a8b2
+0824b61a bl 0x0824a388
+0824b61e movs r4,#0x1
+0824b620 b.w 0x0824a8b2
+0824b624 movs r3,#0x1
+0824b626 movw r0,#0xf601
+0824b62a add r2,sp,#0x1c
+0824b62c add.w r1,sp,#0x17
+0824b630 str r3,[sp,#0x1c]

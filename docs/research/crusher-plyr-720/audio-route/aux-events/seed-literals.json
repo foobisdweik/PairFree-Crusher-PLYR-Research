@@ -1,0 +1,338 @@
+[
+  {
+    "literal_address": "0x82318c8",
+    "file_offset": "0x1c68c8",
+    "value": "0x60c15c5",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fbc",
+    "file_offset": "0x1d5fbc",
+    "value": "0x4247684",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fc0",
+    "file_offset": "0x1d5fc0",
+    "value": "0x60d8828",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fc4",
+    "file_offset": "0x1d5fc4",
+    "value": "0x83171ec",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fc8",
+    "file_offset": "0x1d5fc8",
+    "value": "0x82fe990",
+    "text": "CRUSHER PLYR 720X Headset"
+  },
+  {
+    "literal_address": "0x8240fcc",
+    "file_offset": "0x1d5fcc",
+    "value": "0x60d886e",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fd0",
+    "file_offset": "0x1d5fd0",
+    "value": "0x82fe9aa",
+    "text": "Airoha Headset Gaming ULL2"
+  },
+  {
+    "literal_address": "0x8240fd4",
+    "file_offset": "0x1d5fd4",
+    "value": "0x60d88b9",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fd8",
+    "file_offset": "0x1d5fd8",
+    "value": "0x82fe9c5",
+    "text": "Airoha Headset Enterprise"
+  },
+  {
+    "literal_address": "0x8240fdc",
+    "file_offset": "0x1d5fdc",
+    "value": "0x60d8903",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fe0",
+    "file_offset": "0x1d5fe0",
+    "value": "0x82fe9df",
+    "text": "Airoha Wireless Mic TX"
+  },
+  {
+    "literal_address": "0x8240fe4",
+    "file_offset": "0x1d5fe4",
+    "value": "0x60d8952",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240fe8",
+    "file_offset": "0x1d5fe8",
+    "value": "0x82fe9f6",
+    "text": "Airoha Headset 8CH"
+  },
+  {
+    "literal_address": "0x8240fec",
+    "file_offset": "0x1d5fec",
+    "value": "0x60d8995",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240ff0",
+    "file_offset": "0x1d5ff0",
+    "value": "0x82fea09",
+    "text": "Airoha Headset IOT"
+  },
+  {
+    "literal_address": "0x8240ff4",
+    "file_offset": "0x1d5ff4",
+    "value": "0x60d89d8",
+    "text": null
+  },
+  {
+    "literal_address": "0x8240ff8",
+    "file_offset": "0x1d5ff8",
+    "value": "0x82fea1c",
+    "text": "Airoha Headset DCHS Custom"
+  },
+  {
+    "literal_address": "0x8240ffc",
+    "file_offset": "0x1d5ffc",
+    "value": "0x60d8a23",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241000",
+    "file_offset": "0x1d6000",
+    "value": "0x82fea37",
+    "text": "Airoha Headset MIC_192K_1CH"
+  },
+  {
+    "literal_address": "0x8241004",
+    "file_offset": "0x1d6004",
+    "value": "0x60d8a6f",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241008",
+    "file_offset": "0x1d6008",
+    "value": "0x82fea53",
+    "text": "Airoha Headset Audio CDC"
+  },
+  {
+    "literal_address": "0x824100c",
+    "file_offset": "0x1d600c",
+    "value": "0x60d8ab8",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241010",
+    "file_offset": "0x1d6010",
+    "value": "0x82fea6c",
+    "text": "Airoha Headset Mass Storage"
+  },
+  {
+    "literal_address": "0x8241014",
+    "file_offset": "0x1d6014",
+    "value": "0x60d8afb",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241018",
+    "file_offset": "0x1d6018",
+    "value": "0x82fea88",
+    "text": "Airoha Headset CDC"
+  },
+  {
+    "literal_address": "0x824101c",
+    "file_offset": "0x1d601c",
+    "value": "0x60d8b3e",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241020",
+    "file_offset": "0x1d6020",
+    "value": "0x82fea9b",
+    "text": "Airoha Headset IOT 2"
+  },
+  {
+    "literal_address": "0x8241024",
+    "file_offset": "0x1d6024",
+    "value": "0x60d8b83",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241028",
+    "file_offset": "0x1d6028",
+    "value": "0x82feab0",
+    "text": "Airoha Headset HID"
+  },
+  {
+    "literal_address": "0x8241720",
+    "file_offset": "0x1d6720",
+    "value": "0x60d8d19",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241724",
+    "file_offset": "0x1d6724",
+    "value": "0x83171ec",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241728",
+    "file_offset": "0x1d6728",
+    "value": "0x4247686",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417b0",
+    "file_offset": "0x1d67b0",
+    "value": "0x4247685",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417b4",
+    "file_offset": "0x1d67b4",
+    "value": "0x82ffc2e",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417b8",
+    "file_offset": "0x1d67b8",
+    "value": "0x82ffc0e",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417bc",
+    "file_offset": "0x1d67bc",
+    "value": "0x60d8d63",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417c0",
+    "file_offset": "0x1d67c0",
+    "value": "0x83171ec",
+    "text": null
+  },
+  {
+    "literal_address": "0x82417c4",
+    "file_offset": "0x1d67c4",
+    "value": "0x4247686",
+    "text": null
+  },
+  {
+    "literal_address": "0x824193c",
+    "file_offset": "0x1d693c",
+    "value": "0x82ffc0e",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241940",
+    "file_offset": "0x1d6940",
+    "value": "0x4247685",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241944",
+    "file_offset": "0x1d6944",
+    "value": "0x82ffc2e",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241948",
+    "file_offset": "0x1d6948",
+    "value": "0x420f3c4",
+    "text": null
+  },
+  {
+    "literal_address": "0x824194c",
+    "file_offset": "0x1d694c",
+    "value": "0x60d8da0",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241950",
+    "file_offset": "0x1d6950",
+    "value": "0x83171ec",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241954",
+    "file_offset": "0x1d6954",
+    "value": "0x60d8e35",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241958",
+    "file_offset": "0x1d6958",
+    "value": "0x60d8dec",
+    "text": null
+  },
+  {
+    "literal_address": "0x824195c",
+    "file_offset": "0x1d695c",
+    "value": "0x824172d",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241960",
+    "file_offset": "0x1d6960",
+    "value": "0x60d8e77",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241964",
+    "file_offset": "0x1d6964",
+    "value": "0x4247686",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241968",
+    "file_offset": "0x1d6968",
+    "value": "0x60d8ec5",
+    "text": null
+  },
+  {
+    "literal_address": "0x824196c",
+    "file_offset": "0x1d696c",
+    "value": "0x60d8f07",
+    "text": null
+  },
+  {
+    "literal_address": "0x82419f0",
+    "file_offset": "0x1d69f0",
+    "value": "0x82ffc0e",
+    "text": null
+  },
+  {
+    "literal_address": "0x82419f4",
+    "file_offset": "0x1d69f4",
+    "value": "0x824172d",
+    "text": null
+  },
+  {
+    "literal_address": "0x82419f8",
+    "file_offset": "0x1d69f8",
+    "value": "0x60d8f40",
+    "text": null
+  },
+  {
+    "literal_address": "0x82419fc",
+    "file_offset": "0x1d69fc",
+    "value": "0x83171ec",
+    "text": null
+  },
+  {
+    "literal_address": "0x8241a00",
+    "file_offset": "0x1d6a00",
+    "value": "0x4247686",
+    "text": null
+  }
+]

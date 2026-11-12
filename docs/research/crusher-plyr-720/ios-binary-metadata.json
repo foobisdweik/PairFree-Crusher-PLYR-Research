@@ -1,0 +1,37 @@
+{
+  "source": "otool -l; SHA256; Info.plist",
+  "binaries": [
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Runner",
+      "bytes": 5036576,
+      "sha256": "5927435ff16b89b5a0ccc5c06e9c4a98211e749390bce70dd4f317933927d045",
+      "encryption_load_commands": [
+        "          cmd LC_ENCRYPTION_INFO_64\n      cmdsize 24\n     cryptoff 20480\n    cryptsize 4096\n      cryptid 1\n          pad 0"
+      ]
+    },
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/App.framework/App",
+      "bytes": 11989040,
+      "sha256": "5a7c29154da6e0d9744c668ff85d5bbcd637e4a8092ea5f99281488a3449961f",
+      "encryption_load_commands": [
+        "          cmd LC_ENCRYPTION_INFO_64\n      cmdsize 24\n     cryptoff 16384\n    cryptsize 11616256\n      cryptid 0\n          pad 0"
+      ]
+    },
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/AirohaUnifyLibrary.framework/AirohaUnifyLibrary",
+      "bytes": 10769616,
+      "sha256": "d9ce96ce502e280d5f08ba961233bd262d48ec2e572dd5c4dd4aab0b9222d1d2",
+      "encryption_load_commands": [
+        "          cmd LC_ENCRYPTION_INFO_64\n      cmdsize 24\n     cryptoff 16384\n    cryptsize 8503296\n      cryptid 0\n          pad 0"
+      ]
+    },
+    {
+      "path": "/Applications/Runner.app/Wrapper/Runner.app/Frameworks/RxBragi.framework/RxBragi",
+      "bytes": 408192,
+      "sha256": "b869727d1fae236bf06b81a3225833da1e1be2c619c9ede6bb70ab2b9db4f76c",
+      "encryption_load_commands": [
+        "          cmd LC_ENCRYPTION_INFO_64\n      cmdsize 24\n     cryptoff 16384\n    cryptsize 114688\n      cryptid 0\n          pad 0"
+      ]
+    }
+  ]
+}

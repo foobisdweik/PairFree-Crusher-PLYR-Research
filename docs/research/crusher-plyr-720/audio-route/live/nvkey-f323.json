@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794439913.1496601
+    },
+    {
+      "hex" : "055a0e00010d0002055a06000c0a23f30200",
+      "kind" : "request",
+      "time" : 1794439914.005131
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794439914.0078549
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794439914.058743
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794439914.060075
+    },
+    {
+      "error" : "none",
+      "hex" : "055d0f00010d0002055b07000c0afc23f30000",
+      "kind" : "notification",
+      "time" : 1794439914.113919
+    }
+  ],
+  "query" : "Master READ_NVKEY_RESP_NVID F323 max2 bytes",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

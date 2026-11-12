@@ -1,0 +1,20 @@
+[
+  {
+    "literal_address": "0x82419e8",
+    "value": "0x82ffb7e",
+    "image_bytes_hex": "01ffffffffffffff0d0effffffff0c0bffff0807ff150000"
+  },
+  {
+    "literal_address": "0x82419ec",
+    "value": "0x4247685"
+  },
+  {
+    "literal_address": "0x82419f0",
+    "value": "0x60d8f7c"
+  },
+  {
+    "literal_address": "0x82419f4",
+    "value": "0x8317164",
+    "image_bytes_hex": "b0f12f0800000000000000006da22004c1a2200419a32004"
+  }
+]

@@ -1,0 +1,5273 @@
+{
+  "scope": "Only SG200X Master and Slave decoded firmware version 1.0.0.34. Static byte analysis. No hardware or Ghidra import.",
+  "files": [
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/decoded/SG200X_Master_Headset_DFU_v1.0.0.34.decoded.bin",
+      "size": 3280896,
+      "sha256": "202b0da5549f850ce539166c0f5bd4bc4c6a0435970ba66df2a16821c8416879",
+      "matched_strings": {
+        "line_in": [
+          {
+            "offset": "0x28c148",
+            "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28c176",
+            "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_CLOSE",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28c3cf",
+            "text": "AT+EAUDIO=LINEIN_PEQ_MODE,",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28c3ea",
+            "text": "AT+EAUDIO=LINEIN_PEQ_SYNC,",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28daff",
+            "text": "+OFFLINE INFO:",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x291324",
+            "text": "linein",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x293547",
+            "text": "line_in",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x293bca",
+            "text": "AT+LINE_IN_DET",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x293bd9",
+            "text": "AT+LINE_IN_VOL",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x2941b5",
+            "text": "LINE_IN - ON",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x2941c2",
+            "text": "LINE_IN - OFF",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x294218",
+            "text": "GET_LINE_IN",
+            "status": "verified-bytes"
+          }
+        ],
+        "race": [
+          {
+            "offset": "0x288a05",
+            "text": "RACE_CMD",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28dc1d",
+            "text": "query crash info fail, race header error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28dc48",
+            "text": "query crash info fail, race id error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28dc6f",
+            "text": "query crash info fail, race length error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28e924",
+            "text": "race_tx_default",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28e959",
+            "text": "race_sleep_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28e96a",
+            "text": "race_idle_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28ea3c",
+            "text": "RACE_COSYS",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28ea64",
+            "text": "race_usb_com_1_rx_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28ea7c",
+            "text": "race_usb_com_2_rx_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28eb18",
+            "text": "race_dump_data",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28ec30",
+            "text": "race_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28f020",
+            "text": "race_audio_loopback_test_test",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28f03e",
+            "text": "race_audio_loopback_test_check",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28f05d",
+            "text": "race_cosys_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x293829",
+            "text": "[APP_RACE_DUAL_EVENT], timestamp. master:%s, slave:%s",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x29385f",
+            "text": "app_race_cmd_co_sys_data_received_callback",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x294be5",
+            "text": "race command",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x29eb94",
+            "text": "race_app_race",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x29eba2",
+            "text": "race_app_bt",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x29ebae",
+            "text": "race_app_cosys",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x29ec7b",
+            "text": "PAIR_RACE",
+            "status": "verified-bytes"
+          }
+        ],
+        "thx": [
+          {
+            "offset": "0x2dd83c",
+            "text": "THX_OFF.mp3",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x2dd884",
+            "text": "THX_ON.mp3",
+            "status": "verified-bytes"
+          }
+        ],
+        "headtracker": [
+          {
+            "offset": "0x88540",
+            "text": "[DSP][GSA_LC] data sent from MCU. quaternion{%f, %f, %f, %f}",
+            "status": "verified-bytes"
+          }
+        ],
+        "architecture": [
+          {
+            "offset": "0x86de8",
+            "text": "../../../../../middleware/airoha/dspfw/port/chip/ab158x/src/dsp_scenario.c",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x878ce",
+            "text": "../../../../../middleware/airoha/dspfw/port/chip/ab158x/src/dsp_upper_layer/dsp_stream_task.c",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x886fa",
+            "text": "../../../../../project/ab15xx/apps/dsp0_headset_ref_design/src/syscalls.c",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x92524",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x95b58",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x9720c",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x988c0",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x9a644",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x9de60",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xa0d8c",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xac384",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xad15c",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xf817c",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xfa0e8",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xfd56c",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0xfe9b4",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1124d8",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x113ef4",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x115c78",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1182c4",
+            "text": "XtensaTools-14.11 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x118745",
+            "text": "../../../../../../..//middleware/airoha/dspfw/anc_protected/port/chip/ab158x/src/anc_control.c:694 0",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1eaad4",
+            "text": "CM4 MINIEED",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28a2c0",
+            "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB158x",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x294b20",
+            "text": "[MCU]sysinit done[%s]",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x2b38ff",
+            "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB158x",
+            "status": "verified-bytes"
+          }
+        ],
+        "aux_adc": [
+          {
+            "offset": "0x289f3b",
+            "text": "AT+EAUXADC",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28b1fc",
+            "text": "+EAUXADC:1, measure voltage of CH2.",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x28b225",
+            "text": "+EAUXADC:adc_channel = %d adc_data = 0x%04x, adc_k_data = 0x%04x,adc_voltage = %dmV",
+            "status": "verified-bytes"
+          }
+        ]
+      },
+      "elf_candidates": [
+        {
+          "offset": "0x88754",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x3948",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x9e48",
+          "flags": "0x300",
+          "extent": 40960,
+          "end_exclusive": "0x92754",
+          "bounded": true,
+          "extent_sha256": "bb872b0c6ea157c412b8e601273f6af38787c9cd16ab0c56773bb771d7dc73df",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 16321,
+              "memory_size": 16321,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x410c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 21700,
+              "memory_size": 21704,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x9600",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 2000,
+              "memory_size": 2000,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x9600",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 16321,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x410c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x4110",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x4118",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x4120",
+              "size": 21680,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20054d0",
+              "file_offset": "0x95d0",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x9dd0",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x9600",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x96c8",
+              "size": 1800,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x9df8",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x92754",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x1ed4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x347c",
+          "flags": "0x300",
+          "extent": 13876,
+          "end_exclusive": "0x95d88",
+          "bounded": true,
+          "extent_sha256": "90063b32c48f344645296574c460dc230417e90fb5691f26198651de38da8835",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8001,
+              "memory_size": 8001,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x208c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 4302,
+              "memory_size": 4308,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x3180",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 644,
+              "memory_size": 644,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x3180",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8001,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x208c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x2090",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x2098",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x20a0",
+              "size": 4282,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20010dc",
+              "file_offset": "0x315a",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x3404",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x3180",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x3248",
+              "size": 444,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x342c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x95d88",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xf0",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x14fc",
+          "flags": "0x300",
+          "extent": 5812,
+          "end_exclusive": "0x9743c",
+          "bounded": true,
+          "extent_sha256": "335d8e930fab61b0532f40282ac2b73402484caec93142e1f0fc5abee09f3a3f",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 3905,
+              "memory_size": 3905,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x108c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 308,
+              "memory_size": 312,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1200",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 644,
+              "memory_size": 644,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1200",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 3905,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x108c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1090",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1098",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x10a0",
+              "size": 288,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000140",
+              "file_offset": "0x11c0",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1484",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1200",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x12c8",
+              "size": 444,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x14ac",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x9743c",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xf0",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x14fc",
+          "flags": "0x300",
+          "extent": 5812,
+          "end_exclusive": "0x98af0",
+          "bounded": true,
+          "extent_sha256": "a33357e97a7091364e7cd9d3ba125aada3bf5c1864907bbae9089c210da6aee4",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 3905,
+              "memory_size": 3905,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x108c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 308,
+              "memory_size": 312,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1200",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 644,
+              "memory_size": 644,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1200",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 3905,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x108c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1090",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1098",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x10a0",
+              "size": 288,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000140",
+              "file_offset": "0x11c0",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1484",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1200",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x12c8",
+              "size": 444,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x14ac",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x98af0",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x124",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1bcc",
+          "flags": "0x300",
+          "extent": 7556,
+          "end_exclusive": "0x9a874",
+          "bounded": true,
+          "extent_sha256": "854c9531214927a9db835e66c11076af5e689eb4a510d703ea1149ca1ffaca14",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 4769,
+              "memory_size": 4769,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x140c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 1172,
+              "memory_size": 1252,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 596,
+              "memory_size": 596,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 4769,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x140c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1410",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1418",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x1420",
+              "size": 1152,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20004a0",
+              "file_offset": "0x18a0",
+              "size": 80,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1b54",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1900",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x19c8",
+              "size": 396,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1b7c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x9a874",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x1ed4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x3664",
+          "flags": "0x300",
+          "extent": 14364,
+          "end_exclusive": "0x9e090",
+          "bounded": true,
+          "extent_sha256": "f9dd6076898ef2057f638f6a68a62fffbeafaad5e065f5af08dd4cb5d2a0f5e1",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8485,
+              "memory_size": 8485,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x228c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 4320,
+              "memory_size": 4324,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x3380",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 620,
+              "memory_size": 620,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x3380",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8485,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x228c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x2290",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x2298",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x22a0",
+              "size": 4300,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20010ec",
+              "file_offset": "0x336c",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x35ec",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x3380",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x3448",
+              "size": 420,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x3614",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x9e090",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x118",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x2d74",
+          "flags": "0x300",
+          "extent": 12076,
+          "end_exclusive": "0xa0fbc",
+          "bounded": true,
+          "extent_sha256": "8aae70fac695de8707cff8fcc0baf487f382f2d72b089e22d52dfee7b7eeb760",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8625,
+              "memory_size": 8625,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x230c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 1656,
+              "memory_size": 1660,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2a00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 764,
+              "memory_size": 764,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x2a00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8625,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x230c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x2310",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x2318",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x2320",
+              "size": 1636,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000684",
+              "file_offset": "0x2984",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x2cfc",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x2a00",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x2ac8",
+              "size": 564,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x2d24",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xa0fbc",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x578",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0xb440",
+          "flags": "0x300",
+          "extent": 46584,
+          "end_exclusive": "0xac5b4",
+          "bounded": true,
+          "extent_sha256": "0d35a1434e6b7a1df6fa6df56a45127c24f265a432e68d03c9656ba8ba1fb66c",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 37897,
+              "memory_size": 37897,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x950c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 5252,
+              "memory_size": 5260,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xaa00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 2504,
+              "memory_size": 2504,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0xaa00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 37897,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x950c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x9510",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x9518",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x9520",
+              "size": 5232,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2001490",
+              "file_offset": "0xa990",
+              "size": 8,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xb3c8",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0xaa00",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0xaac8",
+              "size": 2304,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xb3f0",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xac5b4",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x598",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0xc20",
+          "flags": "0x300",
+          "extent": 3544,
+          "end_exclusive": "0xad38c",
+          "bounded": true,
+          "extent_sha256": "6572f9f88747a86ba16b79d9286c3b6682dcaae8c91a7e52ea0de2dadbeea135",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 1589,
+              "memory_size": 1589,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x78c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 326,
+              "memory_size": 332,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 680,
+              "memory_size": 680,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 1589,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x78c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x790",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x798",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x7a0",
+              "size": 306,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000154",
+              "file_offset": "0x8d2",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xba8",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x900",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x9c8",
+              "size": 480,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xbd0",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xad38c",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x15b4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x4ae68",
+          "flags": "0x300",
+          "extent": 307232,
+          "end_exclusive": "0xf83ac",
+          "bounded": true,
+          "extent_sha256": "19dab6fb9205aeeb6ea7b09c283c81feecbb207617921ce2e866134e2cdfb79e",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 56893,
+              "memory_size": 56893,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xdf40",
+              "vaddr": "0xde40",
+              "paddr": "0xde40",
+              "file_size": 249520,
+              "memory_size": 249564,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0xdf40",
+              "vaddr": "0xde40",
+              "paddr": "0xde40",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 56893,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0xde40",
+              "file_offset": "0xdf40",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0xdf0c",
+              "file_offset": "0xe00c",
+              "size": 2268,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0xe8d0",
+              "file_offset": "0xe9d0",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0xe8d4",
+              "file_offset": "0xe9d4",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0xe8dc",
+              "file_offset": "0xe9dc",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0xe900",
+              "file_offset": "0xea00",
+              "size": 246768,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x4acf0",
+              "file_offset": "0x4adf0",
+              "size": 44,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x4adf0",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x4ae18",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xf83ac",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xe0",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1db4",
+          "flags": "0x300",
+          "extent": 8044,
+          "end_exclusive": "0xfa318",
+          "bounded": true,
+          "extent_sha256": "85f2eaff40e86d15268f2b0192c914531f9c4809c922e0df69b91fed51ca0950",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 6381,
+              "memory_size": 6381,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1a0c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 192,
+              "memory_size": 196,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1b00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 572,
+              "memory_size": 572,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1b00",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 6381,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x1a0c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1a10",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1a18",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x1a20",
+              "size": 172,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20000cc",
+              "file_offset": "0x1acc",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1d3c",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1b00",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x1bc8",
+              "size": 372,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1d64",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xfa318",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x299c",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x32cc",
+          "flags": "0x300",
+          "extent": 13444,
+          "end_exclusive": "0xfd79c",
+          "bounded": true,
+          "extent_sha256": "f4308c83efb151da0ddf4437f81c77a3ec042b12459f834987cec6bf86000816",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 11597,
+              "memory_size": 11597,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2e8c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 353,
+              "memory_size": 360,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x3000",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 596,
+              "memory_size": 596,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x3000",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 11597,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x2e8c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x2e90",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x2e98",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x2ea0",
+              "size": 333,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000170",
+              "file_offset": "0x2fed",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x3254",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x3000",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x30c8",
+              "size": 396,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x327c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xfd79c",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xc4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1290",
+          "flags": "0x300",
+          "extent": 5192,
+          "end_exclusive": "0xfebe4",
+          "bounded": true,
+          "extent_sha256": "5ae2f3965518d9875da0c875a59dc534001a0cfea10f4c7ab2371d788de2ad6d",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 3541,
+              "memory_size": 3541,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xf0c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 160,
+              "memory_size": 164,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1000",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 536,
+              "memory_size": 536,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1000",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 3541,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0xf0c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0xf10",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0xf18",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0xf20",
+              "size": 140,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20000ac",
+              "file_offset": "0xfac",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1218",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1000",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x10c8",
+              "size": 336,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1240",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0xfebe4",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x648",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1396c",
+          "flags": "0x300",
+          "extent": 80676,
+          "end_exclusive": "0x112708",
+          "bounded": true,
+          "extent_sha256": "aa11072b0bf77af698cb396c9929968d2cf3dcc2997c446a432dfcde4a5a5d4d",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 74437,
+              "memory_size": 74437,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1240c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 1302,
+              "memory_size": 2024,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x12980",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 3956,
+              "memory_size": 3956,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x12980",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 74437,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x1240c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x12410",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x12418",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x12420",
+              "size": 1282,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2000524",
+              "file_offset": "0x12922",
+              "size": 720,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x138f4",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x12980",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x12a48",
+              "size": 3756,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1391c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x112708",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xf4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1864",
+          "flags": "0x300",
+          "extent": 6684,
+          "end_exclusive": "0x114124",
+          "bounded": true,
+          "extent_sha256": "c5c9eac1aa18d0cb8a952b1e290eea0dc8d9d5606ad48c28a2d2d4de05118d22",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 4997,
+              "memory_size": 4997,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x148c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 183,
+              "memory_size": 888,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1580",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 620,
+              "memory_size": 620,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1580",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 4997,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x148c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1490",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1498",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x14a0",
+              "size": 163,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20000c4",
+              "file_offset": "0x1543",
+              "size": 704,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x17ec",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1580",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x1648",
+              "size": 420,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1814",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x114124",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xec",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1bcc",
+          "flags": "0x300",
+          "extent": 7556,
+          "end_exclusive": "0x115ea8",
+          "bounded": true,
+          "extent_sha256": "a356adeeff59ee4e5a99b03741aaaa9c980bb7f5d135bdf1cbbf6e2d18017eda",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 5789,
+              "memory_size": 5789,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x180c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 171,
+              "memory_size": 876,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 596,
+              "memory_size": 596,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1900",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 5789,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x180c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x1810",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x1818",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x1820",
+              "size": 151,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20000b8",
+              "file_offset": "0x18b7",
+              "size": 704,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1b54",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x1900",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x19c8",
+              "size": 396,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1b7c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x115ea8",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x110",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x2494",
+          "flags": "0x300",
+          "extent": 9804,
+          "end_exclusive": "0x1184f4",
+          "bounded": true,
+          "extent_sha256": "fc784ba76683b73952cde67700958ef2fe5108abbe8dde9f44493fa41e166b1f",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8065,
+              "memory_size": 8065,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x208c",
+              "vaddr": "0x200000c",
+              "paddr": "0x200000c",
+              "file_size": 204,
+              "memory_size": 908,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2180",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 668,
+              "memory_size": 668,
+              "flags": "0x3",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x2180",
+              "vaddr": "0x3000000",
+              "paddr": "0x3000000",
+              "file_size": 164,
+              "memory_size": 164,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8065,
+              "flags": "0x6"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x200000c",
+              "file_offset": "0x208c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000010",
+              "file_offset": "0x2090",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2000018",
+              "file_offset": "0x2098",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2000020",
+              "file_offset": "0x20a0",
+              "size": 184,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x20000d8",
+              "file_offset": "0x2158",
+              "size": 704,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x241c",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x3000000",
+              "file_offset": "0x2180",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x30000c8",
+              "file_offset": "0x2248",
+              "size": 468,
+              "flags": "0x2"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x2444",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        }
+      ],
+      "safe_header_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d41300e81300b11300b21300b31300b41300c21300c31300c41300021300001300011300041300e013461500000000007004"
+    },
+    {
+      "path": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/firmware/decoded/SG200X_Slave_Headset_DFU_v1.0.0.34.decoded.bin",
+      "size": 2289664,
+      "sha256": "fc0d5b3d56853fde48c807f20b09498cf20e6481d4cec5088245ab9f4e0e431d",
+      "matched_strings": {
+        "line_in": [
+          {
+            "offset": "0x1d91b6",
+            "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_OPEN",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1d91e4",
+            "text": "AT+EAUDIO=AUDIO_HQA_PURE_LINEIN_PLAYBACK_CLOSE",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1da38f",
+            "text": "+OFFLINE INFO:",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dd9d4",
+            "text": "linein",
+            "status": "verified-bytes"
+          }
+        ],
+        "race": [
+          {
+            "offset": "0x1d6787",
+            "text": "RACE_CMD",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1da4ad",
+            "text": "query crash info fail, race header error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1da4d8",
+            "text": "query crash info fail, race id error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1da4ff",
+            "text": "query crash info fail, race length error",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dae00",
+            "text": "Vrace_tx_default",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dae36",
+            "text": "race_sleep_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dae47",
+            "text": "race_idle_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1daf14",
+            "text": "RACE_COSYS",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dafae",
+            "text": "race_dump_data",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1db0d0",
+            "text": "race_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1db4c0",
+            "text": "race_audio_loopback_test_test",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1db4de",
+            "text": "race_audio_loopback_test_check",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1db4fd",
+            "text": "race_cosys_timer",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e1aeb",
+            "text": "race command",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e5588",
+            "text": "race_app_race",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e5596",
+            "text": "race_app_bt",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e55a2",
+            "text": "race_app_cosys",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e5677",
+            "text": "PAIR_RACE",
+            "status": "verified-bytes"
+          }
+        ],
+        "thx": [],
+        "headtracker": [
+          {
+            "offset": "0x996f0",
+            "text": "[DSP][GSA_LC] data sent from MCU. quaternion{%f, %f, %f, %f}",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dee8f",
+            "text": "headtracker",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1dee9b",
+            "text": "BSP_HEAD_TRACKER_IMU",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1deeb0",
+            "text": "[bsp][headtracker][air] initialising:%d, accelerationRecovery:%d, angularRateRecovery:%d",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1def09",
+            "text": "[bsp][headtracker][air] Roll %0.1f, Pitch %0.1f, Yaw %0.1f",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1def45",
+            "text": "[bsp][headtracker][air] offset value, accl {%f, %f, %f}, gyro {%f, %f, %f} z:%d",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1def9a",
+            "text": "HEAD_TRACKER",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1defa7",
+            "text": "#AndroidHeadTracker#1.0",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1df164",
+            "text": "[HEAD_TRACKER][SENSOR] sensor_listen_callback: acc=[%.4f:%.4f:%.4f], gyr=[%.4f:%.4f:%.4f]",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1df1be",
+            "text": "[HEAD_TRACKER][SENSOR][SPV] nvkey_load: acc=[%.4f:%.4f:%.4f], gyr=[%.4f:%.4f:%.4f]",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1df211",
+            "text": "head_tracker_sensor_spv_nvkey_load",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1df234",
+            "text": "head_tracker_sensor_callback",
+            "status": "verified-bytes"
+          }
+        ],
+        "architecture": [
+          {
+            "offset": "0x6fdb0",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x72b5c",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x74ae0",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x7d1f0",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x7d9c4",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x7f1a0",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8ad04",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8ad2c",
+            "text": "XtensaTools-14.08.20220331734507 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8d4b6",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8d4de",
+            "text": "XtensaTools-14.08.20220331734507 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8fc6d",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x8fc95",
+            "text": "XtensaTools-14.08.20220331734507 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x92131",
+            "text": "XtensaTools-14.08 clang version 10.0.1 ",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x98cb6",
+            "text": "../../../../../middleware/airoha/dspfw/port/chip/ab156x/src/dsp_upper_layer/dsp_stream_task.c",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x9987a",
+            "text": "../../../../../project/ab15xx/apps/dsp0_headset_ref_design/src/syscalls.c",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1d7594",
+            "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB156x",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1e1a60",
+            "text": "[MCU]sysinit done[%s]",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1f4b0a",
+            "text": "IoT_SDK_for_BT_Audio_V5.2.0.AB156x",
+            "status": "verified-bytes"
+          }
+        ],
+        "aux_adc": [
+          {
+            "offset": "0x1d7257",
+            "text": "AT+EAUXADC",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1d83fa",
+            "text": "+EAUXADC:1, measure voltage of CH2.",
+            "status": "verified-bytes"
+          },
+          {
+            "offset": "0x1d8423",
+            "text": "+EAUXADC:adc_channel = %d adc_data = 0x%04x, adc_k_data = 0x%04x,adc_voltage = %dmV",
+            "status": "verified-bytes"
+          }
+        ]
+      },
+      "elf_candidates": [
+        {
+          "offset": "0x5ff38",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x3328",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x9a30",
+          "flags": "0x300",
+          "extent": 39952,
+          "end_exclusive": "0x69b48",
+          "bounded": true,
+          "extent_sha256": "64f6e2fd9eae5daab312556a57c243c74ae416e5dfdf0e998642aadabf690e73",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 14517,
+              "memory_size": 14517,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x39b8",
+              "vaddr": "0x38b8",
+              "paddr": "0x38b8",
+              "file_size": 23720,
+              "memory_size": 23752,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x39b8",
+              "vaddr": "0x38b8",
+              "paddr": "0x38b8",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 14517,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x38b8",
+              "file_offset": "0x39b8",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x3a00",
+              "file_offset": "0x3b00",
+              "size": 1656,
+              "flags": "0x2"
+            },
+            {
+              "name": ".rodata",
+              "type": 1,
+              "address": "0x40e0",
+              "file_offset": "0x41e0",
+              "size": 21440,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x94ac",
+              "file_offset": "0x95ac",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x94b0",
+              "file_offset": "0x95b0",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x94b8",
+              "file_offset": "0x95b8",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x94c0",
+              "file_offset": "0x95c0",
+              "size": 160,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x9560",
+              "file_offset": "0x9660",
+              "size": 32,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x9660",
+              "size": 885,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x99d5",
+              "size": 88,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x69b48",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xe00",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x27b8",
+          "flags": "0x300",
+          "extent": 10648,
+          "end_exclusive": "0x6c4e0",
+          "bounded": true,
+          "extent_sha256": "804d320f752699bac6e7b575c33eeb996d590d92ae985fbce1fabfe444e6a126",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 3693,
+              "memory_size": 3693,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xf70",
+              "vaddr": "0xe70",
+              "paddr": "0xe70",
+              "file_size": 5296,
+              "memory_size": 5328,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0xf70",
+              "vaddr": "0xe70",
+              "paddr": "0xe70",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 3693,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0xe70",
+              "file_offset": "0xf70",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0xfb8",
+              "file_offset": "0x10b8",
+              "size": 576,
+              "flags": "0x2"
+            },
+            {
+              "name": ".rodata",
+              "type": 1,
+              "address": "0x1260",
+              "file_offset": "0x1360",
+              "size": 4224,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x22ec",
+              "file_offset": "0x23ec",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x22f0",
+              "file_offset": "0x23f0",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x22f8",
+              "file_offset": "0x23f8",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2300",
+              "file_offset": "0x2400",
+              "size": 32,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2320",
+              "file_offset": "0x2420",
+              "size": 32,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x2420",
+              "size": 830,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x275e",
+              "size": 88,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x6c4e0",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x80",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1020",
+          "flags": "0x300",
+          "extent": 4488,
+          "end_exclusive": "0x6d668",
+          "bounded": true,
+          "extent_sha256": "93c5e7e590e977e40b8a482368b293f753f5380bd57cfa47aadfe367df32d04d",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 2121,
+              "memory_size": 2121,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x94c",
+              "vaddr": "0x84c",
+              "paddr": "0x84c",
+              "file_size": 900,
+              "memory_size": 904,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x94c",
+              "vaddr": "0x84c",
+              "paddr": "0x84c",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 2121,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x84c",
+              "file_offset": "0x94c",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x994",
+              "file_offset": "0xa94",
+              "size": 288,
+              "flags": "0x2"
+            },
+            {
+              "name": ".rodata",
+              "type": 1,
+              "address": "0xae0",
+              "file_offset": "0xbe0",
+              "size": 208,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0xbc0",
+              "file_offset": "0xcc0",
+              "size": 16,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0xbd0",
+              "file_offset": "0xcd0",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xcd0",
+              "size": 782,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xfde",
+              "size": 64,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x6d668",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x80",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1010",
+          "flags": "0x300",
+          "extent": 4472,
+          "end_exclusive": "0x6e7e0",
+          "bounded": true,
+          "extent_sha256": "62804d7e44ae979de30a111c695f4f70cefdfb8b0ba87e5ff83ac10ff719f35a",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 2113,
+              "memory_size": 2113,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x944",
+              "vaddr": "0x844",
+              "paddr": "0x844",
+              "file_size": 892,
+              "memory_size": 896,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x944",
+              "vaddr": "0x844",
+              "paddr": "0x844",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 2113,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x844",
+              "file_offset": "0x944",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x98c",
+              "file_offset": "0xa8c",
+              "size": 288,
+              "flags": "0x2"
+            },
+            {
+              "name": ".rodata",
+              "type": 1,
+              "address": "0xad0",
+              "file_offset": "0xbd0",
+              "size": 208,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0xbb0",
+              "file_offset": "0xcb0",
+              "size": 16,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0xbc0",
+              "file_offset": "0xcc0",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xcc0",
+              "size": 782,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xfce",
+              "size": 64,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x6e7e0",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x128",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1648",
+          "flags": "0x300",
+          "extent": 6144,
+          "end_exclusive": "0x6ffe0",
+          "bounded": true,
+          "extent_sha256": "5028bfafa0fcc399cac76010edcb0ad23000aa532061673d10a4dd1458db2bb0",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 3437,
+              "memory_size": 3437,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xe70",
+              "vaddr": "0xd70",
+              "paddr": "0xd70",
+              "file_size": 1888,
+              "memory_size": 1968,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0xe70",
+              "vaddr": "0xd70",
+              "paddr": "0xd70",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 3437,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0xd70",
+              "file_offset": "0xe70",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0xe3c",
+              "file_offset": "0xf3c",
+              "size": 396,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x1030",
+              "file_offset": "0x1130",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x1034",
+              "file_offset": "0x1134",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x103c",
+              "file_offset": "0x113c",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x1050",
+              "file_offset": "0x1150",
+              "size": 1152,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x14d0",
+              "file_offset": "0x15d0",
+              "size": 80,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x15d0",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x15f8",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x6ffe0",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x1434",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x2bf4",
+          "flags": "0x300",
+          "extent": 11692,
+          "end_exclusive": "0x72d8c",
+          "bounded": true,
+          "extent_sha256": "40c66750a500cbe7df3393b96d7939ca257dbe567edd6bce5e431369a05ce815",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 5817,
+              "memory_size": 5817,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x17bc",
+              "vaddr": "0x16bc",
+              "paddr": "0x16bc",
+              "file_size": 5056,
+              "memory_size": 5060,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x17bc",
+              "vaddr": "0x16bc",
+              "paddr": "0x16bc",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 5817,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x16bc",
+              "file_offset": "0x17bc",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x1788",
+              "file_offset": "0x1888",
+              "size": 408,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x1990",
+              "file_offset": "0x1a90",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x1994",
+              "file_offset": "0x1a94",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x199c",
+              "file_offset": "0x1a9c",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x19b0",
+              "file_offset": "0x1ab0",
+              "size": 4300,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2a7c",
+              "file_offset": "0x2b7c",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x2b7c",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x2ba4",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x72d8c",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x118",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1dcc",
+          "flags": "0x300",
+          "extent": 8068,
+          "end_exclusive": "0x74d10",
+          "bounded": true,
+          "extent_sha256": "e31be6bbeed90ac6415d8d46e4023ee047bf72040899f7e1a3e1ed640410a1ac",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 5133,
+              "memory_size": 5133,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1510",
+              "vaddr": "0x1410",
+              "paddr": "0x1410",
+              "file_size": 2116,
+              "memory_size": 2120,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1510",
+              "vaddr": "0x1410",
+              "paddr": "0x1410",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 5133,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x1410",
+              "file_offset": "0x1510",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x14dc",
+              "file_offset": "0x15dc",
+              "size": 564,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x1768",
+              "file_offset": "0x1868",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x176c",
+              "file_offset": "0x186c",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x1774",
+              "file_offset": "0x1874",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x1780",
+              "file_offset": "0x1880",
+              "size": 1236,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x1c54",
+              "file_offset": "0x1d54",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x1d54",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x1d7c",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x74d10",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x47c",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x8558",
+          "flags": "0x300",
+          "extent": 34576,
+          "end_exclusive": "0x7d420",
+          "bounded": true,
+          "extent_sha256": "6444a2e4198ef0660a95c1293db80792a9f5ee7790b2464269a2faf20558efaa",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 26801,
+              "memory_size": 26801,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x69b4",
+              "vaddr": "0x68b4",
+              "paddr": "0x68b4",
+              "file_size": 6956,
+              "memory_size": 6964,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x69b4",
+              "vaddr": "0x68b4",
+              "paddr": "0x68b4",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 26801,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x68b4",
+              "file_offset": "0x69b4",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x6980",
+              "file_offset": "0x6a80",
+              "size": 2124,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x725c",
+              "file_offset": "0x735c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x7260",
+              "file_offset": "0x7360",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x7268",
+              "file_offset": "0x7368",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x7270",
+              "file_offset": "0x7370",
+              "size": 4464,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x83e0",
+              "file_offset": "0x84e0",
+              "size": 8,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x84e0",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x8508",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x7d420",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x14c",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x61c",
+          "flags": "0x300",
+          "extent": 2004,
+          "end_exclusive": "0x7dbf4",
+          "bounded": true,
+          "extent_sha256": "1ade6d3561de402532ca7bb495e96724d44afacb3237e4a153c50cc68a3ac885",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 437,
+              "memory_size": 437,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2b8",
+              "vaddr": "0x1b8",
+              "paddr": "0x1b8",
+              "file_size": 748,
+              "memory_size": 752,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x2b8",
+              "vaddr": "0x1b8",
+              "paddr": "0x1b8",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 437,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x1b8",
+              "file_offset": "0x2b8",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x284",
+              "file_offset": "0x384",
+              "size": 288,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x3ec",
+              "file_offset": "0x4ec",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x3f0",
+              "file_offset": "0x4f0",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x3f8",
+              "file_offset": "0x4f8",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x400",
+              "file_offset": "0x500",
+              "size": 164,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x4a4",
+              "file_offset": "0x5a4",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x5a4",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x5cc",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x7dbf4",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xe0",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x1624",
+          "flags": "0x300",
+          "extent": 6108,
+          "end_exclusive": "0x7f3d0",
+          "bounded": true,
+          "extent_sha256": "c7ba4e84209566b6a35627ca1c1a007ef118bbd5fe8ac29e3c49155656e2eb6b",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 4441,
+              "memory_size": 4441,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x125c",
+              "vaddr": "0x115c",
+              "paddr": "0x115c",
+              "file_size": 848,
+              "memory_size": 852,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x125c",
+              "vaddr": "0x115c",
+              "paddr": "0x115c",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 4441,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x115c",
+              "file_offset": "0x125c",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x1228",
+              "file_offset": "0x1328",
+              "size": 372,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x13ec",
+              "file_offset": "0x14ec",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x13f0",
+              "file_offset": "0x14f0",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x13f8",
+              "file_offset": "0x14f8",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x1400",
+              "file_offset": "0x1500",
+              "size": 172,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x14ac",
+              "file_offset": "0x15ac",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x15ac",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x15d4",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x7f3d0",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x4b4",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0xb9e4",
+          "flags": "0x300",
+          "extent": 48028,
+          "end_exclusive": "0x8af6c",
+          "bounded": true,
+          "extent_sha256": "ec91e119809ea04ee7193a82d36fdcaf873f2663bb645968172ba8448d6610d9",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 42929,
+              "memory_size": 42929,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0xa8b4",
+              "vaddr": "0xa7b4",
+              "paddr": "0xa7b4",
+              "file_size": 4224,
+              "memory_size": 5028,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0xa8b4",
+              "vaddr": "0xa7b4",
+              "paddr": "0xa7b4",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 42929,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0xa7b4",
+              "file_offset": "0xa8b4",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0xa880",
+              "file_offset": "0xa980",
+              "size": 3108,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0xb5fc",
+              "file_offset": "0xb6fc",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0xb600",
+              "file_offset": "0xb700",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0xb608",
+              "file_offset": "0xb708",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0xb610",
+              "file_offset": "0xb710",
+              "size": 548,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0xb834",
+              "file_offset": "0xb934",
+              "size": 804,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xb934",
+              "size": 95,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xb993",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x8af6c",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x108",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x25fc",
+          "flags": "0x300",
+          "extent": 10164,
+          "end_exclusive": "0x8d720",
+          "bounded": true,
+          "extent_sha256": "74a96e30a95c5edaac8d019cefb56724df60ece5fb8cb915d8fb737b34e13160",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8337,
+              "memory_size": 8337,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2194",
+              "vaddr": "0x2094",
+              "paddr": "0x2094",
+              "file_size": 950,
+              "memory_size": 1728,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x2194",
+              "vaddr": "0x2094",
+              "paddr": "0x2094",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8337,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x2094",
+              "file_offset": "0x2194",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x2160",
+              "file_offset": "0x2260",
+              "size": 468,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x237c",
+              "file_offset": "0x247c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2380",
+              "file_offset": "0x2480",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2388",
+              "file_offset": "0x2488",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2390",
+              "file_offset": "0x2490",
+              "size": 186,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x244c",
+              "file_offset": "0x254a",
+              "size": 776,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x254a",
+              "size": 95,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x25a9",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x8d720",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x108",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x25fc",
+          "flags": "0x300",
+          "extent": 10164,
+          "end_exclusive": "0x8fed4",
+          "bounded": true,
+          "extent_sha256": "16f674bc09854471c7805b3d45eeb43fd8adb657775699d46b332766847fc4b0",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 8337,
+              "memory_size": 8337,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x2194",
+              "vaddr": "0x2094",
+              "paddr": "0x2094",
+              "file_size": 953,
+              "memory_size": 1732,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x2194",
+              "vaddr": "0x2094",
+              "paddr": "0x2094",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 8337,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x2094",
+              "file_offset": "0x2194",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x2160",
+              "file_offset": "0x2260",
+              "size": 468,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x237c",
+              "file_offset": "0x247c",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2380",
+              "file_offset": "0x2480",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2388",
+              "file_offset": "0x2488",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2390",
+              "file_offset": "0x2490",
+              "size": 189,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2450",
+              "file_offset": "0x254d",
+              "size": 776,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x254d",
+              "size": 95,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x25ac",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x8fed4",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0x1a14",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0x22d8",
+          "flags": "0x300",
+          "extent": 9360,
+          "end_exclusive": "0x92364",
+          "bounded": true,
+          "extent_sha256": "9e968b79429b8bbfb869cd71bc86ac3c5f850d6732c815cdd8d625d39e556869",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 7481,
+              "memory_size": 7481,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x1e3c",
+              "vaddr": "0x1d3c",
+              "paddr": "0x1d3c",
+              "file_size": 1057,
+              "memory_size": 1064,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x1e3c",
+              "vaddr": "0x1d3c",
+              "paddr": "0x1d3c",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 7481,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x1d3c",
+              "file_offset": "0x1e3c",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x1e08",
+              "file_offset": "0x1f08",
+              "size": 396,
+              "flags": "0x2"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x1ffc",
+              "file_offset": "0x20fc",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x2000",
+              "file_offset": "0x2100",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x2008",
+              "file_offset": "0x2108",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x2010",
+              "file_offset": "0x2110",
+              "size": 333,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x2160",
+              "file_offset": "0x225d",
+              "size": 4,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x225d",
+              "size": 40,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0x2285",
+              "size": 80,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        },
+        {
+          "offset": "0x92364",
+          "class": 32,
+          "endian": "little",
+          "e_machine": 94,
+          "type": 3,
+          "entry": "0xe0",
+          "program_table_offset": "0x34",
+          "section_table_offset": "0xc74",
+          "flags": "0x300",
+          "extent": 3668,
+          "end_exclusive": "0x931b8",
+          "bounded": true,
+          "extent_sha256": "00fc15946748c9e6a96340423f6e2f4ad9f257e136aff052b7cd0e836a18b124",
+          "programs": [
+            {
+              "type": 1,
+              "file_offset": "0x100",
+              "vaddr": "0x0",
+              "paddr": "0x0",
+              "file_size": 1589,
+              "memory_size": 1589,
+              "flags": "0x5",
+              "alignment": 128
+            },
+            {
+              "type": 1,
+              "file_offset": "0x738",
+              "vaddr": "0x638",
+              "paddr": "0x638",
+              "file_size": 920,
+              "memory_size": 952,
+              "flags": "0x7",
+              "alignment": 128
+            },
+            {
+              "type": 2,
+              "file_offset": "0x738",
+              "vaddr": "0x638",
+              "paddr": "0x638",
+              "file_size": 168,
+              "memory_size": 168,
+              "flags": "0x6",
+              "alignment": 4
+            }
+          ],
+          "sections": [
+            {
+              "name": "",
+              "type": 0,
+              "address": "0x0",
+              "file_offset": "0x0",
+              "size": 0,
+              "flags": "0x0"
+            },
+            {
+              "name": ".text",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0x100",
+              "size": 1589,
+              "flags": "0x6"
+            },
+            {
+              "name": ".dynamic",
+              "type": 6,
+              "address": "0x638",
+              "file_offset": "0x738",
+              "size": 168,
+              "flags": "0x3"
+            },
+            {
+              "name": ".rela.got",
+              "type": 4,
+              "address": "0x780",
+              "file_offset": "0x880",
+              "size": 384,
+              "flags": "0x2"
+            },
+            {
+              "name": ".rodata",
+              "type": 1,
+              "address": "0x93c",
+              "file_offset": "0xa3c",
+              "size": 80,
+              "flags": "0x32"
+            },
+            {
+              "name": ".eh_frame",
+              "type": 1,
+              "address": "0x998",
+              "file_offset": "0xa98",
+              "size": 4,
+              "flags": "0x2"
+            },
+            {
+              "name": ".ctors",
+              "type": 1,
+              "address": "0x99c",
+              "file_offset": "0xa9c",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".dtors",
+              "type": 1,
+              "address": "0x9a4",
+              "file_offset": "0xaa4",
+              "size": 8,
+              "flags": "0x2"
+            },
+            {
+              "name": ".data",
+              "type": 1,
+              "address": "0x9b0",
+              "file_offset": "0xab0",
+              "size": 32,
+              "flags": "0x3"
+            },
+            {
+              "name": ".bss",
+              "type": 8,
+              "address": "0x9d0",
+              "file_offset": "0xad0",
+              "size": 32,
+              "flags": "0x3"
+            },
+            {
+              "name": ".comment",
+              "type": 1,
+              "address": "0x0",
+              "file_offset": "0xad0",
+              "size": 330,
+              "flags": "0x30"
+            },
+            {
+              "name": ".shstrtab",
+              "type": 3,
+              "address": "0x0",
+              "file_offset": "0xc1a",
+              "size": 88,
+              "flags": "0x0"
+            }
+          ],
+          "status": "Headers and file-backed regions are structurally bounded. Code execution and every relocation remain unverified."
+        }
+      ],
+      "safe_header_hex": "060000000c0000e41300a01300a1133020000c0000d11300d21300d31300d41300e81300b11300b21300b31300b41300c21300c31300c41300021300001300011300041300e013461500000000005804"
+    }
+  ],
+  "findings": [
+    {
+      "claim": "The Master image contains AB158x paths and SDK labels. The Slave image contains AB156x paths and SDK labels.",
+      "status": "verified-bytes",
+      "limit": "These labels identify build targets. They do not identify an exact physical chip revision."
+    },
+    {
+      "claim": "The Master image contains AT+LINE_IN_DET, AT+LINE_IN_VOL, GET_LINE_IN, LINE_IN - ON and LINE_IN - OFF. Both images contain test commands for pure line-in playback.",
+      "status": "verified-bytes",
+      "limit": "The strings identify promising handler targets. They do not prove which command transports expose them or how their arguments work."
+    },
+    {
+      "claim": "The Master image contains THX_OFF.mp3 and THX_ON.mp3. The Slave image has no printable THX match under this scan.",
+      "status": "verified-bytes",
+      "limit": "Prompt filenames do not prove THX processing. A missing string does not prove missing code."
+    },
+    {
+      "claim": "The Slave image contains headtracker sensor labels, acceleration/gyro calibration logs and #AndroidHeadTracker#1.0. Both images contain a quaternion log.",
+      "status": "verified-bytes",
+      "limit": "Strings do not prove active sensor operation or THX headtracking behavior."
+    },
+    {
+      "claim": "The Master has 17 embedded ELF32 little-endian objects. The Slave has 15. Every parsed object declares e_machine 94.",
+      "status": "verified-structure",
+      "limit": "The region bounds, section tables and program tables were checked. Instructions and relocations were not checked."
+    },
+    {
+      "claim": "Xtensa compiler labels and e_machine 94 support treating embedded ELF objects as Xtensa targets. CM4 labels support a separate MCU component.",
+      "status": "inferred",
+      "limit": "Do not import the whole composite firmware under one guessed architecture or base address."
+    },
+    {
+      "claim": "RACE and co-system strings occur in both images. The Master has USB RACE timer labels.",
+      "status": "verified-bytes",
+      "limit": "No dispatch table, opcode-to-function mapping or packet parser has been recovered in this batch."
+    },
+    {
+      "claim": "Both images contain PNVkey$ and NVKey XML delimiters.",
+      "status": "verified-bytes",
+      "limit": "No key values, device identifiers or calibration assets were extracted. The marker does not establish encryption."
+    },
+    {
+      "claim": "EAUXADC strings describe analog-to-digital conversion.",
+      "status": "verified-bytes",
+      "limit": "The AUX substring alone is not evidence of the headphone aux audio route."
+    }
+  ],
+  "next_evidence": [
+    "Extract embedded ELF objects using the computed bounded extents. Preserve each parent hash and offset.",
+    "Verify the e_machine 94 definition against an ELF specification or a trusted local header before importing.",
+    "Inspect section names, relocations and imported symbols before choosing the first ELF for disassembly.",
+    "Recover the composite container and MCU region layout before any raw MCU import. The current header is not interpreted.",
+    "Find references to Master line-in strings. Recover argument parsing and the conditions that select an audio route.",
+    "Identify RACE dispatchers and match them to known host commands using both request fields and response behavior.",
+    "Compare THX state handlers with real audio processing code. Prompt filenames are insufficient.",
+    "Map co-system messages between Master and Slave. Confirm whether headtracker reports traverse that route."
+  ]
+}

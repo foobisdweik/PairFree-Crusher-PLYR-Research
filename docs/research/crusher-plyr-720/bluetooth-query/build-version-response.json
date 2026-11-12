@@ -1,0 +1,33 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794438813.498642
+    },
+    {
+      "hex" : "055a0200081e",
+      "kind" : "request",
+      "time" : 1794438814.009259
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794438814.011771
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794438814.0429749
+    },
+    {
+      "error" : "none",
+      "hex" : "055b7300081e006162313536785f657662000000000000496f545f53444b5f666f725f42545f417564696f5f56352e322e302e4142313536780000000000000000000000000000323032362f30312f32322031373a35313a303620474d54202b30383a3030000000000000000000000000000000000000",
+      "kind" : "notification",
+      "time" : 1794438814.0456572
+    }
+  ],
+  "query" : "GET_BUILD_VERSION",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

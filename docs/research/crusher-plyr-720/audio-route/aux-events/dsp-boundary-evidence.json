@@ -1,0 +1,122 @@
+{
+  "scope": "Existing17 Master .34 ELF section tables plus bounded printable metadata scan of Master .35. No hardware or new DSP disassembly.",
+  "objects": [
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00088754.elf",
+      "bytes": 40960,
+      "sha256": "bb872b0c6ea157c412b8e601273f6af38787c9cd16ab0c56773bb771d7dc73df",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00092754.elf",
+      "bytes": 13876,
+      "sha256": "90063b32c48f344645296574c460dc230417e90fb5691f26198651de38da8835",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00095d88.elf",
+      "bytes": 5812,
+      "sha256": "335d8e930fab61b0532f40282ac2b73402484caec93142e1f0fc5abee09f3a3f",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-0009743c.elf",
+      "bytes": 5812,
+      "sha256": "a33357e97a7091364e7cd9d3ba125aada3bf5c1864907bbae9089c210da6aee4",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00098af0.elf",
+      "bytes": 7556,
+      "sha256": "854c9531214927a9db835e66c11076af5e689eb4a510d703ea1149ca1ffaca14",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-0009a874.elf",
+      "bytes": 14364,
+      "sha256": "f9dd6076898ef2057f638f6a68a62fffbeafaad5e065f5af08dd4cb5d2a0f5e1",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-0009e090.elf",
+      "bytes": 12076,
+      "sha256": "8aae70fac695de8707cff8fcc0baf487f382f2d72b089e22d52dfee7b7eeb760",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000a0fbc.elf",
+      "bytes": 46584,
+      "sha256": "0d35a1434e6b7a1df6fa6df56a45127c24f265a432e68d03c9656ba8ba1fb66c",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000ac5b4.elf",
+      "bytes": 3544,
+      "sha256": "6572f9f88747a86ba16b79d9286c3b6682dcaae8c91a7e52ea0de2dadbeea135",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000ad38c.elf",
+      "bytes": 307232,
+      "sha256": "19dab6fb9205aeeb6ea7b09c283c81feecbb207617921ce2e866134e2cdfb79e",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000f83ac.elf",
+      "bytes": 8044,
+      "sha256": "85f2eaff40e86d15268f2b0192c914531f9c4809c922e0df69b91fed51ca0950",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000fa318.elf",
+      "bytes": 13444,
+      "sha256": "f4308c83efb151da0ddf4437f81c77a3ec042b12459f834987cec6bf86000816",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000fd79c.elf",
+      "bytes": 5192,
+      "sha256": "5ae2f3965518d9875da0c875a59dc534001a0cfea10f4c7ab2371d788de2ad6d",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-000febe4.elf",
+      "bytes": 80676,
+      "sha256": "aa11072b0bf77af698cb396c9929968d2cf3dcc2997c446a432dfcde4a5a5d4d",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00112708.elf",
+      "bytes": 6684,
+      "sha256": "c5c9eac1aa18d0cb8a952b1e290eea0dc8d9d5606ad48c28a2d2d4de05118d22",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00114124.elf",
+      "bytes": 7556,
+      "sha256": "a356adeeff59ee4e5a99b03741aaaa9c980bb7f5d135bdf1cbbf6e2d18017eda",
+      "symbol_table_section_types": []
+    },
+    {
+      "file": "SG200X_Master_Headset_DFU_v1.0.0.34.decoded.offset-00115ea8.elf",
+      "bytes": 9804,
+      "sha256": "fc784ba76683b73952cde67700958ef2fe5108abbe8dde9f44493fa41e166b1f",
+      "symbol_table_section_types": []
+    }
+  ],
+  "master35_sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+  "metadata_matches": {
+    "scenario": [
+      {
+        "file_offset": "0x86de8",
+        "string": "../../../../../middleware/airoha/dspfw/port/chip/ab158x/src/dsp_scenario.c"
+      }
+    ],
+    "endpoint": [],
+    "analog": [],
+    "AFE": [],
+    "SOURCE_TYPE": [],
+    "SINK_TYPE": []
+  },
+  "conclusion": "No inspected symbol table or metadata names scenario7 or endpoints4/3. Reported software states do not measure analog or PCM flow."
+}

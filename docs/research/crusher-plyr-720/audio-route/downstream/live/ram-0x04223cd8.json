@@ -1,0 +1,39 @@
+{
+  "events" : [
+    {
+      "kind" : "connected",
+      "time" : 1794443864.1349711
+    },
+    {
+      "hex" : "055a1000010d0002055a080080160000d83c2204",
+      "kind" : "request",
+      "time" : 1794443864.1740999
+    },
+    {
+      "error" : "none",
+      "hex" : "055c0300033101",
+      "kind" : "notification",
+      "time" : 1794443864.174262
+    },
+    {
+      "error" : "none",
+      "kind" : "write_ack",
+      "time" : 1794443864.205411
+    },
+    {
+      "error" : "none",
+      "hex" : "055b0300010d00",
+      "kind" : "notification",
+      "time" : 1794443864.2074831
+    },
+    {
+      "error" : "none",
+      "hex" : "055d1500010d0002055b0d008016000000d83c2204d03c2204",
+      "kind" : "notification",
+      "time" : 1794443864.238869
+    }
+  ],
+  "query" : "Master read four RAM bytes at 0x04223CD8",
+  "scope" : "One documented state query. No settings, NVKEY writes, or firmware commands.",
+  "status" : "response window completed"
+}

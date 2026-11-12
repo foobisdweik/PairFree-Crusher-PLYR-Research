@@ -1,0 +1,45 @@
+{
+  "devices" : [
+    {
+      "alive" : true,
+      "default_input" : true,
+      "default_output" : false,
+      "id" : 93,
+      "name" : "CRUSHER PLYR 720 XBOX",
+      "running_somewhere" : false
+    },
+    {
+      "alive" : true,
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 87,
+      "name" : "CRUSHER PLYR 720 XBOX",
+      "running_somewhere" : false
+    },
+    {
+      "alive" : true,
+      "default_input" : false,
+      "default_output" : true,
+      "id" : 98,
+      "name" : "External Headphones",
+      "running_somewhere" : true
+    },
+    {
+      "alive" : true,
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 82,
+      "name" : "MacBook Pro Microphone",
+      "running_somewhere" : false
+    },
+    {
+      "alive" : true,
+      "default_input" : false,
+      "default_output" : false,
+      "id" : 75,
+      "name" : "MacBook Pro Speakers",
+      "running_somewhere" : false
+    }
+  ],
+  "scope" : "Read-only CoreAudio properties. Running does not identify a stream or application."
+}

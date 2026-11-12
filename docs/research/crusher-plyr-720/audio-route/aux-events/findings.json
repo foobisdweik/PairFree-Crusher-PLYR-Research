@@ -1,0 +1,149 @@
+{
+  "image": {
+    "sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
+    "bytes": 3280896,
+    "mapping_delta": "0x806b000"
+  },
+  "scope": "Static Master .35 aux event trace. Hardware and shared Ghidra project were not accessed.",
+  "findings": [
+    {
+      "claim": "Four functions write the detection byte and dispatch module0x27/event0x7d.",
+      "status": "static-decompilation",
+      "addresses": [
+        "0x082416a4",
+        "0x0824172c",
+        "0x082417c8",
+        "0x08241970"
+      ],
+      "evidence": [
+        {
+          "path": "seed-functions.c",
+          "line_start": 3,
+          "line_end": 190
+        }
+      ]
+    },
+    {
+      "claim": "Consumer0x082456a0 forwards detection into requested audio-path state and route operations.",
+      "status": "static-decompilation",
+      "evidence": [
+        {
+          "path": "event-consumer.c",
+          "line_start": 307,
+          "line_end": 339
+        }
+      ]
+    },
+    {
+      "claim": "A successful F323 read that parses aszero blocks event7d. A failed read setsminus1 and does not block it.",
+      "status": "static-decompilation",
+      "evidence": [
+        {
+          "path": "event-consumer.c",
+          "line_start": 311,
+          "line_end": 325
+        }
+      ]
+    },
+    {
+      "claim": "Routine0x082454bc writes0x0420f43d. Ordinary detection passes its persistence argument aszero, so this path does not write NVKEY.",
+      "status": "static-decompilation",
+      "evidence": [
+        {
+          "path": "downstream-functions.c",
+          "line_start": 13,
+          "line_end": 36
+        },
+        {
+          "path": "event-consumer.c",
+          "line_start": 327,
+          "line_end": 331
+        }
+      ]
+    },
+    {
+      "claim": "Initialization creates named line_in and line_out objects at0x042479b8 and0x042479fc.",
+      "status": "static-decompilation-plus-literals",
+      "evidence": [
+        {
+          "path": "event-consumer.c",
+          "line_start": 65,
+          "line_end": 93
+        },
+        {
+          "path": "handle-accessors.c",
+          "line_start": 111,
+          "line_end": 130
+        }
+      ]
+    },
+    {
+      "claim": "The three wrappers queue operations1/2/4. They do not establish successful backend completion.",
+      "status": "static-decompilation",
+      "evidence": [
+        {
+          "path": "handle-accessors.c",
+          "line_start": 3,
+          "line_end": 108
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "slot": 0,
+      "address": "0x042479b8",
+      "pointer_storage": "0x04247994",
+      "name": "line_in",
+      "callback": "0x082453dc",
+      "field_0x15": 1,
+      "field_0x18": 17
+    },
+    {
+      "slot": 1,
+      "address": "0x042479fc",
+      "pointer_storage": "0x0424799c",
+      "name": "line_out",
+      "callback": "0x0824554c",
+      "field_0x15": 0,
+      "field_0x18": 2
+    }
+  ],
+  "config_callback": {
+    "address": "0x082453dc",
+    "common_fields": {
+      "0x0": 7,
+      "0x8": 48000,
+      "0xc": 2,
+      "0x10": 6
+    },
+    "selector_zero": {
+      "0x1": 4,
+      "0x48": 257,
+      "0x4a": 7
+    },
+    "selector_nonzero": {
+      "0x1": 3,
+      "0x48": 256,
+      "0x4a": 0,
+      "0x3d": 0
+    },
+    "limit": "Physical endpoint names and field enums remain unverified in this batch."
+  },
+  "unknowns": [
+    "Module1/event0x26 consumer was not recovered in this batch.",
+    "Actual backend start completion belongs to the parent manager investigation.",
+    "The detection callback exports do not establish actual analog signal flow.",
+    "The meanings of endpoint types7,4,3 and format-like value6 remain unverified."
+  ],
+  "rejected_candidates": [
+    {
+      "address": "0x08235070",
+      "reason": "The comparison concerns module0x26, not module1/event0x26."
+    },
+    {
+      "address": "0x0824ad6c",
+      "reason": "The guessed function boundary produced invalid instructions."
+    }
+  ]
+}
