@@ -69,7 +69,10 @@ final class Dump: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
   func peripheral(_ p: CBPeripheral, didUpdateValueFor c: CBCharacteristic, error: Error?) {
     let b = [UInt8](c.value ?? Data())
     // Relay reply: 05 5D 15 00 01 0D 00 02 05 5B 0D 00 80 16 <status> 00? <addr 4> <data 4>; match on the echoed address.
-    guard b.count >= 25, b[0] == 5, b[1] == 0x5d, b[12] == 0x80, b[13] == 0x16 else { return }
+    // Bytes 4-5 are the relay opcode 0x0D01 and bytes 6-7 the relay ID; accept only the Master (0x0200) that the request targets.
+    let req = packet(next)
+    guard b.count >= 25, b[0] == 5, b[1] == 0x5d, b[4] == 1, b[5] == 0x0d, b[6] == req[6], b[7] == req[7],
+          b[8] == 5, b[9] == 0x5b, b[12] == 0x80, b[13] == 0x16 else { return }
     let a = UInt32(b[17]) | UInt32(b[18]) << 8 | UInt32(b[19]) << 16 | UInt32(b[20]) << 24
     guard a == next else { return }
     // Byte 14 is the READ_ADDRESS status. A nonzero status can still echo the address, so its payload is not memory.
