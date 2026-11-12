@@ -27,15 +27,31 @@ final class Query:NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
   super.init()
  }
  func log(_ kind:String,_ extra:[String:Any]=[:]){var row=extra;row["kind"]=kind;row["time"]=Date().timeIntervalSince1970;events.append(row)}
- // Exit status: 0 = the write was acknowledged without error and at least one notification (a headset reply) arrived.
- // 1 = the session failed (Bluetooth off, headset not found, connect or subscribe failed, deadline). 3 = no reply arrived.
- // A RACE command can be applied without a reply, so status 3 means "unconfirmed", not "not applied".
+ // Response opcodes whose first payload byte (frame byte 6) is a status, where 0 means success.
+ // Taken from saved replies; other opcodes (for example GET_MMI_STATE 0x2C80) start with a value instead.
+ static let statusFirst:Set<Int>=[0x1680,0x0A0C,0x2C82,0x2C83,0x0002,0x1E08]
+ // Find the reply that answers this request. A direct request expects a 05 5B response with the same opcode.
+ // A relay request (opcode 0x0D01) expects a 05 5D relay notification that wraps the Master's 05 5B response
+ // with the inner opcode. The short 05 5B 03 00 01 0D 00 is only the relay's transport acknowledgment.
+ func reply(_ b:[UInt8])->[UInt8]? {
+  let outer=Int(packet[4])|Int(packet[5])<<8;var f=b;var expect=outer
+  if outer == 0x0d01 {guard f.count>=8,f[0]==5,f[1]==0x5d,f[4]==1,f[5]==0x0d else{return nil};f=Array(f[8...]);expect=Int(packet[12])|Int(packet[13])<<8}
+  guard f.count>=6,f[0]==5,f[1]==0x5b,f.count == 4+(Int(f[2])|Int(f[3])<<8),(Int(f[4])|Int(f[5])<<8) == expect else{return nil}
+  return f
+ }
+ // Exit status: 0 = the write was acknowledged and the matching reply arrived with status 0 (or with no status field).
+ // 1 = the session failed (Bluetooth off, headset not found, connect or subscribe failed, deadline), or the reply status is nonzero.
+ // 3 = no matching reply arrived. A RACE command can be applied without a reply, so 3 means "unconfirmed", not "not applied".
  func finish(_ status:String){
   if let p=peripheral {if let c=rx,c.isNotifying {p.setNotifyValue(false,for:c)};central.cancelPeripheralConnection(p)}
-  let data=try! JSONSerialization.data(withJSONObject:["query":label,"status":status,"scope":(label.hasPrefix("RELAY_RACE inner") ? "One approved RACE command (state change)." : "One documented state query. No settings, NVKEY writes, or firmware commands."),"events":events],options:[.prettyPrinted,.sortedKeys]);print(String(data:data,encoding:.utf8)!)
   let acked=events.contains{$0["kind"] as? String == "write_ack" && $0["error"] as? String == "none"}
-  let replied=events.contains{$0["kind"] as? String == "notification"}
-  exit(status != "response window completed" || !acked ? 1 : (replied ? 0 : 3))
+  let match=events.lazy.filter{$0["kind"] as? String == "notification"}.compactMap{($0["hex"] as? String).flatMap{h in self.reply(stride(from:0,to:h.count-1,by:2).compactMap{i in UInt8(h.dropFirst(i).prefix(2),radix:16)})}}.first
+  var verdict="no matching reply";var code:Int32=3
+  if let f=match {let op=Int(f[4])|Int(f[5])<<8
+   if Query.statusFirst.contains(op) && (f.count<7 || f[6] != 0) {verdict=String(format:"reply status 0x%02X (rejected)",f.count<7 ? 0xff : Int(f[6]));code=1} else {verdict="reply ok";code=0}}
+  if status != "response window completed" || !acked {verdict="session failed";code=1}
+  let data=try! JSONSerialization.data(withJSONObject:["query":label,"status":status,"reply":verdict,"scope":(label.hasPrefix("RELAY_RACE inner") ? "One approved RACE command (state change)." : "One documented state query. No settings, NVKEY writes, or firmware commands."),"events":events],options:[.prettyPrinted,.sortedKeys]);print(String(data:data,encoding:.utf8)!)
+  exit(code)
  }
  func centralManagerDidUpdateState(_ c:CBCentralManager){
   guard c.state == .poweredOn else {if c.state == .unauthorized || c.state == .poweredOff {finish("Bluetooth unavailable")};return}

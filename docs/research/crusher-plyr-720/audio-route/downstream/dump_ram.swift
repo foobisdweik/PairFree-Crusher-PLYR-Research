@@ -69,6 +69,8 @@ final class Dump: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     guard b.count >= 25, b[0] == 5, b[1] == 0x5d, b[12] == 0x80, b[13] == 0x16 else { return }
     let a = UInt32(b[17]) | UInt32(b[18]) << 8 | UInt32(b[19]) << 16 | UInt32(b[20]) << 24
     guard a == next else { return }
+    // Byte 14 is the READ_ADDRESS status. A nonzero status can still echo the address, so its payload is not memory.
+    guard b[14] == 0 else { timer?.invalidate(); finish(String(format: "READ_ADDRESS status 0x%02X at 0x%08X", b[14], a)); return }
     data += b[21..<25]; next += 4; retries = 0
     if data.count % 512 == 0 { FileHandle.standardError.write("\(data.count)/\(count)\n".data(using: .utf8)!) }
     send()

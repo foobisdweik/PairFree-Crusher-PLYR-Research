@@ -8,7 +8,7 @@ r=$1; [[ $r == <-> && $r -le 20 ]] || { echo "usage: mix_test.sh 0..20"; exit 2;
 h=$(printf %02x $r)
 swift query_ram.swift app-conf:000B > live/mix/$r-ratio-before.json; echo "ratio before: exit $?"
 swift query_ram.swift raw:055a0500822c0b00$h > live/mix/$r-command.json; rc=$?; echo "command: exit $rc"
-# query_ram.swift exits 1 when the Bluetooth session failed, so the write did not reach the headset.
+# query_ram.swift exits 1 when the Bluetooth session failed or the Master rejected the command (nonzero status).
 (( rc == 1 )) && { echo "command failed; see the JSON file"; exit 1; }
 swift query_ram.swift app-conf:000B > live/mix/$r-ratio-after.json; echo "ratio after: exit $?"
 swift dump_ram.swift 0x0423f35c 12 live/mix/$r-gains-after.bin; echo "gains after: exit $?"
