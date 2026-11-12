@@ -138,4 +138,5 @@ Actual endpoint names, backend completion, analog samples, gain, and mute remain
 No missing NVKEY, queued operation, or object pointer is labeled as the cause of silence.
 
 Run `python3 collect_evidence.py` from this directory to reproduce all literal checks.
+The decoded `.35` Master image is git-ignored. If it is absent, the script decodes it from the package in `bluetooth-query/current-firmware/`. If the package is absent too, the script prints a `curl` command and exits with status 3.
 `literal-evidence.json` records the exact image hash, literal offsets, values, and export hashes.

@@ -1,5 +1,5 @@
 {
-  "image": "/Users/iphoobis/Developer/PairFree-Crusher-PLYR-Research/docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin",
+  "image": "docs/research/crusher-plyr-720/bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin",
   "image_bytes": 3280896,
   "image_sha256": "7e30d46c9f52637cac42bf87e6b16f2614815601699caa5004c209807aba1cf6",
   "mapping_delta": "0x806b000",
