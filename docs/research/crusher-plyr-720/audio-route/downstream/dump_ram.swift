@@ -8,14 +8,15 @@ final class Dump: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
   var central: CBCentralManager!
   var peripheral: CBPeripheral?
   var tx: CBCharacteristic?
-  let start: UInt32, count: Int, out: String
+  // `count` is rounded up to whole 4-byte words because each READ_ADDRESS returns one word; `want` is the requested size.
+  let start: UInt32, count: Int, want: Int, out: String
   var next: UInt32 = 0
   var data = [UInt8]()
   var retries = 0
   var timer: Timer?
 
   init(start: UInt32, count: Int, out: String) {
-    self.start = start; self.count = (count + 3) & ~3; self.out = out; self.next = start
+    self.start = start; self.count = (count + 3) & ~3; self.want = count; self.out = out; self.next = start
     super.init()
   }
 
@@ -25,8 +26,10 @@ final class Dump: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
   }
 
   func finish(_ status: String) {
-    try? Data(data).write(to: URL(fileURLWithPath: out))
-    FileHandle.standardError.write("\(status): \(data.count) bytes from 0x\(String(start, radix: 16)) to \(out)\n".data(using: .utf8)!)
+    // Trim the last word so the file holds exactly the requested range.
+    let saved = Data(data.prefix(want))
+    try? saved.write(to: URL(fileURLWithPath: out))
+    FileHandle.standardError.write("\(status): \(saved.count) bytes from 0x\(String(start, radix: 16)) to \(out)\n".data(using: .utf8)!)
     if let p = peripheral { central.cancelPeripheralConnection(p) }
     exit(data.count == count ? 0 : 1)
   }
