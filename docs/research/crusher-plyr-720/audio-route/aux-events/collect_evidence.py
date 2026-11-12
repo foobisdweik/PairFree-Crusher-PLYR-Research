@@ -2,7 +2,8 @@
 
 The decoded .35 Master image is a vendor file, so .gitignore keeps it (and its
 package) out of the repository. If the decoded image is absent, this script
-decodes it from the package and checks both hashes in source.json. If the
+decodes it from the package and checks both hashes in source.json. An existing
+decoded image must match decoded_sha256, or the script exits 1. If the
 package is absent too, it prints the download command and exits with status 3.
 """
 import hashlib,json,lzma,pathlib,re,struct,sys
@@ -11,9 +12,13 @@ ROOT=HERE.parents[1]
 IMAGE=ROOT/'bluetooth-query/current-firmware/SG200X_Master_Headset_DFU_v1.0.0.35.decoded.bin'
 SOURCE=ROOT/'bluetooth-query/current-firmware/source.json'
 def load_image():
-    if IMAGE.is_file():
-        return IMAGE.read_bytes()
     meta=json.loads(SOURCE.read_text())
+    if IMAGE.is_file():
+        data=IMAGE.read_bytes()
+        if hashlib.sha256(data).hexdigest()!=meta['decoded_sha256']:
+            print(f'MISMATCH: {IMAGE.name} does not match decoded_sha256 in source.json. Delete it to decode it again from the package.',file=sys.stderr)
+            sys.exit(1)
+        return data
     package=IMAGE.parent/meta['url'].rsplit('/',1)[-1]
     if not package.is_file():
         print(f"MISSING: {IMAGE.name} and its package are git-ignored. Download the package, then run again:\n  curl -fL -o '{package}' '{meta['url']}'",file=sys.stderr)

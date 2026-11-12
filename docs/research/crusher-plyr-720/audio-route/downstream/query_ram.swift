@@ -35,7 +35,8 @@ final class Query:NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
  // with the inner opcode. The short 05 5B 03 00 01 0D 00 is only the relay's transport acknowledgment.
  func reply(_ b:[UInt8])->[UInt8]? {
   let outer=Int(packet[4])|Int(packet[5])<<8;var f=b;var expect=outer
-  if outer == 0x0d01 {guard f.count>=8,f[0]==5,f[1]==0x5d,f[4]==1,f[5]==0x0d else{return nil};f=Array(f[8...]);expect=Int(packet[12])|Int(packet[13])<<8}
+  // Bytes 6-7 of a relay frame are the relay ID (0x0200 = the Master); the reply must come from the requested one.
+  if outer == 0x0d01 {guard f.count>=8,f[0]==5,f[1]==0x5d,f[4]==1,f[5]==0x0d,f[6]==packet[6],f[7]==packet[7] else{return nil};f=Array(f[8...]);expect=Int(packet[12])|Int(packet[13])<<8}
   guard f.count>=6,f[0]==5,f[1]==0x5b,f.count == 4+(Int(f[2])|Int(f[3])<<8),(Int(f[4])|Int(f[5])<<8) == expect else{return nil}
   return f
  }
