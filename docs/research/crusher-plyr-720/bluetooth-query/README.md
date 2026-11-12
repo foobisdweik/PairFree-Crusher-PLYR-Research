@@ -162,6 +162,7 @@ The audio fault remains unresolved.
 ## Reproducible evidence checks
 
 Run `python3 docs/research/crusher-plyr-720/bluetooth-query/verify_captures.py`.
+The `.35` packages are git-ignored. If they are absent, the script prints a `curl` command for each package, skips its hash check, and exits with status 3.
 The saved frame lengths, nested replies, state transitions, and both `.35` package hashes pass.
 The baseline verifier passes for 1,164 source files and excludes five Finder metadata files.
 Their original hashes remain in the inventory because Finder metadata can change independently of source code.

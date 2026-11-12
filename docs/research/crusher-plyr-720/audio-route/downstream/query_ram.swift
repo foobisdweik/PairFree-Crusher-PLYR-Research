@@ -27,9 +27,15 @@ final class Query:NSObject,CBCentralManagerDelegate,CBPeripheralDelegate {
   super.init()
  }
  func log(_ kind:String,_ extra:[String:Any]=[:]){var row=extra;row["kind"]=kind;row["time"]=Date().timeIntervalSince1970;events.append(row)}
+ // Exit status: 0 = the write was acknowledged without error and at least one notification (a headset reply) arrived.
+ // 1 = the session failed (Bluetooth off, headset not found, connect or subscribe failed, deadline). 3 = no reply arrived.
+ // A RACE command can be applied without a reply, so status 3 means "unconfirmed", not "not applied".
  func finish(_ status:String){
   if let p=peripheral {if let c=rx,c.isNotifying {p.setNotifyValue(false,for:c)};central.cancelPeripheralConnection(p)}
-  let data=try! JSONSerialization.data(withJSONObject:["query":label,"status":status,"scope":(label.hasPrefix("RELAY_RACE inner") ? "One approved RACE command (state change)." : "One documented state query. No settings, NVKEY writes, or firmware commands."),"events":events],options:[.prettyPrinted,.sortedKeys]);print(String(data:data,encoding:.utf8)!);exit(0)
+  let data=try! JSONSerialization.data(withJSONObject:["query":label,"status":status,"scope":(label.hasPrefix("RELAY_RACE inner") ? "One approved RACE command (state change)." : "One documented state query. No settings, NVKEY writes, or firmware commands."),"events":events],options:[.prettyPrinted,.sortedKeys]);print(String(data:data,encoding:.utf8)!)
+  let acked=events.contains{$0["kind"] as? String == "write_ack" && $0["error"] as? String == "none"}
+  let replied=events.contains{$0["kind"] as? String == "notification"}
+  exit(status != "response window completed" || !acked ? 1 : (replied ? 0 : 3))
  }
  func centralManagerDidUpdateState(_ c:CBCentralManager){
   guard c.state == .poweredOn else {if c.state == .unauthorized || c.state == .poweredOff {finish("Bluetooth unavailable")};return}

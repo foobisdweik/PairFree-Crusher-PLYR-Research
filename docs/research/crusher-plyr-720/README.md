@@ -219,6 +219,8 @@ That module is not yet identified as a Bluetooth controller, so controller-speci
 ## Verification
 
 Run `python3 docs/research/crusher-plyr-720/verify_evidence.py` from the PairFree repository.
+The script finds `skullcandy-hq-apple-silicon` beside this repository, or at `$SKULLCANDY_HQ_ROOT`, and the iOS app at `$RUNNER_APP`.
+The `firmware/` folder is git-ignored, so a clean clone lacks it. In that case the script skips those checks, lists them, and exits with status 3.
 At creation, all 1,169 source hashes and 291 citation ranges passed.
 The analytical checksum example passed too.
 Further checks passed for four app binaries, four packages, four decoded bodies, 32 extracted ELF objects, and 140 schema ranges.
